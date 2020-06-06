@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Politics on </title>
+    <link>/tags/politics/</link>
+    <description>Recent content in Politics on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 07 Nov 2019 22:21:06 -0700</lastBuildDate>
+    
+	<atom:link href="/tags/politics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nile River Dispute between Ethopia, Sudan and Egypt</title>
+      <link>/news/2019-11-08-nile-rive-dispute/</link>
+      <pubDate>Thu, 07 Nov 2019 22:21:06 -0700</pubDate>
+      
+      <guid>/news/2019-11-08-nile-rive-dispute/</guid>
+      <description>One of the finest story I have ever read it titled &amp;ldquo; I Dared My Best Friend to Ruin My Life - He&amp;rsquo;s Succeeding&amp;rdquo; and can be read here. This 8 part series takes you down a chilling ride of shock and horror. So lifelike is the authors potrayal of the story that you could feel it happening at that very moment. If you haven&amp;rsquo;t read it before, it is highly recommended.</description>
+    </item>
+    
+    <item>
+      <title>Nile River Dispute between Ethopia, Sudan and Egypt</title>
+      <link>/post/2019-11-08-nile-rive-dispute/</link>
+      <pubDate>Thu, 07 Nov 2019 22:21:06 -0700</pubDate>
+      
+      <guid>/post/2019-11-08-nile-rive-dispute/</guid>
+      <description>It all started with one news article here and I went down a rabbit hole as to what is this Nile dispute all about. Political news, crisis reports, few wikipedia sources and I landed up this page. Now, wait. This gets interesting. I have seen this guy before on Twitter and that too very recently. I was right! It&amp;rsquo;s right in the second paragraph of the page. He was the Nobel Peace Prize recipient for 2019.</description>
+    </item>
+    
+    <item>
+      <title>First Blog Post</title>
+      <link>/post/2019-03-18-first-blog-post/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019-03-18-first-blog-post/</guid>
+      <description>Get it from github. See the live demo. See it in action on my own blog.  Welcome to the sample post for the Jekyll Clean theme.
+A simple and clean Jekyll theme using bootstrap (not to be confused with jekyll-bootstrap) that&amp;rsquo;s easy to modify and very modular in component and element reuse.
+It uses Disqus for comments and includes Google Analytics support. Both of these features are disabled by default and can be enabled via _config.</description>
+    </item>
+    
+  </channel>
+</rss>

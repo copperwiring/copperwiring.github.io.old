@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Geekout on </title>
+    <link>/tags/geekout/</link>
+    <description>Recent content in Geekout on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 06 Nov 2019 01:25:06 -0700</lastBuildDate>
+    
+	<atom:link href="/tags/geekout/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Accessing Windows File From Linux Subshell</title>
+      <link>/post/2019-11-06-accessing-windows-from-linux/</link>
+      <pubDate>Wed, 06 Nov 2019 01:25:06 -0700</pubDate>
+      
+      <guid>/post/2019-11-06-accessing-windows-from-linux/</guid>
+      <description>If you are using Ubuntu subshell in Windows (I use the one available in Microsoft Store), this is for you. There are times, where you may need to access the files saved on your windows in the Linux subshell. All you need to do is mount your drive. You may need to access the subshell via administrative privileges. For example, if you have the file in C: Drive, use the following:</description>
+    </item>
+    
+  </channel>
+</rss>

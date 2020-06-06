@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Technical on </title>
+    <link>/tags/technical/</link>
+    <description>Recent content in Technical on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 10 Nov 2019 12:38:00 -0700</lastBuildDate>
+    
+	<atom:link href="/tags/technical/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why do we use vectorization in Machine Learning?</title>
+      <link>/post/2019-11-10-why-do-we-use-vectorization-in-ml/</link>
+      <pubDate>Sun, 10 Nov 2019 12:38:00 -0700</pubDate>
+      
+      <guid>/post/2019-11-10-why-do-we-use-vectorization-in-ml/</guid>
+      <description>Example 1: $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+Example 2: (ax^2 + bx + c = 0)
+When we do machine learning, a lot of time, we use vectors to perform any computation. The same thing can be done using the traditional method of loops too. Let&amp;rsquo;s see how.
+We will write a small code to take the dot problem of two numbers. For the vectorized method, we&amp;rsquo;ll use numpy library and for non-vectorized method, we&amp;rsquo;ll use the traditional for loop.</description>
+    </item>
+    
+    <item>
+      <title>Why do we use vectorization in Machine Learning?</title>
+      <link>/post/test/</link>
+      <pubDate>Sun, 10 Nov 2019 12:38:00 -0700</pubDate>
+      
+      <guid>/post/test/</guid>
+      <description>When we do machine learning, a lot of time, we use vectors to perform any computation. The same thing can be done using the traditional method of loops too. Let&amp;rsquo;s see how.
+We will write a small code to take the dot problem of two numbers. For the vectorized method, we&amp;rsquo;ll use numpy library and for non-vectorized method, we&amp;rsquo;ll use the traditional for loop.
+Vectorized Method: import numpy as np import time #We&#39;ll create an array of the size 100000 and populate it with random samples from a uniform distribution over [0, 1).</description>
+    </item>
+    
+    <item>
+      <title>Feature Vector in Machine Learning</title>
+      <link>/post/2019-11-07-feature-vector-in-machine-learning/</link>
+      <pubDate>Thu, 07 Nov 2019 22:21:06 -0700</pubDate>
+      
+      <guid>/post/2019-11-07-feature-vector-in-machine-learning/</guid>
+      <description>In computer vision we keep referring to feature vector, especially when we talk about CNNs. But what exactly is a feature vector and can how can you visualize it? Imagine we have an RGB image is the form as shown below:
+Notice, that the value are unique for each color channel. However, we don’t intend to send out this data to any algorithm in 3 fold i.e. sending for one channel and doing computation, sending for second and so on.</description>
+    </item>
+    
+    <item>
+      <title>Setting up LaTeX in Jekyll</title>
+      <link>/news/2019-11-08-latex-in-jekyll/</link>
+      <pubDate>Thu, 07 Nov 2019 00:15:06 -0700</pubDate>
+      
+      <guid>/news/2019-11-08-latex-in-jekyll/</guid>
+      <description>Coming soon</description>
+    </item>
+    
+    <item>
+      <title>Setting up LaTeX in Jekyll</title>
+      <link>/post/2019-11-08-latex-in-jekyll/</link>
+      <pubDate>Thu, 07 Nov 2019 00:15:06 -0700</pubDate>
+      
+      <guid>/post/2019-11-08-latex-in-jekyll/</guid>
+      <description>Coming soon</description>
+    </item>
+    
+    <item>
+      <title>Decoding Tensorflow</title>
+      <link>/post/2019-10-20-decode-tensorflow-language/</link>
+      <pubDate>Wed, 06 Nov 2019 01:25:06 -0700</pubDate>
+      
+      <guid>/post/2019-10-20-decode-tensorflow-language/</guid>
+      <description>Tensorflow is now being used significantly for machine learning modelling, training and testing purposes. However, for someone who may have never used TensorFlow before or for people who love to understand the details behind the meanings of the commands and keywords, it may be toime consuming. This blog post is intended for people who may want to dive deep into what the commands stand for in the first place.</description>
+    </item>
+    
+    <item>
+      <title>Sigmoid Function in Deep Learning : Why?</title>
+      <link>/post/2019-11-07-sigmoid-in-deep-learning/</link>
+      <pubDate>Wed, 06 Nov 2019 01:25:06 -0700</pubDate>
+      
+      <guid>/post/2019-11-07-sigmoid-in-deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>What not to do</title>
+      <link>/post/2019-04-24-what-not-to-do/</link>
+      <pubDate>Wed, 24 Apr 2019 16:25:06 -0700</pubDate>
+      
+      <guid>/post/2019-04-24-what-not-to-do/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam metus, commodo sit amet ante a, finibus efficitur lorem. Maecenas egestas purus in tempor volutpat. Sed dapibus tortor nec sem suscipit ullamcorper. Nulla nec lorem lacus. Phasellus condimentum massa quis dolor consequat viverra ut ac magna. Ut a consequat nisi. Vivamus at leo ut turpis convallis lacinia. Curabitur eu placerat quam. Donec ultricies faucibus dui, a tincidunt lorem lobortis condimentum.</description>
+    </item>
+    
+  </channel>
+</rss>
