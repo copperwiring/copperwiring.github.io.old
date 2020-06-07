@@ -3,12 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://srishti.dev/post/</loc>
-    <lastmod>2019-11-10T12:38:00-07:00</lastmod>
+    <loc>https://srishti.dev/news/2020-01-01-joined-the-program-committee-of-vancouver-datajam/</loc>
+    <lastmod>2020-01-01T22:21:06-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://srishti.dev/news/</loc>
+    <lastmod>2020-01-01T22:21:06-07:00</lastmod>
   </url>
   
   <url>
     <loc>https://srishti.dev/</loc>
+    <lastmod>2020-01-01T22:21:06-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://srishti.dev/news/2019-12-10-i-organized-vancouver-official-neurips-meetup/</loc>
+    <lastmod>2019-12-10T00:10:06-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://srishti.dev/post/</loc>
     <lastmod>2019-11-10T12:38:00-07:00</lastmod>
   </url>
   
@@ -83,23 +98,13 @@
   </url>
   
   <url>
-    <loc>https://srishti.dev/news/2019-11-08-latex-in-jekyll/</loc>
+    <loc>https://srishti.dev/news/2019-10-10-joined-the-organizing-committee-of-wiml-2020/</loc>
+    <lastmod>2019-10-05T12:38:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://srishti.dev/news/2019-09-09-joined-wicv-2020-as-chair/</loc>
     <lastmod>2019-09-09T00:15:06-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://srishti.dev/news/</loc>
-    <lastmod>2019-09-09T00:15:06-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://srishti.dev/news/2019-11-08-reddit/</loc>
-    <lastmod>2019-08-22T00:10:06-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://srishti.dev/news/2019-11-08-nile-rive-dispute/</loc>
-    <lastmod>2019-08-07T22:21:06-07:00</lastmod>
   </url>
   
   <url>
@@ -155,10 +160,6 @@
   <url>
     <loc>https://srishti.dev/publication/example-1/</loc>
     <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://srishti.dev/news/2019-11-10-why-do-we-use-vectorization-in-ml/</loc>
   </url>
   
   <url>
