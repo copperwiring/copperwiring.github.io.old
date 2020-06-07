@@ -132,15 +132,6 @@ Imagine we have an RGB image is the form as shown below:&lt;/p&gt;
     
     <item>
       <title>Setting up LaTeX in Jekyll</title>
-      <link>https://srishti.dev/news/2019-11-08-latex-in-jekyll/</link>
-      <pubDate>Thu, 07 Nov 2019 00:15:06 -0700</pubDate>
-      <guid>https://srishti.dev/news/2019-11-08-latex-in-jekyll/</guid>
-      <description>&lt;p&gt;Coming soon&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Setting up LaTeX in Jekyll</title>
       <link>https://srishti.dev/post/2019-11-08-latex-in-jekyll/</link>
       <pubDate>Thu, 07 Nov 2019 00:15:06 -0700</pubDate>
       <guid>https://srishti.dev/post/2019-11-08-latex-in-jekyll/</guid>
@@ -202,6 +193,16 @@ model.add(layers.Conv2D(64, (3, 3), activation=&#39;relu&#39;))
       <pubDate>Wed, 06 Nov 2019 01:25:06 -0700</pubDate>
       <guid>https://srishti.dev/post/2019-11-07-sigmoid-in-deep-learning/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Joined WiCV 2020 as Chair</title>
+      <link>https://srishti.dev/news/2019-11-08-latex-in-jekyll/</link>
+      <pubDate>Mon, 09 Sep 2019 00:15:06 -0700</pubDate>
+      <guid>https://srishti.dev/news/2019-11-08-latex-in-jekyll/</guid>
+      <description>&lt;p&gt;I have joined the the organizing committee of 
+&lt;a href=&#34;https://sites.google.com/view/wicvworkshop-cvpr2020/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Women in Computer Vision Workshop, 2020&lt;/a&gt; as one of the chairs. As a part of the program committte we are responsible for publicity and webmaster (maintaining social media, website, creating print materials), sponsorship, mentoring dinner (organising the dinner and mentor-mentee matching) , working with CMT (handling paper submission, reviewing and notification), finance and budgeting and bringing speakers for the workshop.&lt;/p&gt;
+</description>
     </item>
     
     <item>

@@ -5,7 +5,7 @@
     <link>https://srishti.dev/news/</link>
       <atom:link href="https://srishti.dev/news/index.xml" rel="self" type="application/rss+xml" />
     <description>News</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 22 Nov 2019 00:10:06 -0700</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 09 Sep 2019 00:15:06 -0700</lastBuildDate>
     <image>
       <url>https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png</url>
       <title>News</title>
@@ -13,9 +13,19 @@
     </image>
     
     <item>
-      <title></title>
+      <title>Joined WiCV 2020 as Chair</title>
+      <link>https://srishti.dev/news/2019-11-08-latex-in-jekyll/</link>
+      <pubDate>Mon, 09 Sep 2019 00:15:06 -0700</pubDate>
+      <guid>https://srishti.dev/news/2019-11-08-latex-in-jekyll/</guid>
+      <description>&lt;p&gt;I have joined the the organizing committee of 
+&lt;a href=&#34;https://sites.google.com/view/wicvworkshop-cvpr2020/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Women in Computer Vision Workshop, 2020&lt;/a&gt; as one of the chairs. As a part of the program committte we are responsible for publicity and webmaster (maintaining social media, website, creating print materials), sponsorship, mentoring dinner (organising the dinner and mentor-mentee matching) , working with CMT (handling paper submission, reviewing and notification), finance and budgeting and bringing speakers for the workshop.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Latest news</title>
       <link>https://srishti.dev/news/2019-11-08-reddit/</link>
-      <pubDate>Fri, 22 Nov 2019 00:10:06 -0700</pubDate>
+      <pubDate>Thu, 22 Aug 2019 00:10:06 -0700</pubDate>
       <guid>https://srishti.dev/news/2019-11-08-reddit/</guid>
       <description>&lt;p&gt;For those not familiar, 
 &lt;a href=&#34;https://www.reddit.com/r/nosleep/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;r/nosleep&lt;/a&gt; is a subreddit on the popular social media platorm 
@@ -24,19 +34,9 @@
     </item>
     
     <item>
-      <title></title>
-      <link>https://srishti.dev/news/2019-11-10-why-do-we-use-vectorization-in-ml/</link>
-      <pubDate>Sun, 10 Nov 2019 12:38:00 -0700</pubDate>
-      <guid>https://srishti.dev/news/2019-11-10-why-do-we-use-vectorization-in-ml/</guid>
-      <description>&lt;p&gt;When we do machine learning, a lot of time, we use vectors to perform any computation. The same thing can be done using the traditional method of loops too. Let&amp;rsquo;s see how.&lt;/p&gt;
-&lt;p&gt;We will write a small code to take the dot problem of two numbers. For the vectorized method, we&amp;rsquo;ll use numpy library and for non-vectorized method, we&amp;rsquo;ll use the traditional for loop.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Nile River Dispute between Ethopia, Sudan and Egypt</title>
       <link>https://srishti.dev/news/2019-11-08-nile-rive-dispute/</link>
-      <pubDate>Thu, 07 Nov 2019 22:21:06 -0700</pubDate>
+      <pubDate>Wed, 07 Aug 2019 22:21:06 -0700</pubDate>
       <guid>https://srishti.dev/news/2019-11-08-nile-rive-dispute/</guid>
       <description>&lt;p&gt;One of the finest story I have ever read it titled &amp;quot; I Dared My Best Friend to Ruin My Life - He&amp;rsquo;s Succeeding&amp;rdquo; and can be read 
 &lt;a href=&#34;https://www.reddit.com/r/nosleep/comments/4q03fa/i_dared_my_best_friend_to_ruin_my_life_hes/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. This 8 part series takes you down a chilling ride of shock and horror. So lifelike is the authors potrayal of the story that you could feel it happening at that very moment. If you haven&amp;rsquo;t read it before, it is highly recommended. And yes, read all the parts in one go for the most fun!&lt;/p&gt;
@@ -44,11 +44,12 @@
     </item>
     
     <item>
-      <title>Setting up LaTeX in Jekyll</title>
-      <link>https://srishti.dev/news/2019-11-08-latex-in-jekyll/</link>
-      <pubDate>Thu, 07 Nov 2019 00:15:06 -0700</pubDate>
-      <guid>https://srishti.dev/news/2019-11-08-latex-in-jekyll/</guid>
-      <description>&lt;p&gt;Coming soon&lt;/p&gt;
+      <title></title>
+      <link>https://srishti.dev/news/2019-11-10-why-do-we-use-vectorization-in-ml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://srishti.dev/news/2019-11-10-why-do-we-use-vectorization-in-ml/</guid>
+      <description>&lt;p&gt;When we do machine learning, a lot of time, we use vectors to perform any computation. The same thing can be done using the traditional method of loops too. Let&amp;rsquo;s see how.&lt;/p&gt;
+&lt;p&gt;We will write a small code to take the dot problem of two numbers. For the vectorized method, we&amp;rsquo;ll use numpy library and for non-vectorized method, we&amp;rsquo;ll use the traditional for loop.&lt;/p&gt;
 </description>
     </item>
     
