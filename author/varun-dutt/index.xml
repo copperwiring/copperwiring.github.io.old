@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>1 | Srishti Yadav</title>
-    <link>https://srishti.dev/publication-type/1/</link>
-      <atom:link href="https://srishti.dev/publication-type/1/index.xml" rel="self" type="application/rss+xml" />
-    <description>1</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 01 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <title>Varun Dutt | Srishti Yadav</title>
+    <link>https://srishti.dev/author/varun-dutt/</link>
+      <atom:link href="https://srishti.dev/author/varun-dutt/index.xml" rel="self" type="application/rss+xml" />
+    <description>Varun Dutt</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 01 May 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png</url>
-      <title>1</title>
-      <link>https://srishti.dev/publication-type/1/</link>
+      <title>Varun Dutt</title>
+      <link>https://srishti.dev/author/varun-dutt/</link>
     </image>
     
     <item>
-      <title>Real-Time Experimental Study of Kernelized Correlation Filter Tracker using RGB Kinect Camera</title>
-      <link>https://srishti.dev/publication/kcfexperimentalstudy/</link>
-      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
-      <guid>https://srishti.dev/publication/kcfexperimentalstudy/</guid>
+      <title>A Low-Cost IoT Framework for Landslide Prediction and Risk Communication</title>
+      <link>https://srishti.dev/publication/a-low-cost-iot-framework-for-landslide-prediction-and-risk-communication/</link>
+      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
+      <guid>https://srishti.dev/publication/a-low-cost-iot-framework-for-landslide-prediction-and-risk-communication/</guid>
       <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
