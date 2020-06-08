@@ -5,38 +5,12 @@
     <link>https://srishti.dev/</link>
       <atom:link href="https://srishti.dev/index.xml" rel="self" type="application/rss+xml" />
     <description>Srishti Yadav</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2020 22:21:06 -0700</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 10 Nov 2019 12:38:00 -0700</lastBuildDate>
     <image>
       <url>https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png</url>
       <title>Srishti Yadav</title>
       <link>https://srishti.dev/</link>
     </image>
-    
-    <item>
-      <title>Joined the program committee of Vancouver Datajam</title>
-      <link>https://srishti.dev/news/2020-01-01-joined-the-program-committee-of-vancouver-datajam/</link>
-      <pubDate>Wed, 01 Jan 2020 22:21:06 -0700</pubDate>
-      <guid>https://srishti.dev/news/2020-01-01-joined-the-program-committee-of-vancouver-datajam/</guid>
-      <description>&lt;p&gt;
-&lt;a href=&#34;https://www.vancouverdatajam.ca/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vancouver Datajam&lt;/a&gt; is hackathon-like event of its own type in Vancouver where some of the biggest tech communities of Vancouver including RLadies, PyLadies, SFU Scientific Programming, Women in Machine Learning/Data Science, Women Techmakers come together. Starting Jan, 2020; I have joined the program committee of Vancouver Datajam.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>I organized Vancouver&#39;s official NeurIPS meetup</title>
-      <link>https://srishti.dev/news/2019-12-10-i-organized-vancouver-official-neurips-meetup/</link>
-      <pubDate>Tue, 10 Dec 2019 00:10:06 -0700</pubDate>
-      <guid>https://srishti.dev/news/2019-12-10-i-organized-vancouver-official-neurips-meetup/</guid>
-      <description>&lt;p&gt;I was the organizer of NeurIPS Conference 2019 
-&lt;a href=&#34;https://www.google.com/maps/d/u/0/viewer?mid=1ezbjW7AGg_9APIshVTu09uhJbXkMO5SI&amp;amp;ll=17.281210494679804%2C13.98394220000003&amp;amp;z=2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;official meetup&lt;/a&gt; of Vancouver. The meetup saw talks from 
-&lt;a href=&#34;https://www.linkedin.com/in/ishadijayasinghe/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ishadi Jayasingha&lt;/a&gt; (Researcher, University of Moratuwa), 
-&lt;a href=&#34;https://cseweb.ucsd.edu/~fmireshg/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fatemehsadat Mireshghallah&lt;/a&gt; (Ph.D. student at UC San Diego ), 
-&lt;a href=&#34;https://meghu2791.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Meghana Moorthy&lt;/a&gt; (Ph.D student at Ohio State University), 
-&lt;a href=&#34;https://www.khoury.northeastern.edu/people/olga-vitek/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Olga Vitek&lt;/a&gt; (Professor, Director - MS in Data Science Khoury College of Computer Sciences, Northeastern University), 
-&lt;a href=&#34;https://researcher.watson.ibm.com/researcher/view.php?person=us-ioana&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ioana Baldini&lt;/a&gt; (Research Staff Member at IBM T.J. Watson) and 
-&lt;a href=&#34;http://www.annieying.ca/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Annie Ying&lt;/a&gt; (Manager of Cisco Data Science Lab in Vancouver).&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>Why do we use vectorization in Machine Learning?</title>
@@ -267,26 +241,6 @@ model.add(layers.Conv2D(64, (3, 3), activation=&#39;relu&#39;))
 &lt;a href=&#34;https://www.reddit.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Reddit&lt;/a&gt;. This subreddit brings toether some of the best horror stories originally written by the authors who post the stories. Also, I haven&amp;rsquo;t by far haven&amp;rsquo;t seen any sci-fi story here. All of them make an attempt to make it a lifelike story.&lt;/p&gt;
 &lt;p&gt;One of the finest story I have ever read it titled &amp;quot; I Dared My Best Friend to Ruin My Life - He&amp;rsquo;s Succeeding&amp;rdquo; and can be read 
 &lt;a href=&#34;https://www.reddit.com/r/nosleep/comments/4q03fa/i_dared_my_best_friend_to_ruin_my_life_hes/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. This 8 part series takes you down a chilling ride of shock and horror. So lifelike is the authors potrayal of the story that you could feel it happening at that very moment. If you haven&amp;rsquo;t read it before, it is highly recommended. And yes, read all the parts in one go for the most fun!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Joined the organizing committee of WiML 2020</title>
-      <link>https://srishti.dev/news/2019-10-10-joined-the-organizing-committee-of-wiml-2020/</link>
-      <pubDate>Sat, 05 Oct 2019 12:38:00 -0700</pubDate>
-      <guid>https://srishti.dev/news/2019-10-10-joined-the-organizing-committee-of-wiml-2020/</guid>
-      <description>&lt;p&gt;I have joined the organizing committee of 2019 
-&lt;a href=&#34;https://wimlworkshop.org/2019/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Women in Machine Learning Workshop&lt;/a&gt;. I will be helpoing the team in their pre-workshop reception with venue selection, publicity, managing volunteers and organzing the workshop for 500+ people.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Joined WiCV 2020 as Chair</title>
-      <link>https://srishti.dev/news/2019-09-09-joined-wicv-2020-as-chair/</link>
-      <pubDate>Mon, 09 Sep 2019 00:15:06 -0700</pubDate>
-      <guid>https://srishti.dev/news/2019-09-09-joined-wicv-2020-as-chair/</guid>
-      <description>&lt;p&gt;I have joined the the organizing committee of 
-&lt;a href=&#34;https://sites.google.com/view/wicvworkshop-cvpr2020/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Women in Computer Vision Workshop, 2020&lt;/a&gt; as one of the chairs. As a part of the program committte we are responsible for publicity and webmaster (maintaining social media, website, creating print materials), sponsorship, mentoring dinner (organising the dinner and mentor-mentee matching) , working with CMT (handling paper submission, reviewing and notification), finance and budgeting and bringing speakers for the workshop.&lt;/p&gt;
 </description>
     </item>
     
