@@ -27,10 +27,10 @@
   
     
   
-  <meta name="description" content="If you are using Ubuntu subshell in Windows (I use the one available in Microsoft Store), this is for you. There are times, where you may need to access the files saved on your windows in the Linux subshell.">
+  <meta name="description" content="In deep learning, it is not easy to tune hyperparameters for optimal results. If we have 2 parameters (each with 3 prior desirable values), it is an easier problem. We will have possible combinations to try.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://srishti.dev/post/2019-11-06-accessing-windows-from-linux/">
+  <link rel="alternate" hreflang="en-us" href="https://srishti.dev/post/2020-06-01-hyperopt/">
 
   
 
@@ -220,7 +220,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://srishti.dev/post/2019-11-06-accessing-windows-from-linux/">
+  <link rel="canonical" href="https://srishti.dev/post/2020-06-01-hyperopt/">
 
   
   
@@ -236,15 +236,15 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Srishti Yadav">
-  <meta property="og:url" content="https://srishti.dev/post/2019-11-06-accessing-windows-from-linux/">
-  <meta property="og:title" content="Accessing Windows File From Linux Subshell | Srishti Yadav">
-  <meta property="og:description" content="If you are using Ubuntu subshell in Windows (I use the one available in Microsoft Store), this is for you. There are times, where you may need to access the files saved on your windows in the Linux subshell."><meta property="og:image" content="https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png">
+  <meta property="og:url" content="https://srishti.dev/post/2020-06-01-hyperopt/">
+  <meta property="og:title" content="Hyperopt: A tool for parameter tuning | Srishti Yadav">
+  <meta property="og:description" content="In deep learning, it is not easy to tune hyperparameters for optimal results. If we have 2 parameters (each with 3 prior desirable values), it is an easier problem. We will have possible combinations to try."><meta property="og:image" content="https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2019-11-06T01:25:06-07:00">
+      <meta property="article:published_time" content="2020-06-01T12:38:00-07:00">
     
-    <meta property="article:modified_time" content="2019-11-06T01:25:06-07:00">
+    <meta property="article:modified_time" content="2020-06-01T12:38:00-07:00">
   
 
   
@@ -268,12 +268,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://srishti.dev/post/2019-11-06-accessing-windows-from-linux/"
+    "@id": "https://srishti.dev/post/2020-06-01-hyperopt/"
   },
-  "headline": "Accessing Windows File From Linux Subshell",
+  "headline": "Hyperopt: A tool for parameter tuning",
   
-  "datePublished": "2019-11-06T01:25:06-07:00",
-  "dateModified": "2019-11-06T01:25:06-07:00",
+  "datePublished": "2020-06-01T12:38:00-07:00",
+  "dateModified": "2020-06-01T12:38:00-07:00",
   
   "author": {
     "@type": "Person",
@@ -288,7 +288,7 @@
       "url": "https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "If you are using Ubuntu subshell in Windows (I use the one available in Microsoft Store), this is for you. There are times, where you may need to access the files saved on your windows in the Linux subshell."
+  "description": "In deep learning, it is not easy to tune hyperparameters for optimal results. If we have 2 parameters (each with 3 prior desirable values), it is an easier problem. We will have possible combinations to try."
 }
 </script>
 
@@ -306,7 +306,7 @@
 
 
 
-  <title>Accessing Windows File From Linux Subshell | Srishti Yadav</title>
+  <title>Hyperopt: A tool for parameter tuning | Srishti Yadav</title>
 
 </head>
 
@@ -553,7 +553,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Accessing Windows File From Linux Subshell</h1>
+  <h1>Hyperopt: A tool for parameter tuning</h1>
 
   
 
@@ -572,7 +572,7 @@
     
       
     
-    Nov 6, 2019
+    Jun 1, 2020
   </span>
   
 
@@ -581,7 +581,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    1 min read
+    2 min read
   </span>
   
 
@@ -617,15 +617,37 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>If you are using Ubuntu subshell in Windows (I use the one available in Microsoft Store), this is for you. There are times, where you may need to access the files saved on your windows in the Linux subshell.
-All you need to do is mount your drive. You may need to access the subshell via administrative privileges. For example, if you have the file in C: Drive, use the following:</p>
-<pre><code>cd /mnt/c
-ls
-</code></pre>
-<p>The same can be used to access data from external hard disk too. If the external disk is in D: Drive, the command would simply change to:</p>
-<pre><code>cd /mnt/d
-ls
-</code></pre>
+      <p>In deep learning, it is not easy to tune hyperparameters for optimal results. If we have 2 parameters (each with 3 prior desirable values), it is an easier problem. We will have possible combinations to try. However, with more parameters, the possible combinations will increase exponentially. For example, for 5 parameters, each with 4 desired values, we will have possible combinations. Manually trying each of them is not a very practical approach.</p>
+<p>hence, the question usually is &ldquo;Which way should I update my hyper-parameter to reduce the loss (i.e. gradients) in order to find the optimal model architecture?</p>
+<p>Idealy, we should come up with an approach :</p>
+<ul>
+<li>where we can search for hyperparameters (hyper-parameter search space) using a distributed compute on the cloud.</li>
+<li>intelligently optimize which of the possible combinations from the search space will give us the best results.</li>
+<li>Supports exisitng optimization techniques like Grid Search, Random Search, Bayesian Optmization etc.</li>
+</ul>
+<p>Some of the exisiting tools for hyperparamter tuning are:</p>
+<ol>
+<li>RayTune (<a href="https://ray.readthedocs.io/en/latest/tune.html">https://ray.readthedocs.io/en/latest/tune.html</a>)</li>
+<li>Talos (<a href="https://autonomio.github.io/talos">https://autonomio.github.io/talos</a>)</li>
+<li>NNI (<a href="https://nni.readthedocs.io/en/latest/index.html">https://nni.readthedocs.io/en/latest/index.html</a>)</li>
+<li>Orion (<a href="https://orion.readthedocs.io/en/latest/user/pytorch.html#adapting-the-code-for-orion">https://orion.readthedocs.io/en/latest/user/pytorch.html#adapting-the-code-for-orion</a>)</li>
+<li>Sherpa (<a href="https://parameter-sherpa.readthedocs.io/en/latest/parallel/parallel-guide.html">https://parameter-sherpa.readthedocs.io/en/latest/parallel/parallel-guide.html</a>)</li>
+<li>TPOT (<a href="https://github.com/EpistasisLab/tpot">https://github.com/EpistasisLab/tpot</a>)</li>
+<li>Hyperopt (<a href="https://github.com/hyperopt/hyperopt">https://github.com/hyperopt/hyperopt</a>)</li>
+<li>AWS Sagemaker Hyperparameter tuning (<a href="https://aws.amazon.com/sagemaker/?hp=tile&amp;so-exp=below">https://aws.amazon.com/sagemaker/?hp=tile&amp;so-exp=below</a>)</li>
+<li>Botorch (<a href="https://botorch.org/">https://botorch.org/</a>)</li>
+</ol>
+<p>Here, we will discuss hyperopt!</p>
+<p>Hyperopt is an open-source hyperparameter tuning library written for Python. Hyperopt provides a general API for searching over hyperparameters and model types. Hyperopt offers two tuning algorithms: Random Search and the Bayesian method Tree of Parzen Estimators (TPE). To run hyperopt you define:</p>
+<ul>
+<li>the objective function</li>
+<li>the parameter space</li>
+<li>the number of experiments</li>
+</ul>
+<p>There are both continuous and categorical methods to describe the parameters.</p>
+<p><img src="/img/hyperopt.png " width="600" height="800" /></p>
+<p><strong>Limitation</strong>:
+Hyper-parameter takes a lot of time to tune the parameters if number of trials and number of epocs (iteration of the neural network) are higher (which is desired). Hence, it would be good to explore how to parallelize the tuning work.</p>
 
     </div>
 
@@ -637,7 +659,7 @@ ls
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tag/geekout/">Geekout</a>
+  <a class="badge badge-light" href="/tag/technical/">technical</a>
   
 </div>
 
@@ -654,7 +676,7 @@ ls
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://srishti.dev/post/2019-11-06-accessing-windows-from-linux/&amp;text=Accessing%20Windows%20File%20From%20Linux%20Subshell" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://srishti.dev/post/2020-06-01-hyperopt/&amp;text=Hyperopt:%20A%20tool%20for%20parameter%20tuning" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -667,7 +689,7 @@ ls
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://srishti.dev/post/2019-11-06-accessing-windows-from-linux/&amp;t=Accessing%20Windows%20File%20From%20Linux%20Subshell" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://srishti.dev/post/2020-06-01-hyperopt/&amp;t=Hyperopt:%20A%20tool%20for%20parameter%20tuning" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -680,7 +702,7 @@ ls
       
       
       <li>
-        <a href="mailto:?subject=Accessing%20Windows%20File%20From%20Linux%20Subshell&amp;body=https://srishti.dev/post/2019-11-06-accessing-windows-from-linux/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Hyperopt:%20A%20tool%20for%20parameter%20tuning&amp;body=https://srishti.dev/post/2020-06-01-hyperopt/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -693,7 +715,7 @@ ls
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://srishti.dev/post/2019-11-06-accessing-windows-from-linux/&amp;title=Accessing%20Windows%20File%20From%20Linux%20Subshell" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://srishti.dev/post/2020-06-01-hyperopt/&amp;title=Hyperopt:%20A%20tool%20for%20parameter%20tuning" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -706,7 +728,7 @@ ls
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Accessing%20Windows%20File%20From%20Linux%20Subshell%20https://srishti.dev/post/2019-11-06-accessing-windows-from-linux/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Hyperopt:%20A%20tool%20for%20parameter%20tuning%20https://srishti.dev/post/2020-06-01-hyperopt/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -719,7 +741,7 @@ ls
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://srishti.dev/post/2019-11-06-accessing-windows-from-linux/&amp;title=Accessing%20Windows%20File%20From%20Linux%20Subshell" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://srishti.dev/post/2020-06-01-hyperopt/&amp;title=Hyperopt:%20A%20tool%20for%20parameter%20tuning" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -832,6 +854,17 @@ ls
 
 
   
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/2019-11-10-why-do-we-use-vectorization-in-ml/">Vectorization in machine learning</a></li>
+      
+      <li><a href="/post/2019-11-07-feature-vector-in-machine-learning/">Feature Vector in Machine Learning</a></li>
+      
+    </ul>
+  </div>
   
 
 
