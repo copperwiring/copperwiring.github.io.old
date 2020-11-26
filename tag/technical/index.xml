@@ -5,7 +5,7 @@
     <link>https://srishti.dev/tag/technical/</link>
       <atom:link href="https://srishti.dev/tag/technical/index.xml" rel="self" type="application/rss+xml" />
     <description>technical</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jun 2020 12:38:00 -0700</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
     <image>
       <url>https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png</url>
       <title>technical</title>
@@ -13,9 +13,23 @@
     </image>
     
     <item>
+      <title>Feature Vector in Machine Learning</title>
+      <link>https://srishti.dev/post/2019-11-07-feature-vector-in-machine-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://srishti.dev/post/2019-11-07-feature-vector-in-machine-learning/</guid>
+      <description>&lt;p&gt;In computer vision we keep referring to feature vector, especially when we talk about CNNs. But what exactly is a feature vector and can how can you visualize it?
+Imagine we have an RGB image is the form as shown below:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://srishti.dev/img/rgbchannel.png &#34; width=&#34;150&#34; height=&#34;120&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Notice, that the value are unique for each color channel. However, we don’t intend to send out this data to any algorithm in 3 fold i.e. sending for one channel and doing computation, sending for second and so on. This is very unrealistic from computation point of you because our original data (pixel values) are ‘together’ representing the image. Hence, we create what we call a feature vector. We create 1-D column vector with values from these 3 color channels. For instance, we start from Red channel and bread each value row wise till the last value. Next we do the same for Blue channel and lastly for Green channel. This gives us one single column vector representing the original image in the form of, what we call, ‘feature vector’. So, what is the final size of the feature vector? This is important to know the total amount of data we will eventually use to do any computation.&lt;/p&gt;
+&lt;p&gt;When we see the CNN structure, we see that the architecture is defined usingm x n x 3, in case of RGB images. For example, a CNN architecture of dimension 64 x 64 x 3 will have a feature vector of size 12,288.&lt;/p&gt;
+&lt;p&gt;Simple!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Hyperopt: A tool for parameter tuning</title>
       <link>https://srishti.dev/post/2020-06-01-hyperopt/</link>
-      <pubDate>Mon, 01 Jun 2020 12:38:00 -0700</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://srishti.dev/post/2020-06-01-hyperopt/</guid>
       <description>&lt;p&gt;In deep learning, it is not easy to tune hyperparameters for optimal results. If we have 2 parameters (each with 3 prior desirable values), it is an easier problem. We will have possible combinations to try. However, with more parameters, the possible combinations will increase exponentially. For example, for 5 parameters, each with 4 desired values, we will have possible combinations. Manually trying each of them is not a very practical approach.&lt;/p&gt;
 &lt;p&gt;hence, the question usually is &amp;ldquo;Which way should I update my hyper-parameter to reduce the loss (i.e. gradients) in order to find the optimal model architecture?&lt;/p&gt;
@@ -54,7 +68,7 @@ Hyper-parameter takes a lot of time to tune the parameters if number of trials a
     <item>
       <title>Vectorization in machine learning</title>
       <link>https://srishti.dev/post/2019-11-10-why-do-we-use-vectorization-in-ml/</link>
-      <pubDate>Sun, 10 Nov 2019 12:38:00 -0700</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://srishti.dev/post/2019-11-10-why-do-we-use-vectorization-in-ml/</guid>
       <description>&lt;p&gt;When we do machine learning, a lot of time, we use vectors to perform any computation. let us see few examples of vectors we come across any machine learning or dep leaning mathematics:&lt;/p&gt;
 &lt;p&gt;Example 1: $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$&lt;/p&gt;
@@ -102,20 +116,6 @@ print(&amp;quot;Vectorized version:&amp;quot; + str(1000*(toc-tic)) + &amp;quot;
 Vectorized version:91.36772155761719 ms
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;From the outputs, we can see that the for loop takes 20x time than the vectorized method. This difference can be significant if we have large amounts of data where vectorization can save us a lot of computation time. Hence, the need of vectorization!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Feature Vector in Machine Learning</title>
-      <link>https://srishti.dev/post/2019-11-07-feature-vector-in-machine-learning/</link>
-      <pubDate>Thu, 07 Nov 2019 22:21:06 -0700</pubDate>
-      <guid>https://srishti.dev/post/2019-11-07-feature-vector-in-machine-learning/</guid>
-      <description>&lt;p&gt;In computer vision we keep referring to feature vector, especially when we talk about CNNs. But what exactly is a feature vector and can how can you visualize it?
-Imagine we have an RGB image is the form as shown below:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://srishti.dev/img/rgbchannel.png &#34; width=&#34;150&#34; height=&#34;120&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Notice, that the value are unique for each color channel. However, we don’t intend to send out this data to any algorithm in 3 fold i.e. sending for one channel and doing computation, sending for second and so on. This is very unrealistic from computation point of you because our original data (pixel values) are ‘together’ representing the image. Hence, we create what we call a feature vector. We create 1-D column vector with values from these 3 color channels. For instance, we start from Red channel and bread each value row wise till the last value. Next we do the same for Blue channel and lastly for Green channel. This gives us one single column vector representing the original image in the form of, what we call, ‘feature vector’. So, what is the final size of the feature vector? This is important to know the total amount of data we will eventually use to do any computation.&lt;/p&gt;
-&lt;p&gt;When we see the CNN structure, we see that the architecture is defined usingm x n x 3, in case of RGB images. For example, a CNN architecture of dimension 64 x 64 x 3 will have a feature vector of size 12,288.&lt;/p&gt;
-&lt;p&gt;Simple!&lt;/p&gt;
 </description>
     </item>
     

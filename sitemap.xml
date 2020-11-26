@@ -3,51 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://srishti.dev/post/2020-06-01-hyperopt/</loc>
-    <lastmod>2020-06-01T12:38:00-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://srishti.dev/post/</loc>
-    <lastmod>2020-06-01T12:38:00-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://srishti.dev/</loc>
-    <lastmod>2020-06-01T12:38:00-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://srishti.dev/tags/</loc>
-    <lastmod>2020-06-01T12:38:00-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://srishti.dev/tag/technical/</loc>
-    <lastmod>2020-06-01T12:38:00-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://srishti.dev/post/2019-11-10-why-do-we-use-vectorization-in-ml/</loc>
-    <lastmod>2019-11-10T12:38:00-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://srishti.dev/post/2019-11-07-feature-vector-in-machine-learning/</loc>
-    <lastmod>2019-11-07T22:21:06-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://srishti.dev/post/2019-11-06-accessing-windows-from-linux/</loc>
-    <lastmod>2019-11-06T01:25:06-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://srishti.dev/tag/geekout/</loc>
-    <lastmod>2019-11-06T01:25:06-07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://srishti.dev/publication/deep-attention-models-for-human-tracking-using-rgbd/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url>
@@ -94,6 +49,16 @@
   
   <url>
     <loc>https://srishti.dev/author/srishti-yadav/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://srishti.dev/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://srishti.dev/tags/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -168,11 +133,31 @@
   </url>
   
   <url>
+    <loc>https://srishti.dev/post/2019-11-06-accessing-windows-from-linux/</loc>
+  </url>
+  
+  <url>
     <loc>https://srishti.dev/categories/</loc>
   </url>
   
   <url>
+    <loc>https://srishti.dev/post/2019-11-07-feature-vector-in-machine-learning/</loc>
+  </url>
+  
+  <url>
+    <loc>https://srishti.dev/tag/geekout/</loc>
+  </url>
+  
+  <url>
+    <loc>https://srishti.dev/post/2020-06-01-hyperopt/</loc>
+  </url>
+  
+  <url>
     <loc>https://srishti.dev/news/</loc>
+  </url>
+  
+  <url>
+    <loc>https://srishti.dev/post/</loc>
   </url>
   
   <url>
@@ -185,6 +170,14 @@
   
   <url>
     <loc>https://srishti.dev/author/srishti-yadav/</loc>
+  </url>
+  
+  <url>
+    <loc>https://srishti.dev/tag/technical/</loc>
+  </url>
+  
+  <url>
+    <loc>https://srishti.dev/post/2019-11-10-why-do-we-use-vectorization-in-ml/</loc>
   </url>
   
 </urlset>
