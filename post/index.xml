@@ -5,7 +5,7 @@
     <link>https://srishti.dev/post/</link>
       <atom:link href="https://srishti.dev/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jun 2020 12:38:00 -0700</lastBuildDate>
     <image>
       <url>https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
@@ -13,40 +13,9 @@
     </image>
     
     <item>
-      <title>Accessing Windows File From Linux Subshell</title>
-      <link>https://srishti.dev/post/2019-11-06-accessing-windows-from-linux/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://srishti.dev/post/2019-11-06-accessing-windows-from-linux/</guid>
-      <description>&lt;p&gt;If you are using Ubuntu subshell in Windows (I use the one available in Microsoft Store), this is for you. There are times, where you may need to access the files saved on your windows in the Linux subshell.
-All you need to do is mount your drive. You may need to access the subshell via administrative privileges. For example, if you have the file in C: Drive, use the following:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;cd /mnt/c
-ls
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The same can be used to access data from external hard disk too. If the external disk is in D: Drive, the command would simply change to:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;cd /mnt/d
-ls
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Feature Vector in Machine Learning</title>
-      <link>https://srishti.dev/post/2019-11-07-feature-vector-in-machine-learning/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://srishti.dev/post/2019-11-07-feature-vector-in-machine-learning/</guid>
-      <description>&lt;p&gt;In computer vision we keep referring to feature vector, especially when we talk about CNNs. But what exactly is a feature vector and can how can you visualize it?
-Imagine we have an RGB image is the form as shown below:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://srishti.dev/img/rgbchannel.png &#34; width=&#34;150&#34; height=&#34;120&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Notice, that the value are unique for each color channel. However, we don’t intend to send out this data to any algorithm in 3 fold i.e. sending for one channel and doing computation, sending for second and so on. This is very unrealistic from computation point of you because our original data (pixel values) are ‘together’ representing the image. Hence, we create what we call a feature vector. We create 1-D column vector with values from these 3 color channels. For instance, we start from Red channel and bread each value row wise till the last value. Next we do the same for Blue channel and lastly for Green channel. This gives us one single column vector representing the original image in the form of, what we call, ‘feature vector’. So, what is the final size of the feature vector? This is important to know the total amount of data we will eventually use to do any computation.&lt;/p&gt;
-&lt;p&gt;When we see the CNN structure, we see that the architecture is defined usingm x n x 3, in case of RGB images. For example, a CNN architecture of dimension 64 x 64 x 3 will have a feature vector of size 12,288.&lt;/p&gt;
-&lt;p&gt;Simple!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Hyperopt: A tool for parameter tuning</title>
       <link>https://srishti.dev/post/2020-06-01-hyperopt/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jun 2020 12:38:00 -0700</pubDate>
       <guid>https://srishti.dev/post/2020-06-01-hyperopt/</guid>
       <description>&lt;p&gt;In deep learning, it is not easy to tune hyperparameters for optimal results. If we have 2 parameters (each with 3 prior desirable values), it is an easier problem. We will have possible combinations to try. However, with more parameters, the possible combinations will increase exponentially. For example, for 5 parameters, each with 4 desired values, we will have possible combinations. Manually trying each of them is not a very practical approach.&lt;/p&gt;
 &lt;p&gt;hence, the question usually is &amp;ldquo;Which way should I update my hyper-parameter to reduce the loss (i.e. gradients) in order to find the optimal model architecture?&lt;/p&gt;
@@ -76,63 +45,225 @@ Imagine we have an RGB image is the form as shown below:&lt;/p&gt;
 &lt;li&gt;the number of experiments&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;There are both continuous and categorical methods to describe the parameters.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://srishti.dev/img/hyperopt.png &#34; width=&#34;600&#34; height=&#34;800&#34; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&#34;https://srishti.dev/img/hyperopt.png &#34; width=&#34;600&#34; height=&#34;800&#34; /&gt; --&gt;
 &lt;p&gt;&lt;strong&gt;Limitation&lt;/strong&gt;:
 Hyper-parameter takes a lot of time to tune the parameters if number of trials and number of epocs (iteration of the neural network) are higher (which is desired). Hence, it would be good to explore how to parallelize the tuning work.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Vectorization in machine learning</title>
-      <link>https://srishti.dev/post/2019-11-10-why-do-we-use-vectorization-in-ml/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://srishti.dev/post/2019-11-10-why-do-we-use-vectorization-in-ml/</guid>
-      <description>&lt;p&gt;When we do machine learning, a lot of time, we use vectors to perform any computation. let us see few examples of vectors we come across any machine learning or dep leaning mathematics:&lt;/p&gt;
-&lt;p&gt;Example 1: $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$&lt;/p&gt;
-&lt;p&gt;Example 2: (ax^2 + bx + c = 0)&lt;/p&gt;
-&lt;p&gt;The same thing can be done using the traditional method of loops too. Let&amp;rsquo;s see how.&lt;/p&gt;
-&lt;p&gt;We will write a small code to take the dot problem of two numbers. For the vectorized method, we&amp;rsquo;ll use numpy library and for non-vectorized method, we&amp;rsquo;ll use the traditional for loop.&lt;/p&gt;
-&lt;h1 id=&#34;vectorized-method&#34;&gt;Vectorized Method:&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;import numpy as np
-import time
-
-#We&#39;ll create an array of the size 100000 and populate it with random samples from a uniform distribution over [0, 1).
-#For this purpose, we&#39;l use np.random.rand()
-#Link: https://docs.scipy.org/doc/numpy-1.14.0/reference/generated/numpy.random.rand.html
-a =  np.random.rand(100000)
-b =  np.random.rand(100000)
-
-#We&#39;ll compute the time taken to compute the vector dot product
-tic = time.time()
-c = np.dot(a,b)
-toc = time.time()
-
-print(c)
-print(&amp;quot;Vectorized version:&amp;quot; + str(1000*(toc-tic)) + &amp;quot; ms&amp;quot;)
+      <title>Few Shot Learning</title>
+      <link>https://srishti.dev/post/020-02-01-few-shot-learning-basic-concepts/</link>
+      <pubDate>Sat, 01 Feb 2020 12:38:00 -0700</pubDate>
+      <guid>https://srishti.dev/post/020-02-01-few-shot-learning-basic-concepts/</guid>
+      <description>&lt;p&gt;&lt;b&gt;Question&lt;/b&gt;: If a class has only two samples, can a computer make correct prediction? &lt;br&gt;
+&lt;i&gt;Note: Number of samples is too less for training.&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Approach:&lt;/b&gt; Few Shot Learning&lt;/p&gt;
+&lt;p&gt;Few shot learning is a problem where we try to learn when the training data is very small. It is different from supervised learning where we train on some data and try to predict an object which belongs to a class present in training data. In few shot learning, the training data has never the sample we are predicting on.&lt;/p&gt;
+&lt;p&gt;Le&amp;rsquo;s take an example. Look at Fig.1&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&#34;https://srishti.dev/img/half-training-data.jpg&#34; width=&#34;300&#34; height=&#34;400&#34; /&gt;
+    &lt;figcaption&gt;
+    &lt;a href=&#34;https://cs231n.github.io/classification/&#34;&gt; Fig 1. Photo via CS231 course&lt;/a&gt;
+    &lt;/figcaption&gt; 
+ &lt;/figure&gt;
+&lt;p&gt;We train a model of a big training set of cats, dogs, mug and hat. The goal in few shot learning is not to recognize unseen cats/dogs/mugs/hats. Instead the goal is to recognize the similarity and difference between objects. After training, if we show two pairs of images (Fig.2 and Fig.3) to the model and ask &amp;ldquo;&lt;em&gt;Are the two images similar?&lt;/em&gt;&amp;quot;.&lt;/p&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+* {
+  box-sizing: border-box;
+}
+.column img {
+    width: 100px;
+    height: 150px;
+    float: left ;
+    padding: 10px; 
+}
+/* Clearfix (clear floats) */
+.row::after {
+  content: &#34;&#34;;
+  clear: both;
+  display: table;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;column&#34;&gt;
+        &lt;img src=&#34;https://srishti.dev/img/cat.png&#34; width=&#34;300&#34; height=&#34;600&#34; style=&#34;width:120%&#34;&gt;
+        &lt;figcaption&gt;
+            &lt;a href=&#34;https://medium.com/fenwicks/tutorial-4-demystifying-keras-dogs-vs-cats-tutorial-f7c5ea7adcf8&#34;&gt; Fig 2. Photo via Medium blog&lt;/a&gt;
+        &lt;/figcaption&gt; 
+    &lt;/div&gt;
+    &lt;div class=&#34;column&#34;&gt;
+        &lt;img src=&#34;https://srishti.dev/img/cat-dog.jpeg&#34; width=&#34;300&#34; height=&#34;600&#34; style=&#34;width:100%&#34; &gt;
+        &lt;figcaption&gt;
+            &lt;a href=&#34;https://cdn-images-1.medium.com/max/1600/1*EvMbMNRHm_aOf1n4tDO1Xg.jpeg&#34;&gt; Fig 3. Photo via Medium blog&lt;/a&gt;
+        &lt;/figcaption&gt;  
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;p&gt;Since the model has learned the similarity and difference between objects, it can tell that images in Fig.2 are same kind of objects and Fig.3 are quite different. Now, if you ask the model to &lt;em&gt;recognize&lt;/em&gt; the objects, it does not know it is cat or dog because it isn&amp;rsquo;t a part of the training data.  Hence, model can tell that these two images are similar but can&amp;rsquo;t tell what they are.&lt;/p&gt;
+&lt;p&gt;Now, let&amp;rsquo;s ask another question. Let&amp;rsquo;s ask the model what is Fig. 4. We call this image: &lt;strong&gt;Query&lt;/strong&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&#34;https://srishti.dev/img/squirrel.jpg&#34; width=&#34;300&#34; height=&#34;400&#34; /&gt;
+    &lt;figcaption&gt;
+    &lt;a href=&#34;http://weknowyourdreams.com/single/squirrel/squirrel-09&#34;&gt; Fig 4. &#34;Query&#34; (Photo via web)&lt;/a&gt;
+    &lt;/figcaption&gt; 
+ &lt;/figure&gt;
+&lt;p&gt;Model is unable to answer this question because it has never seen this data during training. Now, I show another 4 images to the model as shown in Fig. 5&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&#34;https://srishti.dev/img/support-set.png&#34; width=&#34;600&#34; height=&#34;800&#34; /&gt;
+    &lt;figcaption&gt;
+    &lt;a&gt; Fig 5. &#34;Support-Set&#34;&lt;/a&gt;
+    &lt;/figcaption&gt; 
+ &lt;/figure&gt;
+&lt;p&gt;Now, model compares the query image with each image in the support set and believes the query is &amp;ldquo;Squirre&amp;rdquo;. These set of labelled images are called &lt;strong&gt;&amp;ldquo;Support Set&amp;rdquo;&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Jargons related to few-shot learning&lt;/p&gt;
+&lt;!-- Let&#39;s define few terms before we get into more technical details: --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;k-way:&lt;/b&gt; we are given $j$ classes (e.g. 3-way means 3 classes. See Fig.1)&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;n-shot:&lt;/b&gt; the number of samples per class (e.g. 2-shot mean 2 sample per class. See Fig.3)&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Support set($S$):&lt;/b&gt; the samples used for learning. If we have $j$ classes and $k$ samples, then number of elements in support set is $ j * k $.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Query set ($Q$):&lt;/b&gt; the sample(s) which we are trying to identify.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;
+    &lt;img src=&#34;https://srishti.dev/img/support_query.png &#34; width=&#34;600&#34; height=&#34;800&#34; /&gt;
+    &lt;figcaption&gt;
+    &lt;a href=&#34;https://www.borealisai.com/en/blog/tutorial-2-few-shot-learning-and-meta-learning-i/&#34;&gt; Fig 3. Photo via Borealis AI blog&lt;/a&gt;
+    &lt;/figcaption&gt; 
+ &lt;/figure&gt;
+&lt;p&gt;More formally,if we define task with $T$, then task $T_i$ is sampled from probabilty distribution over tasks&lt;/p&gt;
+&lt;div&gt; $$ T_i\sim P(T) $$&lt;/div&gt;  and each task $i$ is a set given by Support $S$ and Query $Q$
+&lt;div&gt;$$ T_i = \{ S_i, Q_i \} $$&lt;/div&gt;
+&lt;!-- Points:
+- If we already already pre-trained network on say,imagnet, it appears that if we simply use &#39;traditional&#39; transfer learning, we shold be able to achieve  better results in j-way k-shot learning. However, it doesn&#39;t necessarily happen. &lt;br /&gt; &lt;br /&gt;
+We are dealing with domain transfer. First, there is the problem of domain shift. You may be in a new setting where your model cannot generalize to the new classes (classes different from the one in ImageNet for instance). Few-Shot models better deal with this setting. Second issue, in transfer learning you have to retrain part of the model (e.g. the last layer) and to do so you have to find the right number of epochs, optimizer, and hyperparams. This is very complicated to do when you have just a handful of data like in the Few-Shot setting. --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>KL-Divergence</title>
+      <link>https://srishti.dev/post/2020-01-15-kl-divergence/</link>
+      <pubDate>Wed, 15 Jan 2020 12:38:00 -0700</pubDate>
+      <guid>https://srishti.dev/post/2020-01-15-kl-divergence/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;What is KL-Divergence&lt;/strong&gt;
+KL Divergence is a measure of how one probabilty distributon is different from another. Some people also call it the distance between two distributions, however, strictly speaking it is not the distance. Distance is commutative while KL-Divergence is not.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mathematically&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;$$ D_{KL}(P||Q) = \sum_x P(X= x) log\frac{P(X=x)}{Q(X=x)} $$&lt;/p&gt;
+&lt;p&gt;$$ D_{KL}(P||Q) = \sum_x P(X= x) log\frac{P(X=x)}{Q(X=x)} $$&lt;/p&gt;
+&lt;p&gt;where $\sum_x P(X= x)$ is the summation of all the values that random variable $X$ will take and $P(X= x)$ is the probabilty of that random variable. In short we can also write:&lt;/p&gt;
+&lt;p&gt;$$ D_{KL}(P||Q) = \sum_x P(x) log\frac{P(x)}{Q(x)} $$&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;How can we generalize it to two different distributions?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Suppose we have two multivariate normal distributions defined as&lt;/p&gt;
+&lt;p&gt;$$ p(x) = N(x;p_1, \Sigma_1 ) $$
+$$ q(x) = N(x;p_2, \Sigma_2 ) $$&lt;/p&gt;
+&lt;p&gt;where $N$ is the normal distribution, $p_1$ &amp;amp; $p_2$ are are the means and $\Sigma_1$ and $\Sigma_2$ are the covariance matrix.&lt;/p&gt;
+&lt;p&gt;The multivariate normal distribution is defined as:&lt;/p&gt;
+&lt;p&gt;$$ N(x;p;\Sigma_1) = \frac{1}{\sqrt{(2\pi)^{k} |\Sigma_1|}} * exp(- \frac{1}{2} (x-p)^{T} \Sigma^{-1}(x-p)) $$&lt;/p&gt;
+&lt;p&gt;if the two distributions have the same distributions. Here $x$ is the vector of length $k$ x $1$ i.e. the elements are $x= [x_1, x_2&amp;hellip;x_n]^{T}$&lt;/p&gt;
+&lt;p&gt;Now, if we have two distributions as mutivariate normal density, then KL Divergence between the two normal distributions is defined as:&lt;/p&gt;
+&lt;p&gt;$$ D_{KL}(p(x) || q(x)) = \frac{1}{2} {  \bigg[log \frac{|\Sigma_{2}|}{|\Sigma_{1}|} - d + tr(\Sigma_2^{-1}\Sigma_1) + (p_2 - p_1)^{T} \Sigma_2^{-1}(p_2 - p_1)} \bigg] $$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Proof&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;We know that KL Divergence between two PDFs can be expressed as:
+$$ D_{KL}(p(x) || q(x)) = \sum_x P(x) log\frac{P(x)}{Q(x)} \tag{1}  $$&lt;/p&gt;
+&lt;p&gt;and multi-variate normal distribution is defined like:
+$$ N(x;p;\Sigma_1) = \frac{1}{\sqrt{(2\pi)^{k} |\Sigma_1|}} * exp\Big[- \frac{1}{2} (x-p_1)^{T} \Sigma^{-1}(x-p_1)\Big] \tag{2}  $$&lt;/p&gt;
+&lt;!-- See \ref{1} for a how-to.  --&gt;
+&lt;p&gt;&lt;em&gt;Note: $|\Sigma|$ is the determinant and is not the absolute value&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Taking log of Eq.$2$, we can write as:&lt;/p&gt;
+&lt;p&gt;$$ log P(x) = - \frac{k}{2}log(2\pi) - \frac{1}{2}log(|\Sigma_1|) - \frac{1}{2} \Big[(x-p_1)^{T} \Sigma^{-1}(x-p_1)\Big]  \tag{3} $$&lt;/p&gt;
+&lt;p&gt;Similarly for second probabilty distribution $Q$,
+$$ log Q(x) = - \frac{k}{2}log(2\pi) - \frac{1}{2}log(|\Sigma_2|) - \frac{1}{2} \Big[(x-p_2)^{T} \Sigma^{-1}(x-p_2)\Big]  \tag{4} $$&lt;/p&gt;
+&lt;p&gt;Now, Eq.$\tag{1}$ can be re-written as:
+$$ D_{KL}(p(x) || q(x)) = \sum_x P(x) * [logP(x) - logQ(x)] \tag{5}  $$&lt;/p&gt;
+&lt;p&gt;Substituting Eq. $3$ and Eq. $4$ in Eq. $5$, we get:&lt;/p&gt;
+&lt;div&gt;
+$$ 
+\begin{multline} 
+ D_{KL}(p(x) || q(x)) = 
+\sum_x P(x) *  \\
+\hspace{25mm}- \Big[\frac{k}{2}log(2\pi) - \frac{1}{2}log(|\Sigma_1|) - \frac{1}{2} \Big[(x-p_1)^{T} \Sigma^{-1}(x-p_1)\Big] \Big] \\
+\hspace{-20mm} \Big[- \Big[- \frac{k}{2}log(2\pi) - \frac{1}{2}log(|\Sigma_2|) - \frac{1}{2} \Big[(x-p_2)^{T} \Sigma^{-1}(x-p_2)\Big]\Big]\Big]
+\end{multline} 
+$$
+&lt;/div&gt;
+&lt;p&gt;$$ $$&lt;/p&gt;
+&lt;div&gt;
+$$ 
+\begin{multline} 
+ D_{KL}(p(x) || q(x)) = 
+\sum_x P(x) *  \\
+\hspace{25mm} \xcancel{-\frac{k}{2}log(2\pi)}  \boxed{- \frac{1}{2}log(|\Sigma_1|)} - \frac{1}{2} \Big[(x-p_1)^{T} \Sigma^{-1}(x-p_1) \\
+\xcancel{+\frac{k}{2}log(2\pi)} \boxed{+ \frac{1}{2}log(|\Sigma_2|)} + \frac{1}{2} \Big[(x-p_2)^{T} \Sigma^{-1}(x-p_2)\Big]
+\end{multline} 
+$$
+&lt;/div&gt;
+&lt;p&gt;We can cancel out the parts that give 0, club the boxed item in one and remaining terms in one. Hence,&lt;/p&gt;
+&lt;div&gt;
+$$ 
+\begin{multline} 
+ D_{KL}(p(x) || q(x)) = 
+\sum_x P(x) *  \\
+\hspace{25mm}  \Bigg[ \hspace{5mm} \boxed{+ \frac{1}{2}log(\frac{|\Sigma_2|}{|\Sigma_1|})} - \frac{1}{2} \Big[(x-p_1)^{T} \Sigma^{-1}(x-p_1) \Big] + \frac{1}{2} \Big[(x-p_2)^{T} \Sigma^{-1}(x-p_2)\Big]\Bigg]\tag{6}
+\end{multline} 
+$$
+&lt;/div&gt;
+&lt;p&gt;$P(x)$ can be split for each of the terms and hence can be written as:&lt;/p&gt;
+&lt;div&gt;
+$$ 
+\begin{multline} 
+ D_{KL}(p(x) || q(x)) = 
+\sum_x P(x) * \Bigg[ \hspace{5mm} \frac{1}{2}log(\frac{|\Sigma_2|}{|\Sigma_1|})\Bigg] \\
+\sum_x P(x) * \Bigg[- \frac{1}{2} \Big[(x-p_1)^{T} \Sigma^{-1}(x-p_1) \Big] \Bigg] + 
+\sum_x P(x) * \Bigg[ \frac{1}{2} \Big[(x-p_2)^{T} \Sigma^{-1}(x-p_2)\Big]\Bigg] \tag{7}
+\end{multline} 
+$$
+&lt;/div&gt;
+&lt;p&gt;Now let us solve the remaining terms one by one. We will start with&lt;/p&gt;
+&lt;p&gt;$$
+\sum_x P(x) * \Bigg[ \frac{1}{2} \Big[(x-p_2)^{T} \Sigma_2^{-1}(x-p_2)\Big]\Bigg] \equiv E_p\Bigg[ \frac{1}{2} \Big[(x-p_2)^{T} \Sigma_2^{-1}(x-p_2)\Big]\Bigg]
+$$&lt;/p&gt;
+&lt;p&gt;Using properties of trace and expectation (Appendix -1), we can re-write:&lt;/p&gt;
+&lt;p&gt;$$
+E_p\Bigg[ \frac{1}{2} \Big[(x-p_2)^{T} \Sigma_2^{-1}(x-p_2)\Big]\Bigg]
+$$ as&lt;/p&gt;
+&lt;p&gt;$$
+= \frac{1}{2}E_p\Bigg[ tr\Big[(x-p_2)^{T} \Sigma_2^{-1}(x-p_2)\Big]\Bigg]
+= E_p\Bigg[ tr\Big[\frac{1}{2} (x-p_2)^{T} \Sigma_2^{-1}(x-p_2)\Big]\Bigg]
+= E_p\Bigg[ tr\Big[\frac{1}{2}(x-p_2)(x-p_2)^{T} \Sigma_2^{-1}\Big]\Bigg]
+$$&lt;/p&gt;
+&lt;p&gt;Using propery __, we have&lt;/p&gt;
+&lt;p&gt;$$
+= tr \Bigg[\hspace{3mm}\boxed{E_p \Bigg( \Bigg[(x-p_2)(x-p_2)^{T} \Bigg]} \frac{1}{2} \Sigma_2^{-1} \Bigg) \Bigg]
+$$&lt;/p&gt;
+&lt;p&gt;The boxed element is nothing but a covaiance matrix $\Sigma_2$, therefore
+$$
+D_{KL}\Big(p(x) || q(x)\Big) =  tr \Bigg[ \Sigma_2 \frac{1}{2} \Sigma_2^{-1}] \Bigg] = tr \Bigg[ I_k \Bigg] \equiv k
+$$&lt;/p&gt;
+&lt;p&gt;To be continued &amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Accessing Windows File From Linux Subshell</title>
+      <link>https://srishti.dev/post/2019-11-06-accessing-windows-from-linux/</link>
+      <pubDate>Wed, 06 Nov 2019 01:25:06 -0700</pubDate>
+      <guid>https://srishti.dev/post/2019-11-06-accessing-windows-from-linux/</guid>
+      <description>&lt;p&gt;If you are using Ubuntu subshell in Windows (I use the one available in Microsoft Store), this is for you. There are times, where you may need to access the files saved on your windows in the Linux subshell.
+All you need to do is mount your drive. You may need to access the subshell via administrative privileges. For example, if you have the file in C: Drive, use the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd /mnt/c
+ls
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Output:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;25032.80826579146
-Vectorized version:5.956172943115234 ms
+&lt;p&gt;The same can be used to access data from external hard disk too. If the external disk is in D: Drive, the command would simply change to:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd /mnt/d
+ls
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;non-vectorized-method&#34;&gt;Non-Vectorized Method:&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;## Non-Vectorized Version
-
-c = 0; tic = 0; toc = 0
-
-#We&#39;ll compute the time taken to compute the dot product using for loop
-tic = time.time()
-for i in range(100000):
-    c += a[i]*b[i]
-toc = time.time()
-
-print(c)
-print(&amp;quot;Vectorized version:&amp;quot; + str(1000*(toc-tic)) + &amp;quot; ms&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Output:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;25032.808265791115
-Vectorized version:91.36772155761719 ms
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;From the outputs, we can see that the for loop takes 20x time than the vectorized method. This difference can be significant if we have large amounts of data where vectorization can save us a lot of computation time. Hence, the need of vectorization!&lt;/p&gt;
 </description>
     </item>
     
