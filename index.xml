@@ -365,18 +365,20 @@ $$&lt;/p&gt;
       <link>https://srishti.dev/post/1111-11-11-we-have-so-much-in-common/</link>
       <pubDate>Sat, 11 Nov 1111 12:38:00 -0700</pubDate>
       <guid>https://srishti.dev/post/1111-11-11-we-have-so-much-in-common/</guid>
-      <description>&lt;p&gt;**General Terms:**&lt;/b&gt;
+      <description>&lt;p&gt;&lt;strong&gt;General Terms:&lt;/strong&gt; &lt;/b&gt;
 Semantic: Semantics is the study of relationship between words and how we can draw meaning from words. Example, A child could be called a child, kid, boy, girl, son, daughter. Sematic relations connect up entities in a text. Semantic relation are at the cross-road between knowledge and language and tTogether with entities make up good chunk of the meaning of the text.&lt;/p&gt;
 &lt;p&gt;To explore, how sets of group of words are linked by means of sevaeral semantic relations, one can look at 
 &lt;a href=&#34;http://wordnetweb.princeton.edu/perl/webwn&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;WordNet&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;**Gist:**&lt;/b&gt;
+&lt;p&gt;&lt;strong&gt;Gist:&lt;/strong&gt; &lt;/b&gt;
 For humans it is easy to identify how two events are related by looking at them. Inherently, we can decompose two events in general abstract meaning and see which of the abstract meaning are similar. Example, when we see a.) a human being typing on a computer b.) a GIF with a mouse typing on a calculator, we can relate the hand movements and object being typed upon. We can relate that both activities are related to pushing some buttons and seeing a result on screen and hence can see the similarities in the two activities. It is a result of underlying human decision making abilty. Computers can&amp;rsquo;t do the same.&lt;/p&gt;
 &lt;p&gt;The paper proposes &amp;ldquo;an approach for learning semantic relational set abstractions on videos&amp;rdquo;. &amp;ldquo;semantic relational set abstractions&amp;rdquo; should be read in two parts &amp;ldquo;semantic&amp;rdquo; and &amp;ldquo;relational set abstractions&amp;rdquo; for better understanding. It simply says that if we can find the relational sets between different videos (e.g. similar images at different view angles) and get an abstract meaning from these relational sets, the proposed method can learn the semantic (meaning) between these abstractions. If we can do so, is will be easier to tell which images are similar, which are different and how they are similar/different.&lt;/p&gt;
-&lt;p&gt;More formally, as the paper puts it, this allows our model to perform cognitive tasks such as:
-1.) set abstraction (which general concept is in common among a set of videos?)
-2.) set completion (which new video goes well with the set?), and
-3.) odd one out detection (which video does not belong to the set?)&lt;/p&gt;
+&lt;p&gt;More formally, as the paper puts it, this allows our model to perform cognitive tasks such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;set abstraction (which general concept is in common among a set of videos?)&lt;/li&gt;
+&lt;li&gt;set completion (which new video goes well with the set?), and&lt;/li&gt;
+&lt;li&gt;odd one out detection (which video does not belong to the set?)&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Datsets used:&lt;/strong&gt; &lt;/b&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;K400 (KInect 400)&lt;/li&gt;
