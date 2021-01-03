@@ -27,10 +27,10 @@
   
     
   
-  <meta name="description" content="Research Assistant">
+  <meta name="description" content="In deep learning, it is not easy to tune hyperparameters for optimal results. If we have 2 parameters (each with 3 prior desirable values), it is an easier problem. We will have possible combinations to try.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://srishti.dev/tags/">
+  <link rel="alternate" hreflang="en-us" href="https://srishti.dev/post/1111-11-11-hyperopt/">
 
   
 
@@ -215,14 +215,12 @@
   
 
   
-  <link rel="alternate" href="/tags/index.xml" type="application/rss+xml" title="Srishti Yadav">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://srishti.dev/tags/">
+  <link rel="canonical" href="https://srishti.dev/post/1111-11-11-hyperopt/">
 
   
   
@@ -238,18 +236,63 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Srishti Yadav">
-  <meta property="og:url" content="https://srishti.dev/tags/">
-  <meta property="og:title" content="Tags | Srishti Yadav">
-  <meta property="og:description" content="Research Assistant"><meta property="og:image" content="https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png">
+  <meta property="og:url" content="https://srishti.dev/post/1111-11-11-hyperopt/">
+  <meta property="og:title" content="Hyperopt: A tool for parameter tuning | Srishti Yadav">
+  <meta property="og:description" content="In deep learning, it is not easy to tune hyperparameters for optimal results. If we have 2 parameters (each with 3 prior desirable values), it is an easier problem. We will have possible combinations to try."><meta property="og:image" content="https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2019-11-06T01:25:06-07:00">
+    
+      <meta property="article:published_time" content="1111-11-11T12:38:00-07:00">
+    
+    <meta property="article:modified_time" content="1111-11-11T12:38:00-07:00">
   
 
   
 
 
+    
 
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://srishti.dev/post/1111-11-11-hyperopt/"
+  },
+  "headline": "Hyperopt: A tool for parameter tuning",
+  
+  "datePublished": "1111-11-11T12:38:00-07:00",
+  "dateModified": "1111-11-11T12:38:00-07:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Srishti Yadav"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Srishti Yadav",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "In deep learning, it is not easy to tune hyperparameters for optimal results. If we have 2 parameters (each with 3 prior desirable values), it is an easier problem. We will have possible combinations to try."
+}
+</script>
+
+  
 
   
 
@@ -257,10 +300,13 @@
   
 
 
+  
 
 
 
-  <title>Tags | Srishti Yadav</title>
+
+
+  <title>Hyperopt: A tool for parameter tuning | Srishti Yadav</title>
 
 </head>
 
@@ -380,7 +426,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/post/"><span>Posts</span></a>
+          <a class="nav-link  active" href="/post/"><span>Posts</span></a>
         </li>
 
         
@@ -510,65 +556,284 @@
 </nav>
 
 
-  
-
-
-
-
-
-
-
-
-
-
-
+  <article class="article">
 
   
 
+
+
+
+
+
+
+
+
+
+
+
+  
+
   
   
+  
+<div class="article-container pt-3">
+  <h1>Hyperopt: A tool for parameter tuning</h1>
+
+  
+
   
     
-  
-<div class="universal-wrapper pt-3">
-  <h1>Tags</h1>
+
+
+<div class="article-metadata">
 
   
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Nov 11, 1111
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    2 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 </div>
 
 
 
-<div class="universal-wrapper">
-  
+  <div class="article-container">
 
-  
-  
-    
-    
-    
-    <div>
-      <h2><a href="/tag/technical/" >technical</a></h2>
-      <div class="article-style">
-        
-      </div>
+    <div class="article-style">
+      <p>In deep learning, it is not easy to tune hyperparameters for optimal results. If we have 2 parameters (each with 3 prior desirable values), it is an easier problem. We will have possible combinations to try. However, with more parameters, the possible combinations will increase exponentially. For example, for 5 parameters, each with 4 desired values, we will have possible combinations. Manually trying each of them is not a very practical approach.</p>
+<p>hence, the question usually is &ldquo;Which way should I update my hyper-parameter to reduce the loss (i.e. gradients) in order to find the optimal model architecture?</p>
+<p>Idealy, we should come up with an approach :</p>
+<ul>
+<li>where we can search for hyperparameters (hyper-parameter search space) using a distributed compute on the cloud.</li>
+<li>intelligently optimize which of the possible combinations from the search space will give us the best results.</li>
+<li>Supports exisitng optimization techniques like Grid Search, Random Search, Bayesian Optmization etc.</li>
+</ul>
+<p>Some of the exisiting tools for hyperparamter tuning are:</p>
+<ol>
+<li>RayTune (<a href="https://ray.readthedocs.io/en/latest/tune.html">https://ray.readthedocs.io/en/latest/tune.html</a>)</li>
+<li>Talos (<a href="https://autonomio.github.io/talos">https://autonomio.github.io/talos</a>)</li>
+<li>NNI (<a href="https://nni.readthedocs.io/en/latest/index.html">https://nni.readthedocs.io/en/latest/index.html</a>)</li>
+<li>Orion (<a href="https://orion.readthedocs.io/en/latest/user/pytorch.html#adapting-the-code-for-orion">https://orion.readthedocs.io/en/latest/user/pytorch.html#adapting-the-code-for-orion</a>)</li>
+<li>Sherpa (<a href="https://parameter-sherpa.readthedocs.io/en/latest/parallel/parallel-guide.html">https://parameter-sherpa.readthedocs.io/en/latest/parallel/parallel-guide.html</a>)</li>
+<li>TPOT (<a href="https://github.com/EpistasisLab/tpot">https://github.com/EpistasisLab/tpot</a>)</li>
+<li>Hyperopt (<a href="https://github.com/hyperopt/hyperopt">https://github.com/hyperopt/hyperopt</a>)</li>
+<li>AWS Sagemaker Hyperparameter tuning (<a href="https://aws.amazon.com/sagemaker/?hp=tile&amp;so-exp=below">https://aws.amazon.com/sagemaker/?hp=tile&amp;so-exp=below</a>)</li>
+<li>Botorch (<a href="https://botorch.org/">https://botorch.org/</a>)</li>
+</ol>
+<p>Here, we will discuss hyperopt!</p>
+<p>Hyperopt is an open-source hyperparameter tuning library written for Python. Hyperopt provides a general API for searching over hyperparameters and model types. Hyperopt offers two tuning algorithms: Random Search and the Bayesian method Tree of Parzen Estimators (TPE). To run hyperopt you define:</p>
+<ul>
+<li>the objective function</li>
+<li>the parameter space</li>
+<li>the number of experiments</li>
+</ul>
+<p>There are both continuous and categorical methods to describe the parameters.</p>
+<!-- <img src="/img/hyperopt.png " width="600" height="800" /> -->
+<p><strong>Limitation</strong>:
+Hyper-parameter takes a lot of time to tune the parameters if number of trials and number of epocs (iteration of the neural network) are higher (which is desired). Hence, it would be good to explore how to parallelize the tuning work.</p>
+
     </div>
-  
-    
-    
-    
-    <div>
-      <h2><a href="/tag/source-themes/" >Source Themes</a></h2>
-      <div class="article-style">
-        
-      </div>
-    </div>
-  
 
-  
+    
 
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/technical/">technical</a>
+  
 </div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+    
+    
+    
+      
+    
+    
+    
+    <div class="media author-card content-widget-hr">
+      
+        
+        <img class="avatar mr-3 avatar-circle" src="/author/srishti-yadav/avatar_hu9d788c3a7095d2e8067c7cba9a8e0ac1_2405876_270x270_fill_q90_lanczos_center.jpg" alt="Srishti Yadav">
+      
+
+      <div class="media-body">
+        <h5 class="card-title"><a href="https://srishti.dev">Srishti Yadav</a></h5>
+        <h6 class="card-subtitle">Research Assistant</h6>
+        <p class="card-text">My research interests include applying computationally intensive machine learning algorithm to computer vision algoritmns.</p>
+        <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:srishtiy@sfu.ca" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://linkedin.com/in/srishti-yadav" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/copperwiring" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/files/cv.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/1111-11-11-we-have-so-much-in-common/">We Have So Much In Common: Modeling Semantic Relational Set Abstractions In Videos</a></li>
+      
+      <li><a href="/post/1111-11-11-kl-divergence/">KL-Divergence</a></li>
+      
+      <li><a href="/post/1111-11-11-few-shot-learning-basic-concepts/">Few Shot Learning</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+  </div>
+</article>
 
       
 

@@ -3,42 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://srishti.dev/post/2020-06-01-hyperopt/</loc>
-    <lastmod>2020-06-01T12:38:00-07:00</lastmod>
+    <loc>https://srishti.dev/post/1111-11-11-accessing-windows-from-linux/</loc>
+    <lastmod>2019-11-06T01:25:06-07:00</lastmod>
   </url>
   
   <url>
     <loc>https://srishti.dev/post/</loc>
-    <lastmod>2020-06-01T12:38:00-07:00</lastmod>
+    <lastmod>2019-11-06T01:25:06-07:00</lastmod>
   </url>
   
   <url>
     <loc>https://srishti.dev/</loc>
-    <lastmod>2020-06-01T12:38:00-07:00</lastmod>
+    <lastmod>2019-11-06T01:25:06-07:00</lastmod>
   </url>
   
   <url>
     <loc>https://srishti.dev/tags/</loc>
-    <lastmod>2020-06-01T12:38:00-07:00</lastmod>
+    <lastmod>2019-11-06T01:25:06-07:00</lastmod>
   </url>
   
   <url>
     <loc>https://srishti.dev/tag/technical/</loc>
-    <lastmod>2020-06-01T12:38:00-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://srishti.dev/post/020-02-01-few-shot-learning-basic-concepts/</loc>
-    <lastmod>2020-02-01T12:38:00-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://srishti.dev/post/2020-01-15-kl-divergence/</loc>
-    <lastmod>2020-01-15T12:38:00-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://srishti.dev/post/2019-11-06-accessing-windows-from-linux/</loc>
     <lastmod>2019-11-06T01:25:06-07:00</lastmod>
   </url>
   
@@ -160,6 +145,26 @@
   <url>
     <loc>https://srishti.dev/publication/training-of-sensors-for-early-warning-system-of-rainfall-induced-landslides/</loc>
     <lastmod>2017-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://srishti.dev/post/1111-11-11-few-shot-learning-basic-concepts/</loc>
+    <lastmod>1111-11-11T12:38:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://srishti.dev/post/1111-11-11-hyperopt/</loc>
+    <lastmod>1111-11-11T12:38:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://srishti.dev/post/1111-11-11-kl-divergence/</loc>
+    <lastmod>1111-11-11T12:38:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://srishti.dev/post/1111-11-11-we-have-so-much-in-common/</loc>
+    <lastmod>1111-11-11T12:38:00-07:00</lastmod>
   </url>
   
   <url>

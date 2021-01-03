@@ -5,7 +5,7 @@
     <link>https://srishti.dev/tag/technical/</link>
       <atom:link href="https://srishti.dev/tag/technical/index.xml" rel="self" type="application/rss+xml" />
     <description>technical</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jun 2020 12:38:00 -0700</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 06 Nov 2019 01:25:06 -0700</lastBuildDate>
     <image>
       <url>https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png</url>
       <title>technical</title>
@@ -13,49 +13,27 @@
     </image>
     
     <item>
-      <title>Hyperopt: A tool for parameter tuning</title>
-      <link>https://srishti.dev/post/2020-06-01-hyperopt/</link>
-      <pubDate>Mon, 01 Jun 2020 12:38:00 -0700</pubDate>
-      <guid>https://srishti.dev/post/2020-06-01-hyperopt/</guid>
-      <description>&lt;p&gt;In deep learning, it is not easy to tune hyperparameters for optimal results. If we have 2 parameters (each with 3 prior desirable values), it is an easier problem. We will have possible combinations to try. However, with more parameters, the possible combinations will increase exponentially. For example, for 5 parameters, each with 4 desired values, we will have possible combinations. Manually trying each of them is not a very practical approach.&lt;/p&gt;
-&lt;p&gt;hence, the question usually is &amp;ldquo;Which way should I update my hyper-parameter to reduce the loss (i.e. gradients) in order to find the optimal model architecture?&lt;/p&gt;
-&lt;p&gt;Idealy, we should come up with an approach :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;where we can search for hyperparameters (hyper-parameter search space) using a distributed compute on the cloud.&lt;/li&gt;
-&lt;li&gt;intelligently optimize which of the possible combinations from the search space will give us the best results.&lt;/li&gt;
-&lt;li&gt;Supports exisitng optimization techniques like Grid Search, Random Search, Bayesian Optmization etc.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Some of the exisiting tools for hyperparamter tuning are:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;RayTune (&lt;a href=&#34;https://ray.readthedocs.io/en/latest/tune.html&#34;&gt;https://ray.readthedocs.io/en/latest/tune.html&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Talos (&lt;a href=&#34;https://autonomio.github.io/talos&#34;&gt;https://autonomio.github.io/talos&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;NNI (&lt;a href=&#34;https://nni.readthedocs.io/en/latest/index.html&#34;&gt;https://nni.readthedocs.io/en/latest/index.html&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Orion (&lt;a href=&#34;https://orion.readthedocs.io/en/latest/user/pytorch.html#adapting-the-code-for-orion&#34;&gt;https://orion.readthedocs.io/en/latest/user/pytorch.html#adapting-the-code-for-orion&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Sherpa (&lt;a href=&#34;https://parameter-sherpa.readthedocs.io/en/latest/parallel/parallel-guide.html&#34;&gt;https://parameter-sherpa.readthedocs.io/en/latest/parallel/parallel-guide.html&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;TPOT (&lt;a href=&#34;https://github.com/EpistasisLab/tpot&#34;&gt;https://github.com/EpistasisLab/tpot&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Hyperopt (&lt;a href=&#34;https://github.com/hyperopt/hyperopt&#34;&gt;https://github.com/hyperopt/hyperopt&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;AWS Sagemaker Hyperparameter tuning (&lt;a href=&#34;https://aws.amazon.com/sagemaker/?hp=tile&amp;amp;so-exp=below&#34;&gt;https://aws.amazon.com/sagemaker/?hp=tile&amp;amp;so-exp=below&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Botorch (&lt;a href=&#34;https://botorch.org/&#34;&gt;https://botorch.org/&lt;/a&gt;)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Here, we will discuss hyperopt!&lt;/p&gt;
-&lt;p&gt;Hyperopt is an open-source hyperparameter tuning library written for Python. Hyperopt provides a general API for searching over hyperparameters and model types. Hyperopt offers two tuning algorithms: Random Search and the Bayesian method Tree of Parzen Estimators (TPE). To run hyperopt you define:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;the objective function&lt;/li&gt;
-&lt;li&gt;the parameter space&lt;/li&gt;
-&lt;li&gt;the number of experiments&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;There are both continuous and categorical methods to describe the parameters.&lt;/p&gt;
-&lt;!-- &lt;img src=&#34;https://srishti.dev/img/hyperopt.png &#34; width=&#34;600&#34; height=&#34;800&#34; /&gt; --&gt;
-&lt;p&gt;&lt;strong&gt;Limitation&lt;/strong&gt;:
-Hyper-parameter takes a lot of time to tune the parameters if number of trials and number of epocs (iteration of the neural network) are higher (which is desired). Hence, it would be good to explore how to parallelize the tuning work.&lt;/p&gt;
+      <title>Accessing Windows File From Linux Subshell</title>
+      <link>https://srishti.dev/post/1111-11-11-accessing-windows-from-linux/</link>
+      <pubDate>Wed, 06 Nov 2019 01:25:06 -0700</pubDate>
+      <guid>https://srishti.dev/post/1111-11-11-accessing-windows-from-linux/</guid>
+      <description>&lt;p&gt;If you are using Ubuntu subshell in Windows (I use the one available in Microsoft Store), this is for you. There are times, where you may need to access the files saved on your windows in the Linux subshell.
+All you need to do is mount your drive. You may need to access the subshell via administrative privileges. For example, if you have the file in C: Drive, use the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd /mnt/c
+ls
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The same can be used to access data from external hard disk too. If the external disk is in D: Drive, the command would simply change to:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd /mnt/d
+ls
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
     <item>
       <title>Few Shot Learning</title>
-      <link>https://srishti.dev/post/020-02-01-few-shot-learning-basic-concepts/</link>
-      <pubDate>Sat, 01 Feb 2020 12:38:00 -0700</pubDate>
-      <guid>https://srishti.dev/post/020-02-01-few-shot-learning-basic-concepts/</guid>
+      <link>https://srishti.dev/post/1111-11-11-few-shot-learning-basic-concepts/</link>
+      <pubDate>Sat, 11 Nov 1111 12:38:00 -0700</pubDate>
+      <guid>https://srishti.dev/post/1111-11-11-few-shot-learning-basic-concepts/</guid>
       <description>&lt;p&gt;&lt;b&gt;Question&lt;/b&gt;: If a class has only two samples, can a computer make correct prediction? &lt;br&gt;
 &lt;i&gt;Note: Number of samples is too less for training.&lt;/i&gt;&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Approach:&lt;/b&gt; Few Shot Learning&lt;/p&gt;
@@ -147,10 +125,49 @@ We are dealing with domain transfer. First, there is the problem of domain shift
     </item>
     
     <item>
+      <title>Hyperopt: A tool for parameter tuning</title>
+      <link>https://srishti.dev/post/1111-11-11-hyperopt/</link>
+      <pubDate>Sat, 11 Nov 1111 12:38:00 -0700</pubDate>
+      <guid>https://srishti.dev/post/1111-11-11-hyperopt/</guid>
+      <description>&lt;p&gt;In deep learning, it is not easy to tune hyperparameters for optimal results. If we have 2 parameters (each with 3 prior desirable values), it is an easier problem. We will have possible combinations to try. However, with more parameters, the possible combinations will increase exponentially. For example, for 5 parameters, each with 4 desired values, we will have possible combinations. Manually trying each of them is not a very practical approach.&lt;/p&gt;
+&lt;p&gt;hence, the question usually is &amp;ldquo;Which way should I update my hyper-parameter to reduce the loss (i.e. gradients) in order to find the optimal model architecture?&lt;/p&gt;
+&lt;p&gt;Idealy, we should come up with an approach :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;where we can search for hyperparameters (hyper-parameter search space) using a distributed compute on the cloud.&lt;/li&gt;
+&lt;li&gt;intelligently optimize which of the possible combinations from the search space will give us the best results.&lt;/li&gt;
+&lt;li&gt;Supports exisitng optimization techniques like Grid Search, Random Search, Bayesian Optmization etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some of the exisiting tools for hyperparamter tuning are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;RayTune (&lt;a href=&#34;https://ray.readthedocs.io/en/latest/tune.html&#34;&gt;https://ray.readthedocs.io/en/latest/tune.html&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Talos (&lt;a href=&#34;https://autonomio.github.io/talos&#34;&gt;https://autonomio.github.io/talos&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;NNI (&lt;a href=&#34;https://nni.readthedocs.io/en/latest/index.html&#34;&gt;https://nni.readthedocs.io/en/latest/index.html&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Orion (&lt;a href=&#34;https://orion.readthedocs.io/en/latest/user/pytorch.html#adapting-the-code-for-orion&#34;&gt;https://orion.readthedocs.io/en/latest/user/pytorch.html#adapting-the-code-for-orion&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Sherpa (&lt;a href=&#34;https://parameter-sherpa.readthedocs.io/en/latest/parallel/parallel-guide.html&#34;&gt;https://parameter-sherpa.readthedocs.io/en/latest/parallel/parallel-guide.html&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;TPOT (&lt;a href=&#34;https://github.com/EpistasisLab/tpot&#34;&gt;https://github.com/EpistasisLab/tpot&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Hyperopt (&lt;a href=&#34;https://github.com/hyperopt/hyperopt&#34;&gt;https://github.com/hyperopt/hyperopt&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;AWS Sagemaker Hyperparameter tuning (&lt;a href=&#34;https://aws.amazon.com/sagemaker/?hp=tile&amp;amp;so-exp=below&#34;&gt;https://aws.amazon.com/sagemaker/?hp=tile&amp;amp;so-exp=below&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Botorch (&lt;a href=&#34;https://botorch.org/&#34;&gt;https://botorch.org/&lt;/a&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here, we will discuss hyperopt!&lt;/p&gt;
+&lt;p&gt;Hyperopt is an open-source hyperparameter tuning library written for Python. Hyperopt provides a general API for searching over hyperparameters and model types. Hyperopt offers two tuning algorithms: Random Search and the Bayesian method Tree of Parzen Estimators (TPE). To run hyperopt you define:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the objective function&lt;/li&gt;
+&lt;li&gt;the parameter space&lt;/li&gt;
+&lt;li&gt;the number of experiments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are both continuous and categorical methods to describe the parameters.&lt;/p&gt;
+&lt;!-- &lt;img src=&#34;https://srishti.dev/img/hyperopt.png &#34; width=&#34;600&#34; height=&#34;800&#34; /&gt; --&gt;
+&lt;p&gt;&lt;strong&gt;Limitation&lt;/strong&gt;:
+Hyper-parameter takes a lot of time to tune the parameters if number of trials and number of epocs (iteration of the neural network) are higher (which is desired). Hence, it would be good to explore how to parallelize the tuning work.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>KL-Divergence</title>
-      <link>https://srishti.dev/post/2020-01-15-kl-divergence/</link>
-      <pubDate>Wed, 15 Jan 2020 12:38:00 -0700</pubDate>
-      <guid>https://srishti.dev/post/2020-01-15-kl-divergence/</guid>
+      <link>https://srishti.dev/post/1111-11-11-kl-divergence/</link>
+      <pubDate>Sat, 11 Nov 1111 12:38:00 -0700</pubDate>
+      <guid>https://srishti.dev/post/1111-11-11-kl-divergence/</guid>
       <description>&lt;p&gt;&lt;strong&gt;What is KL-Divergence&lt;/strong&gt;
 KL Divergence is a measure of how one probabilty distributon is different from another. Some people also call it the distance between two distributions, however, strictly speaking it is not the distance. Distance is commutative while KL-Divergence is not.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Mathematically&lt;/strong&gt;:&lt;/p&gt;
@@ -246,24 +263,31 @@ $$&lt;/p&gt;
 $$
 D_{KL}\Big(p(x) || q(x)\Big) =  tr \Bigg[ \Sigma_2 \frac{1}{2} \Sigma_2^{-1}] \Bigg] = tr \Bigg[ I_k \Bigg] \equiv k
 $$&lt;/p&gt;
-&lt;p&gt;To be continued &amp;hellip;&lt;/p&gt;
+&lt;p&gt;(Equations in Latex are so tough sometimes) To be continued &amp;hellip;&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Accessing Windows File From Linux Subshell</title>
-      <link>https://srishti.dev/post/2019-11-06-accessing-windows-from-linux/</link>
-      <pubDate>Wed, 06 Nov 2019 01:25:06 -0700</pubDate>
-      <guid>https://srishti.dev/post/2019-11-06-accessing-windows-from-linux/</guid>
-      <description>&lt;p&gt;If you are using Ubuntu subshell in Windows (I use the one available in Microsoft Store), this is for you. There are times, where you may need to access the files saved on your windows in the Linux subshell.
-All you need to do is mount your drive. You may need to access the subshell via administrative privileges. For example, if you have the file in C: Drive, use the following:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;cd /mnt/c
-ls
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The same can be used to access data from external hard disk too. If the external disk is in D: Drive, the command would simply change to:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;cd /mnt/d
-ls
-&lt;/code&gt;&lt;/pre&gt;
+      <title>We Have So Much In Common: Modeling Semantic Relational Set Abstractions In Videos</title>
+      <link>https://srishti.dev/post/1111-11-11-we-have-so-much-in-common/</link>
+      <pubDate>Sat, 11 Nov 1111 12:38:00 -0700</pubDate>
+      <guid>https://srishti.dev/post/1111-11-11-we-have-so-much-in-common/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;General Terms&lt;/strong&gt;
+Semantic: Semantics is the study of relationship between words and how we can draw meaning from words. Example, A child could be called a child, kid, boy, girl, son, daughter. Sematic relations connect up entities in a text. Semantic relation are at the cross-road between knowledge and language and tTogether with entities make up good chunk of the meaning of the text.&lt;/p&gt;
+&lt;p&gt;To explore, how sets of group of words are linked by means of sevaeral semantic relations, one can look at 
+&lt;a href=&#34;http://wordnetweb.princeton.edu/perl/webwn&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;WordNet&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Gist&lt;/strong&gt;
+For humans it is easy to identify how two events are related by looking at them. Inherently, we can decompose two events in general abstract meaning and see which of the abstract meaning are similar. Example, when we see a.) a human being typing on a computer b.) a GIF with a mouse typing on a calculator, we can relate the hand movements and object being typed upon. We can relate that both activities are related to pushing some buttons and seeing a result on screen and hence can see the similarities in the two activities. It is a result of underlying human decision making abilty. Computers can&amp;rsquo;t do the same.&lt;/p&gt;
+&lt;p&gt;The paper proposes &amp;ldquo;an approach for learning semantic relational set abstractions on videos&amp;rdquo;. &amp;ldquo;semantic relational set abstractions&amp;rdquo; should be read in two parts &amp;ldquo;semantic&amp;rdquo; and &amp;ldquo;relational set abstractions&amp;rdquo; for better understanding. It simply says that if we can find the relational sets between different videos (e.g. similar images at different view angles) and get an abstract meaning from these relational sets, the proposed method can learn the semantic (meaning) between these abstractions. If we can do so, is will be easier to tell which images are similar, which are different and how they are similar/different.&lt;/p&gt;
+&lt;p&gt;More formally, as the paper puts it, this allows our model to perform cognitive tasks such as:
+1.) set abstraction (which general concept is in common among a set of videos?)
+2.) set completion (which new video goes well with the set?), and
+3.) odd one out detection (which video does not belong to the set?)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Datsets used&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;K400 (KInect 400)&lt;/li&gt;
+&lt;li&gt;Multi-Monets in Time&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
