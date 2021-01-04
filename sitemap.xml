@@ -3,31 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://srishti.dev/post/1111-11-11-accessing-windows-from-linux/</loc>
-    <lastmod>2019-11-06T01:25:06-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://srishti.dev/post/</loc>
-    <lastmod>2019-11-06T01:25:06-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://srishti.dev/</loc>
-    <lastmod>2019-11-06T01:25:06-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://srishti.dev/tags/</loc>
-    <lastmod>2019-11-06T01:25:06-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://srishti.dev/tag/technical/</loc>
-    <lastmod>2019-11-06T01:25:06-07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://srishti.dev/publication/deep-attention-models-for-human-tracking-using-rgbd/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url>
@@ -74,6 +49,16 @@
   
   <url>
     <loc>https://srishti.dev/author/srishti-yadav/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://srishti.dev/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://srishti.dev/tags/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -163,8 +148,23 @@
   </url>
   
   <url>
+    <loc>https://srishti.dev/post/</loc>
+    <lastmod>1111-11-11T12:38:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://srishti.dev/tag/technical/</loc>
+    <lastmod>1111-11-11T12:38:00-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://srishti.dev/post/1111-11-11-we-have-so-much-in-common/</loc>
     <lastmod>1111-11-11T12:38:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://srishti.dev/post/1111-11-11-accessing-windows-from-linux/</loc>
+    <lastmod>1111-11-11T01:25:06-07:00</lastmod>
   </url>
   
   <url>

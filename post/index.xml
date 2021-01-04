@@ -5,29 +5,12 @@
     <link>https://srishti.dev/post/</link>
       <atom:link href="https://srishti.dev/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 06 Nov 2019 01:25:06 -0700</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 11 Nov 1111 12:38:00 -0700</lastBuildDate>
     <image>
       <url>https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>https://srishti.dev/post/</link>
     </image>
-    
-    <item>
-      <title>Accessing Windows File From Linux Subshell</title>
-      <link>https://srishti.dev/post/1111-11-11-accessing-windows-from-linux/</link>
-      <pubDate>Wed, 06 Nov 2019 01:25:06 -0700</pubDate>
-      <guid>https://srishti.dev/post/1111-11-11-accessing-windows-from-linux/</guid>
-      <description>&lt;p&gt;If you are using Ubuntu subshell in Windows (I use the one available in Microsoft Store), this is for you. There are times, where you may need to access the files saved on your windows in the Linux subshell.
-All you need to do is mount your drive. You may need to access the subshell via administrative privileges. For example, if you have the file in C: Drive, use the following:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;cd /mnt/c
-ls
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The same can be used to access data from external hard disk too. If the external disk is in D: Drive, the command would simply change to:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;cd /mnt/d
-ls
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
     
     <item>
       <title>Few Shot Learning</title>
@@ -291,6 +274,23 @@ For humans it is easy to identify how two events are related by looking at them.
 &lt;li&gt;K400 (KInect 400)&lt;/li&gt;
 &lt;li&gt;Multi-Monets in Time&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Accessing Windows File From Linux Subshell</title>
+      <link>https://srishti.dev/post/1111-11-11-accessing-windows-from-linux/</link>
+      <pubDate>Sat, 11 Nov 1111 01:25:06 -0700</pubDate>
+      <guid>https://srishti.dev/post/1111-11-11-accessing-windows-from-linux/</guid>
+      <description>&lt;p&gt;If you are using Ubuntu subshell in Windows (I use the one available in Microsoft Store), this is for you. There are times, where you may need to access the files saved on your windows in the Linux subshell.
+All you need to do is mount your drive. You may need to access the subshell via administrative privileges. For example, if you have the file in C: Drive, use the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd /mnt/c
+ls
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The same can be used to access data from external hard disk too. If the external disk is in D: Drive, the command would simply change to:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd /mnt/d
+ls
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
