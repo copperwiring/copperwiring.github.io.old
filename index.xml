@@ -106,6 +106,87 @@ Supplementary notes can be added here, including [code and math](https://sourcet
     </item>
     
     <item>
+      <title>Datasets for Fine-Grained Image Classification</title>
+      <link>https://srishti.dev/post/1111-11-11-datasets-for-fine-grained-image-classification/</link>
+      <pubDate>Sat, 11 Nov 1111 12:38:00 -0700</pubDate>
+      <guid>https://srishti.dev/post/1111-11-11-datasets-for-fine-grained-image-classification/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;iNat2017&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;u&gt;Data:&lt;/u&gt; &lt;a href=&#34;https://github.com/visipedia/inat_comp/tree/master/2017&#34;&gt;&lt;a href=&#34;https://github.com/visipedia/inat_comp/tree/master/2017&#34;&gt;https://github.com/visipedia/inat_comp/tree/master/2017&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;iNat2018 and iNat2019&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;u&gt;Data:&lt;/u&gt; &lt;a href=&#34;https://github.com/visipedia/inat_comp/blob/master/2018/README.md&#34;&gt;&lt;a href=&#34;https://github.com/visipedia/inat_comp/blob/master/2018/README.md&#34;&gt;https://github.com/visipedia/inat_comp/blob/master/2018/README.md&lt;/a&gt; &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;Data:&lt;/u&gt; &lt;a href=&#34;https://github.com/visipedia/inat_comp&#34;&gt;&lt;a href=&#34;https://github.com/visipedia/inat_comp&#34;&gt;https://github.com/visipedia/inat_comp&lt;/a&gt; &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;Details:&lt;/u&gt; The dataset is similar to iNat2017 with small differences, which are mentioned in the website.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Herbarium Dataset&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;u&gt;Paper:&lt;/u&gt; &lt;a href=&#34;https://drive.google.com/file/d/1HPyY82IwGkKlp3ow13JCDtn1G-s_mgGJ/view&#34;&gt;&lt;a href=&#34;https://drive.google.com/file/d/1HPyY82IwGkKlp3ow13JCDtn1G-s_mgGJ/view&#34;&gt;https://drive.google.com/file/d/1HPyY82IwGkKlp3ow13JCDtn1G-s_mgGJ/view&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Cassava (leaves) images&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;u&gt;Paper:&lt;/u&gt; &lt;a href=&#34;https://drive.google.com/file/d/1GW0Ak_fS0ZMXcy89B7di1xNF1MBIga_4/view&#34;&gt;&lt;a href=&#34;https://drive.google.com/file/d/1GW0Ak_fS0ZMXcy89B7di1xNF1MBIga_4/view&#34;&gt;https://drive.google.com/file/d/1GW0Ak_fS0ZMXcy89B7di1xNF1MBIga_4/view&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Birds&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;u&gt;Paper:&lt;/u&gt; &lt;a href=&#34;https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Horn_Building_a_Bird_2015_CVPR_paper.pdf&#34;&gt;&lt;a href=&#34;https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Horn_Building_a_Bird_2015_CVPR_paper.pdf&#34;&gt;https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Horn_Building_a_Bird_2015_CVPR_paper.pdf&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Animal Species (camera trap)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;u&gt;Paper:&lt;/u&gt; &lt;a href=&#34;https://arxiv.org/pdf/2004.10340.pdf&#34;&gt;&lt;a href=&#34;https://arxiv.org/pdf/2004.10340.pdf&#34;&gt;https://arxiv.org/pdf/2004.10340.pdf&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;&lt;strong&gt;UCSD Birds 200&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;u&gt;Data:&lt;/u&gt; &lt;a href=&#34;http://www.vision.caltech.edu/visipedia/CUB-200.html&#34;&gt;&lt;a href=&#34;http://www.vision.caltech.edu/visipedia/CUB-200.html&#34;&gt;http://www.vision.caltech.edu/visipedia/CUB-200.html&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;Paper:&lt;/u&gt; &lt;a href=&#34;https://authors.library.caltech.edu/27452/1/CUB_200_2011.pdf&#34;&gt;&lt;a href=&#34;https://authors.library.caltech.edu/27452/1/CUB_200_2011.pdf&#34;&gt;https://authors.library.caltech.edu/27452/1/CUB_200_2011.pdf&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Birdsnap Large-scale Fine-grained Visual Categorization of Birds&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;u&gt;Data:&lt;/u&gt; &lt;a href=&#34;http://birdsnap.com/&#34;&gt;Link doesn&amp;rsquo;t work anymore.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;Paper:&lt;/u&gt; &lt;a href=&#34;&#34;&gt;&lt;a href=&#34;https://openaccess.thecvf.com/content_cvpr_2014/papers/Berg_Birdsnap_Large-scale_Fine-grained_2014_CVPR_paper.pdf&#34;&gt;https://openaccess.thecvf.com/content_cvpr_2014/papers/Berg_Birdsnap_Large-scale_Fine-grained_2014_CVPR_paper.pdf&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Stanford Dogs&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;u&gt;Data:&lt;/u&gt; &lt;a href=&#34;http://vision.stanford.edu/aditya86/ImageNetDogs/&#34;&gt;&lt;a href=&#34;http://vision.stanford.edu/aditya86/ImageNetDogs/&#34;&gt;http://vision.stanford.edu/aditya86/ImageNetDogs/&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;Paper:&lt;/u&gt; &lt;a href=&#34;https://people.csail.mit.edu/khosla/papers/fgvc2011.pdf&#34;&gt;&lt;a href=&#34;https://people.csail.mit.edu/khosla/papers/fgvc2011.pdf&#34;&gt;https://people.csail.mit.edu/khosla/papers/fgvc2011.pdf&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;10&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Oxford Dogs&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;u&gt;Data:&lt;/u&gt;&lt;a href=&#34;https://www.robots.ox.ac.uk/~vgg/data/pets/&#34;&gt;&lt;a href=&#34;https://www.robots.ox.ac.uk/~vgg/data/pets/&#34;&gt;https://www.robots.ox.ac.uk/~vgg/data/pets/&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;Paper:&lt;/u&gt;&lt;a href=&#34;https://www.robots.ox.ac.uk/~vgg/publications/2012/parkhi12a/parkhi12a.pdf&#34;&gt;&lt;a href=&#34;https://www.robots.ox.ac.uk/~vgg/publications/2012/parkhi12a/parkhi12a.pdf&#34;&gt;https://www.robots.ox.ac.uk/~vgg/publications/2012/parkhi12a/parkhi12a.pdf&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Flowers&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;u&gt;Data:&lt;/u&gt;&lt;a href=&#34;https://www.robots.ox.ac.uk/~vgg/data.html&#34;&gt;Link mentioned in the paper but doesn&amp;rsquo;t work. Couldn&amp;rsquo;t find the datasest&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;Paper:&lt;/u&gt;&lt;a href=&#34;https://www.ics.uci.edu/~welling/teaching/273ASpring09/nilsback06.pdf&#34;&gt;&lt;a href=&#34;https://www.ics.uci.edu/~welling/teaching/273ASpring09/nilsback06.pdf&#34;&gt;https://www.ics.uci.edu/~welling/teaching/273ASpring09/nilsback06.pdf&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Few Shot Learning</title>
       <link>https://srishti.dev/post/1111-11-11-few-shot-learning-basic-concepts/</link>
       <pubDate>Sat, 11 Nov 1111 12:38:00 -0700</pubDate>
@@ -340,6 +421,84 @@ $$
 D_{KL}\Big(p(x) || q(x)\Big) =  tr \Bigg[ \Sigma_2 \frac{1}{2} \Sigma_2^{-1}] \Bigg] = tr \Bigg[ I_k \Bigg] \equiv k
 $$&lt;/p&gt;
 &lt;p&gt;(Equations in Latex are so tough sometimes) To be continued &amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Presence-Only Geographical Priors for Fine-Grained Image Classification</title>
+      <link>https://srishti.dev/post/1111-11-11-presence-only-geographical-priors-for-fine-grained-image-classification/</link>
+      <pubDate>Sat, 11 Nov 1111 12:38:00 -0700</pubDate>
+      <guid>https://srishti.dev/post/1111-11-11-presence-only-geographical-priors-for-fine-grained-image-classification/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Paper:&lt;/strong&gt; 
+&lt;a href=&#34;https://arxiv.org/abs/1906.05272&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; &lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Explores how can we use additional meta-data available to make better classification (in this case animal species).&lt;/li&gt;
+&lt;li&gt;Explores how to make best use of additional meta data which comes with most images today.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Summary:&lt;/strong&gt; &lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Knowing where a given image was taken can provide a strong prior for what objects it may contain.&lt;/li&gt;
+&lt;li&gt;Paper provide a novel training loss to capture these relationship&lt;/li&gt;
+&lt;li&gt;The data they assemble can have unrelated image and location dataset as long as both contain the same categories.&lt;/li&gt;
+&lt;li&gt;At test time, given an image and where and when it was taken, they aim to estimate which category it contains.&lt;/li&gt;
+&lt;li&gt;Location information is incorporated as bayesian spatio-temporal prior. Also, during the modelling, spatio temporal (longitude, latitude, time) are independent from the image classifier&lt;/li&gt;
+&lt;li&gt;It is difficult and time consuming to have information on where and when a given category has been a.) observed to be present and b.) observed to be absent. Hence, the paper explores presence-only setting (&lt;u&gt;novelty&lt;/u&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The iNaturalist Species Classification and Detection Dataset</title>
+      <link>https://srishti.dev/post/1111-11-11-the-inaturalist-species-classification-and-detection-dataset/</link>
+      <pubDate>Sat, 11 Nov 1111 12:38:00 -0700</pubDate>
+      <guid>https://srishti.dev/post/1111-11-11-the-inaturalist-species-classification-and-detection-dataset/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Paper:&lt;/strong&gt; 
+&lt;a href=&#34;https://openaccess.thecvf.com/content_cvpr_2018/papers/Van_Horn_The_INaturalist_Species_CVPR_2018_paper.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; &lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Focuses on species of plants and animals captured in wide variety of situations, different camera types, varying image quality, feature large class imbalance and verified by citizen scientists.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Summary:&lt;/strong&gt; &lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;u&gt;Details:&lt;/u&gt; There are a total of 5,089 categories in the dataset, with 579,184 training images and 95,986 validation images. For the training set, the distribution of images per category follows the observation frequency of that category by the iNaturalist community. Therefore, there is a non-uniform distribution of images per category.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;u&gt;Experiments: &lt;/u&gt; Classification experiments were done using ResNet, Inception V3, Inception ResNet V2 and MobileNet&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;u&gt;Known issues: &lt;/u&gt; a.)  Doesn&amp;rsquo;t contains additional annotations such as sex and life stage attributes, habitat tags, and pixel level labels for the four super-classes that were challenging to annotate. b.) Need of an efficient algorithm that works when the test set contains classes that were never seen during training.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Unreasonable Effectiveness of Noisy Data for Fine-Grained Recognition</title>
+      <link>https://srishti.dev/post/1111-11-11-the-unreasonable-effectiveness-of-noisy-data-for-fine-grained-recognition/</link>
+      <pubDate>Sat, 11 Nov 1111 12:38:00 -0700</pubDate>
+      <guid>https://srishti.dev/post/1111-11-11-the-unreasonable-effectiveness-of-noisy-data-for-fine-grained-recognition/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Paper:&lt;/strong&gt; 
+&lt;a href=&#34;https://research.google/pubs/pub45605/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; &lt;/b&gt;
+Leverage free, noisy data from the web to train effective models of fine-grained recognition.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Summary:&lt;/strong&gt; &lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Interesting paper on using noisy data from the web.&lt;/li&gt;
+&lt;li&gt;They sample images directly from Google search, using all returned images as images for a given category. For L-Bird and L-Butterfly, queries are for the scientific name of the category, and for L-Aircraft and L-Dog queries are simply for the category name (e.g.“Boeing 737-200” or “Pembroke Welsh Corgi”).&lt;/li&gt;
+&lt;li&gt;Active learning-based approach to collect the data.&lt;/li&gt;
+&lt;li&gt;The active learning begins by training a classifier on a seed set of input images and labels (i.e.the Stanford Dogs training set), then proceeds by  iteratively  picking  a  set  of  images  to  annotate,  obtaining  labels  with  human  annotators,  and  re-training  the  classifier.&lt;/li&gt;
+&lt;li&gt;Inception V3 is the base classifier&lt;/li&gt;
+&lt;li&gt;To avoid images overlap between GT and web images, aggressive duplication procedure with all ground truth test sets and their corresponding web images is performed using a SOTA for learning similarity metric between images.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Questions:&lt;/strong&gt; &lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How reliable are the search results for a single category from web, otherwise there are a lot of False Positives being introduced.&lt;/li&gt;
+&lt;li&gt;Is it limited to extracting category information or do we need extra labels like position, time etc.&lt;/li&gt;
+&lt;li&gt;How much human annotators are required to be involved or are they even involved?&lt;/li&gt;
+&lt;li&gt;Since algo queries user to label data from time to time; does this query apply on a subset of the images to verify the annotations or create annotations.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
