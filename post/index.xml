@@ -25,6 +25,19 @@
 &lt;li&gt;Blog: 
 &lt;a href=&#34;https://openai.com/blog/clip/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CLIP: Connecting Text and Images&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;General Terms:&lt;/strong&gt; &lt;/b&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Contrastive Learning:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Embedding:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Zero-shot Learning:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
 &lt;p&gt;The paper describes an approach where it takes a large dataset of image text pair and tries to learn a model that scores whether a image and text could co-occur. This is learned over a large dataset.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Question: How to do classification zero shot i.e. without any training?&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Given a specified classification task where there are some images and some labels and you are supposed to evaluate based on our prediction, you will embed all text labels into vectors and images into vectors and them compare the score of their cross product. The pairing that is going to give the highest score is going to be the prediction label.&lt;/p&gt;
@@ -51,10 +64,44 @@ This model is zero shot because it refers to the number of lables we see for tra
 &lt;/ul&gt;
 &lt;p&gt;&lt;u&gt;Note&lt;/u&gt;: There is a difference between queries and labels.
 Example, when you give a query &amp;lsquo;dog&amp;rsquo; on google image, it will come with all sorts of images of &amp;lsquo;dog&amp;rsquo; and each such image will come associated with a (paired)text. These texts can be in the form of alt text or title of the page.&lt;/p&gt;
+ &lt;figure&gt;
+    &lt;img src=&#34;https://srishti.dev/img/clip-pretraining.png&#34; width=&#34;920&#34; height=&#34;720&#34;/&gt;
+    &lt;figcaption&gt;
+    &lt;a href=&#34;https://cdn.openai.com/papers/Learning_Transferable_Visual_Models_From_Natural_Language_Supervision.pdf&#34;&gt; Fig 2. Photo via Open AI Paper&lt;/a&gt;
+    &lt;/figcaption&gt; 
+ &lt;/figure&gt;
+&lt;p&gt;Fig.2 shows various methods authors use to test which pre-training method is better. We know there are various training method that connects image and language. Most vanilla verison is captioning (language modelling with images). In this paper, authors try a variety of pre-training methods. First for captioning - they found it is not very compute efficient. Second, they tried BoW (bag of words) and they find that they scale better. However, the best they found was contrastive learning.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Model architecture:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;(In progress)
+&lt;p&gt;&lt;u&gt; Image Encode &lt;/u&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ResNet
+&lt;ul&gt;
+&lt;li&gt;Modifications: anti-aliased max pooling; final global pooling by QK Value (QKV) attention&lt;/li&gt;
+&lt;li&gt;Scaling model size by allocating compute equally (to width, depth, input resolution)
+OR&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Vision Transformer&lt;/li&gt;
+&lt;/ul&gt;
 &lt;br/&gt;
-&lt;u&gt;Acknowledment:&lt;/u&gt; Thanks to the discussion in TTIC reading group which introduced me to this paper.&lt;/p&gt;
+&lt;p&gt;&lt;u&gt; Text Encoder &lt;/u&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Transformer text encoder
+&lt;ul&gt;
+&lt;li&gt;scaling model size by width only; do not scale depth&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br/&gt;
+&lt;u&gt; Other parameters &lt;/u&gt;
+&lt;ul&gt;
+&lt;li&gt;$N$ x $N$ affinity matrix. Symmetric Contrastic Loss&lt;/li&gt;
+&lt;li&gt;Temperature $t$ is initialized to 0.07 but allowed to learn&lt;/li&gt;
+&lt;li&gt;Adam with decoupled weight decay ($adam_w$). Cosine LR.&lt;/li&gt;
+&lt;li&gt;Batch size 32768 (this is huge!)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br/&gt;
+&lt;u&gt;Acknowledment:&lt;/u&gt; Thanks to the discussion in TTIC reading group which introduced me to this paper.
 </description>
     </item>
     

@@ -28,7 +28,8 @@
     
   
   <meta name="description" content="Paper: Learning Transferable Visual Models From Natural Language Supervision
- PDF: Learning Transferable Visual Models From Natural Language Supervision Blog: CLIP: Connecting Text and Images  The paper describes an approach where it takes a large dataset of image text pair and tries to learn a model that scores whether a image and text could co-occur.">
+ PDF: Learning Transferable Visual Models From Natural Language Supervision Blog: CLIP: Connecting Text and Images  General Terms: 
+  Contrastive Learning:">
 
   
   <link rel="alternate" hreflang="en-us" href="https://srishti.dev/post/1111-11-11-clip-connecting-text-and-images/">
@@ -240,7 +241,8 @@
   <meta property="og:url" content="https://srishti.dev/post/1111-11-11-clip-connecting-text-and-images/">
   <meta property="og:title" content="CLIP: Connecting Text and Images | Srishti Yadav">
   <meta property="og:description" content="Paper: Learning Transferable Visual Models From Natural Language Supervision
- PDF: Learning Transferable Visual Models From Natural Language Supervision Blog: CLIP: Connecting Text and Images  The paper describes an approach where it takes a large dataset of image text pair and tries to learn a model that scores whether a image and text could co-occur."><meta property="og:image" content="https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png">
+ PDF: Learning Transferable Visual Models From Natural Language Supervision Blog: CLIP: Connecting Text and Images  General Terms: 
+  Contrastive Learning:"><meta property="og:image" content="https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
@@ -290,7 +292,7 @@
       "url": "https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "Paper: Learning Transferable Visual Models From Natural Language Supervision\n PDF: Learning Transferable Visual Models From Natural Language Supervision Blog: CLIP: Connecting Text and Images  The paper describes an approach where it takes a large dataset of image text pair and tries to learn a model that scores whether a image and text could co-occur."
+  "description": "Paper: Learning Transferable Visual Models From Natural Language Supervision\n PDF: Learning Transferable Visual Models From Natural Language Supervision Blog: CLIP: Connecting Text and Images  General Terms: \n  Contrastive Learning:"
 }
 </script>
 
@@ -607,7 +609,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 min read
+    3 min read
   </span>
   
 
@@ -651,6 +653,19 @@
 <li>Blog: 
 <a href="https://openai.com/blog/clip/" target="_blank" rel="noopener">CLIP: Connecting Text and Images</a></li>
 </ul>
+<p><strong>General Terms:</strong> </b></p>
+<ol>
+<li>
+<p>Contrastive Learning:</p>
+</li>
+<li>
+<p>Embedding:</p>
+</li>
+<li>
+<p>Zero-shot Learning:</p>
+</li>
+</ol>
+<hr>
 <p>The paper describes an approach where it takes a large dataset of image text pair and tries to learn a model that scores whether a image and text could co-occur. This is learned over a large dataset.</p>
 <p><strong>Question: How to do classification zero shot i.e. without any training?</strong></p>
 <p>Given a specified classification task where there are some images and some labels and you are supposed to evaluate based on our prediction, you will embed all text labels into vectors and images into vectors and them compare the score of their cross product. The pairing that is going to give the highest score is going to be the prediction label.</p>
@@ -677,10 +692,44 @@ This model is zero shot because it refers to the number of lables we see for tra
 </ul>
 <p><u>Note</u>: There is a difference between queries and labels.
 Example, when you give a query &lsquo;dog&rsquo; on google image, it will come with all sorts of images of &lsquo;dog&rsquo; and each such image will come associated with a (paired)text. These texts can be in the form of alt text or title of the page.</p>
+ <figure>
+    <img src="/img/clip-pretraining.png" width="920" height="720"/>
+    <figcaption>
+    <a href="https://cdn.openai.com/papers/Learning_Transferable_Visual_Models_From_Natural_Language_Supervision.pdf"> Fig 2. Photo via Open AI Paper</a>
+    </figcaption> 
+ </figure>
+<p>Fig.2 shows various methods authors use to test which pre-training method is better. We know there are various training method that connects image and language. Most vanilla verison is captioning (language modelling with images). In this paper, authors try a variety of pre-training methods. First for captioning - they found it is not very compute efficient. Second, they tried BoW (bag of words) and they find that they scale better. However, the best they found was contrastive learning.</p>
 <p><strong>Model architecture:</strong></p>
-<p>(In progress)
+<p><u> Image Encode </u></p>
+<ul>
+<li>ResNet
+<ul>
+<li>Modifications: anti-aliased max pooling; final global pooling by QK Value (QKV) attention</li>
+<li>Scaling model size by allocating compute equally (to width, depth, input resolution)
+OR</li>
+</ul>
+</li>
+<li>Vision Transformer</li>
+</ul>
 <br/>
-<u>Acknowledment:</u> Thanks to the discussion in TTIC reading group which introduced me to this paper.</p>
+<p><u> Text Encoder </u></p>
+<ul>
+<li>Transformer text encoder
+<ul>
+<li>scaling model size by width only; do not scale depth</li>
+</ul>
+</li>
+</ul>
+<br/>
+<u> Other parameters </u>
+<ul>
+<li>$N$ x $N$ affinity matrix. Symmetric Contrastic Loss</li>
+<li>Temperature $t$ is initialized to 0.07 but allowed to learn</li>
+<li>Adam with decoupled weight decay ($adam_w$). Cosine LR.</li>
+<li>Batch size 32768 (this is huge!)</li>
+</ul>
+<br/>
+<u>Acknowledment:</u> Thanks to the discussion in TTIC reading group which introduced me to this paper.
 
     </div>
 
@@ -829,13 +878,13 @@ Example, when you give a query &lsquo;dog&rsquo; on google image, it will come w
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/post/1111-11-11-hyperopt/">Hyperopt: A tool for parameter tuning</a></li>
+      <li><a href="/post/1111-11-11-we-have-so-much-in-common/">We Have So Much In Common: Modeling Semantic Relational Set Abstractions In Videos</a></li>
       
-      <li><a href="/post/1111-11-11-kl-divergence/">KL-Divergence</a></li>
+      <li><a href="/post/1111-11-11-datasets-for-fine-grained-image-classification/">Datasets for Fine-Grained Image Classification</a></li>
+      
+      <li><a href="/post/1111-11-11-low-shot-learning-basic-concepts/">Low/Few Shot Learning</a></li>
       
       <li><a href="/post/1111-11-11-presence-only-geographical-priors-for-fine-grained-image-classification/">Presence-Only Geographical Priors for Fine-Grained Image Classification</a></li>
-      
-      <li><a href="/post/1111-11-11-we-have-so-much-in-common/">We Have So Much In Common: Modeling Semantic Relational Set Abstractions In Videos</a></li>
       
       <li><a href="/post/1111-11-11-the-unreasonable-effectiveness-of-noisy-data-for-fine-grained-recognition/">The Unreasonable Effectiveness of Noisy Data for Fine-Grained Recognition</a></li>
       
