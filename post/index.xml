@@ -140,101 +140,6 @@ Example, when you give a query &amp;lsquo;dog&amp;rsquo; on google image, it wil
     </item>
     
     <item>
-      <title>Few Shot Learning</title>
-      <link>https://srishti.dev/post/1111-11-11-few-shot-learning-basic-concepts/</link>
-      <pubDate>Sat, 11 Nov 1111 12:38:00 -0700</pubDate>
-      <guid>https://srishti.dev/post/1111-11-11-few-shot-learning-basic-concepts/</guid>
-      <description>&lt;p&gt;&lt;b&gt;Question&lt;/b&gt;: If a class has only two samples, can a computer make correct prediction? &lt;br&gt;
-&lt;i&gt;Note: Number of samples is too less for training.&lt;/i&gt;&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Approach:&lt;/b&gt; Few Shot Learning&lt;/p&gt;
-&lt;p&gt;Few shot learning is a problem where we try to learn when the training data is very small. It is different from supervised learning where we train on some data and try to predict an object which belongs to a class present in training data. In few shot learning, the training data has never the sample we are predicting on.&lt;/p&gt;
-&lt;p&gt;Le&amp;rsquo;s take an example. Look at Fig.1&lt;/p&gt;
-&lt;figure&gt;
-    &lt;img src=&#34;https://srishti.dev/img/half-training-data.jpg&#34; width=&#34;300&#34; height=&#34;400&#34; /&gt;
-    &lt;figcaption&gt;
-    &lt;a href=&#34;https://cs231n.github.io/classification/&#34;&gt; Fig 1. Photo via CS231 course&lt;/a&gt;
-    &lt;/figcaption&gt; 
- &lt;/figure&gt;
-&lt;p&gt;We train a model of a big training set of cats, dogs, mug and hat. The goal in few shot learning is not to recognize unseen cats/dogs/mugs/hats. Instead the goal is to recognize the similarity and difference between objects. After training, if we show two pairs of images (Fig.2 and Fig.3) to the model and ask &amp;ldquo;&lt;em&gt;Are the two images similar?&lt;/em&gt;&amp;quot;.&lt;/p&gt;
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;style&gt;
-* {
-  box-sizing: border-box;
-}
-.column img {
-    width: 100px;
-    height: 150px;
-    float: left ;
-    padding: 10px; 
-}
-/* Clearfix (clear floats) */
-.row::after {
-  content: &#34;&#34;;
-  clear: both;
-  display: table;
-}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div class=&#34;row&#34;&gt;
-    &lt;div class=&#34;column&#34;&gt;
-        &lt;img src=&#34;https://srishti.dev/img/cat.png&#34; width=&#34;300&#34; height=&#34;600&#34; style=&#34;width:120%&#34;&gt;
-        &lt;figcaption&gt;
-            &lt;a href=&#34;https://medium.com/fenwicks/tutorial-4-demystifying-keras-dogs-vs-cats-tutorial-f7c5ea7adcf8&#34;&gt; Fig 2. Photo via Medium blog&lt;/a&gt;
-        &lt;/figcaption&gt; 
-    &lt;/div&gt;
-    &lt;div class=&#34;column&#34;&gt;
-        &lt;img src=&#34;https://srishti.dev/img/cat-dog.jpeg&#34; width=&#34;300&#34; height=&#34;600&#34; style=&#34;width:100%&#34; &gt;
-        &lt;figcaption&gt;
-            &lt;a href=&#34;https://cdn-images-1.medium.com/max/1600/1*EvMbMNRHm_aOf1n4tDO1Xg.jpeg&#34;&gt; Fig 3. Photo via Medium blog&lt;/a&gt;
-        &lt;/figcaption&gt;  
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-&lt;p&gt;Since the model has learned the similarity and difference between objects, it can tell that images in Fig.2 are same kind of objects and Fig.3 are quite different. Now, if you ask the model to &lt;em&gt;recognize&lt;/em&gt; the objects, it does not know it is cat or dog because it isn&amp;rsquo;t a part of the training data.  Hence, model can tell that these two images are similar but can&amp;rsquo;t tell what they are.&lt;/p&gt;
-&lt;p&gt;Now, let&amp;rsquo;s ask another question. Let&amp;rsquo;s ask the model what is Fig. 4. We call this image: &lt;strong&gt;Query&lt;/strong&gt;&lt;/p&gt;
-&lt;figure&gt;
-    &lt;img src=&#34;https://srishti.dev/img/squirrel.jpg&#34; width=&#34;300&#34; height=&#34;400&#34; /&gt;
-    &lt;figcaption&gt;
-    &lt;a href=&#34;http://weknowyourdreams.com/single/squirrel/squirrel-09&#34;&gt; Fig 4. &#34;Query&#34; (Photo via web)&lt;/a&gt;
-    &lt;/figcaption&gt; 
- &lt;/figure&gt;
-&lt;p&gt;Model is unable to answer this question because it has never seen this data during training. Now, I show another 4 images to the model as shown in Fig. 5&lt;/p&gt;
-&lt;figure&gt;
-    &lt;img src=&#34;https://srishti.dev/img/support-set.png&#34; width=&#34;600&#34; height=&#34;800&#34; /&gt;
-    &lt;figcaption&gt;
-    &lt;a&gt; Fig 5. &#34;Support-Set&#34;&lt;/a&gt;
-    &lt;/figcaption&gt; 
- &lt;/figure&gt;
-&lt;p&gt;Now, model compares the query image with each image in the support set and believes the query is &amp;ldquo;Squirre&amp;rdquo;. These set of labelled images are called &lt;strong&gt;&amp;ldquo;Support Set&amp;rdquo;&lt;/strong&gt;.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Jargons related to few-shot learning&lt;/p&gt;
-&lt;!-- Let&#39;s define few terms before we get into more technical details: --&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;b&gt;k-way:&lt;/b&gt; we are given $j$ classes (e.g. 3-way means 3 classes. See Fig.1)&lt;/li&gt;
-&lt;li&gt;&lt;b&gt;n-shot:&lt;/b&gt; the number of samples per class (e.g. 2-shot mean 2 sample per class. See Fig.3)&lt;/li&gt;
-&lt;li&gt;&lt;b&gt;Support set($S$):&lt;/b&gt; the samples used for learning. If we have $j$ classes and $k$ samples, then number of elements in support set is $ j * k $.&lt;/li&gt;
-&lt;li&gt;&lt;b&gt;Query set ($Q$):&lt;/b&gt; the sample(s) which we are trying to identify.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure&gt;
-    &lt;img src=&#34;https://srishti.dev/img/support_query.png &#34; width=&#34;600&#34; height=&#34;800&#34; /&gt;
-    &lt;figcaption&gt;
-    &lt;a href=&#34;https://www.borealisai.com/en/blog/tutorial-2-few-shot-learning-and-meta-learning-i/&#34;&gt; Fig 3. Photo via Borealis AI blog&lt;/a&gt;
-    &lt;/figcaption&gt; 
- &lt;/figure&gt;
-&lt;p&gt;More formally,if we define task with $T$, then task $T_i$ is sampled from probabilty distribution over tasks&lt;/p&gt;
-&lt;div&gt; $$ T_i\sim P(T) $$&lt;/div&gt;  and each task $i$ is a set given by Support $S$ and Query $Q$
-&lt;div&gt;$$ T_i = \{ S_i, Q_i \} $$&lt;/div&gt;
-&lt;!-- Points:
-- If we already already pre-trained network on say,imagnet, it appears that if we simply use &#39;traditional&#39; transfer learning, we shold be able to achieve  better results in j-way k-shot learning. However, it doesn&#39;t necessarily happen. &lt;br /&gt; &lt;br /&gt;
-We are dealing with domain transfer. First, there is the problem of domain shift. You may be in a new setting where your model cannot generalize to the new classes (classes different from the one in ImageNet for instance). Few-Shot models better deal with this setting. Second issue, in transfer learning you have to retrain part of the model (e.g. the last layer) and to do so you have to find the right number of epochs, optimizer, and hyperparams. This is very complicated to do when you have just a handful of data like in the Few-Shot setting. --&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Hyperopt: A tool for parameter tuning</title>
       <link>https://srishti.dev/post/1111-11-11-hyperopt/</link>
       <pubDate>Sat, 11 Nov 1111 12:38:00 -0700</pubDate>
@@ -374,6 +279,101 @@ $$
 D_{KL}\Big(p(x) || q(x)\Big) =  tr \Bigg[ \Sigma_2 \frac{1}{2} \Sigma_2^{-1}] \Bigg] = tr \Bigg[ I_k \Bigg] \equiv k
 $$&lt;/p&gt;
 &lt;p&gt;(Equations in Latex are so tough sometimes) To be continued &amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Low/Few Shot Learning</title>
+      <link>https://srishti.dev/post/1111-11-11-low-shot-learning-basic-concepts/</link>
+      <pubDate>Sat, 11 Nov 1111 12:38:00 -0700</pubDate>
+      <guid>https://srishti.dev/post/1111-11-11-low-shot-learning-basic-concepts/</guid>
+      <description>&lt;p&gt;&lt;b&gt;Question&lt;/b&gt;: If a class has only two samples, can a computer make correct prediction? &lt;br&gt;
+&lt;i&gt;Note: Number of samples is too less for training.&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Approach:&lt;/b&gt; Few Shot Learning&lt;/p&gt;
+&lt;p&gt;Few shot learning is a problem where we try to learn when the training data is very small. It is different from supervised learning where we train on some data and try to predict an object which belongs to a class present in training data. In few shot learning, the training data has never the sample we are predicting on.&lt;/p&gt;
+&lt;p&gt;Le&amp;rsquo;s take an example. Look at Fig.1&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&#34;https://srishti.dev/img/half-training-data.jpg&#34; width=&#34;300&#34; height=&#34;400&#34; /&gt;
+    &lt;figcaption&gt;
+    &lt;a href=&#34;https://cs231n.github.io/classification/&#34;&gt; Fig 1. Photo via CS231 course&lt;/a&gt;
+    &lt;/figcaption&gt; 
+ &lt;/figure&gt;
+&lt;p&gt;We train a model of a big training set of cats, dogs, mug and hat. The goal in few shot learning is not to recognize unseen cats/dogs/mugs/hats. Instead the goal is to recognize the similarity and difference between objects. After training, if we show two pairs of images (Fig.2 and Fig.3) to the model and ask &amp;ldquo;&lt;em&gt;Are the two images similar?&lt;/em&gt;&amp;quot;.&lt;/p&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+* {
+  box-sizing: border-box;
+}
+.column img {
+    width: 100px;
+    height: 150px;
+    float: left ;
+    padding: 10px; 
+}
+/* Clearfix (clear floats) */
+.row::after {
+  content: &#34;&#34;;
+  clear: both;
+  display: table;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;column&#34;&gt;
+        &lt;img src=&#34;https://srishti.dev/img/cat.png&#34; width=&#34;300&#34; height=&#34;600&#34; style=&#34;width:120%&#34;&gt;
+        &lt;figcaption&gt;
+            &lt;a href=&#34;https://medium.com/fenwicks/tutorial-4-demystifying-keras-dogs-vs-cats-tutorial-f7c5ea7adcf8&#34;&gt; Fig 2. Photo via Medium blog&lt;/a&gt;
+        &lt;/figcaption&gt; 
+    &lt;/div&gt;
+    &lt;div class=&#34;column&#34;&gt;
+        &lt;img src=&#34;https://srishti.dev/img/cat-dog.jpeg&#34; width=&#34;300&#34; height=&#34;600&#34; style=&#34;width:100%&#34; &gt;
+        &lt;figcaption&gt;
+            &lt;a href=&#34;https://cdn-images-1.medium.com/max/1600/1*EvMbMNRHm_aOf1n4tDO1Xg.jpeg&#34;&gt; Fig 3. Photo via Medium blog&lt;/a&gt;
+        &lt;/figcaption&gt;  
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;p&gt;Since the model has learned the similarity and difference between objects, it can tell that images in Fig.2 are same kind of objects and Fig.3 are quite different. Now, if you ask the model to &lt;em&gt;recognize&lt;/em&gt; the objects, it does not know it is cat or dog because it isn&amp;rsquo;t a part of the training data.  Hence, model can tell that these two images are similar but can&amp;rsquo;t tell what they are.&lt;/p&gt;
+&lt;p&gt;Now, let&amp;rsquo;s ask another question. Let&amp;rsquo;s ask the model what is Fig. 4. We call this image: &lt;strong&gt;Query&lt;/strong&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&#34;https://srishti.dev/img/squirrel.jpg&#34; width=&#34;300&#34; height=&#34;400&#34; /&gt;
+    &lt;figcaption&gt;
+    &lt;a href=&#34;http://weknowyourdreams.com/single/squirrel/squirrel-09&#34;&gt; Fig 4. &#34;Query&#34; (Photo via web)&lt;/a&gt;
+    &lt;/figcaption&gt; 
+ &lt;/figure&gt;
+&lt;p&gt;Model is unable to answer this question because it has never seen this data during training. Now, I show another 4 images to the model as shown in Fig. 5&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&#34;https://srishti.dev/img/support-set.png&#34; width=&#34;600&#34; height=&#34;800&#34; /&gt;
+    &lt;figcaption&gt;
+    &lt;a&gt; Fig 5. &#34;Support-Set&#34;&lt;/a&gt;
+    &lt;/figcaption&gt; 
+ &lt;/figure&gt;
+&lt;p&gt;Now, model compares the query image with each image in the support set and believes the query is &amp;ldquo;Squirre&amp;rdquo;. These set of labelled images are called &lt;strong&gt;&amp;ldquo;Support Set&amp;rdquo;&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Jargons related to few-shot learning&lt;/p&gt;
+&lt;!-- Let&#39;s define few terms before we get into more technical details: --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;k-way:&lt;/b&gt; we are given $j$ classes (e.g. 3-way means 3 classes. See Fig.1)&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;n-shot:&lt;/b&gt; the number of samples per class (e.g. 2-shot mean 2 sample per class. See Fig.3)&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Support set($S$):&lt;/b&gt; the samples used for learning. If we have $j$ classes and $k$ samples, then number of elements in support set is $ j * k $.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Query set ($Q$):&lt;/b&gt; the sample(s) which we are trying to identify.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;
+    &lt;img src=&#34;https://srishti.dev/img/support_query.png &#34; width=&#34;600&#34; height=&#34;800&#34; /&gt;
+    &lt;figcaption&gt;
+    &lt;a href=&#34;https://www.borealisai.com/en/blog/tutorial-2-few-shot-learning-and-meta-learning-i/&#34;&gt; Fig 3. Photo via Borealis AI blog&lt;/a&gt;
+    &lt;/figcaption&gt; 
+ &lt;/figure&gt;
+&lt;p&gt;More formally,if we define task with $T$, then task $T_i$ is sampled from probabilty distribution over tasks&lt;/p&gt;
+&lt;div&gt; $$ T_i\sim P(T) $$&lt;/div&gt;  and each task $i$ is a set given by Support $S$ and Query $Q$
+&lt;div&gt;$$ T_i = \{ S_i, Q_i \} $$&lt;/div&gt;
+&lt;!-- Points:
+- If we already already pre-trained network on say,imagnet, it appears that if we simply use &#39;traditional&#39; transfer learning, we shold be able to achieve  better results in j-way k-shot learning. However, it doesn&#39;t necessarily happen. &lt;br /&gt; &lt;br /&gt;
+We are dealing with domain transfer. First, there is the problem of domain shift. You may be in a new setting where your model cannot generalize to the new classes (classes different from the one in ImageNet for instance). Few-Shot models better deal with this setting. Second issue, in transfer learning you have to retrain part of the model (e.g. the last layer) and to do so you have to find the right number of epochs, optimizer, and hyperparams. This is very complicated to do when you have just a handful of data like in the Few-Shot setting. --&gt;
 </description>
     </item>
     

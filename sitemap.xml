@@ -143,17 +143,17 @@
   </url>
   
   <url>
-    <loc>https://srishti.dev/post/1111-11-11-few-shot-learning-basic-concepts/</loc>
-    <lastmod>1111-11-11T12:38:00-07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://srishti.dev/post/1111-11-11-hyperopt/</loc>
     <lastmod>1111-11-11T12:38:00-07:00</lastmod>
   </url>
   
   <url>
     <loc>https://srishti.dev/post/1111-11-11-kl-divergence/</loc>
+    <lastmod>1111-11-11T12:38:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://srishti.dev/post/1111-11-11-low-shot-learning-basic-concepts/</loc>
     <lastmod>1111-11-11T12:38:00-07:00</lastmod>
   </url>
   
