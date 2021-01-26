@@ -13,6 +13,52 @@
     </image>
     
     <item>
+      <title>CLIP: Connecting Text and Images</title>
+      <link>https://srishti.dev/post/1111-11-11-clip-connecting-text-and-images/</link>
+      <pubDate>Sat, 11 Nov 1111 12:38:00 -0700</pubDate>
+      <guid>https://srishti.dev/post/1111-11-11-clip-connecting-text-and-images/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://srishti.dev/img/clip-openai.png&#34; width=&#34;920&#34; height=&#34;720&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Paper&lt;/strong&gt;: Learning Transferable Visual Models From Natural Language Supervision&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PDF: 
+&lt;a href=&#34;https://cdn.openai.com/papers/Learning_Transferable_Visual_Models_From_Natural_Language_Supervision.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Learning Transferable Visual Models From Natural Language Supervision&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Blog: 
+&lt;a href=&#34;https://openai.com/blog/clip/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CLIP: Connecting Text and Images&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The paper describes an approach where it takes a large dataset of image text pair and tries to learn a model that scores whether a image and text could co-occur. This is learned over a large dataset.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Question: How to do classification zero shot i.e. without any training?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Given a specified classification task where there are some images and some labels and you are supposed to evaluate based on our prediction, you will embed all text labels into vectors and images into vectors and them compare the score of their cross product. The pairing that is going to give the highest score is going to be the prediction label.&lt;/p&gt;
+ &lt;figure&gt;
+    &lt;img src=&#34;https://srishti.dev/img/clip-architecture.png&#34; width=&#34;920&#34; height=&#34;720&#34;/&gt;
+    &lt;figcaption&gt;
+    &lt;a href=&#34;https://cdn.openai.com/papers/Learning_Transferable_Visual_Models_From_Natural_Language_Supervision.pdf&#34;&gt; Fig 1. Photo via Open AI Paper&lt;/a&gt;
+    &lt;/figcaption&gt; 
+ &lt;/figure&gt;
+&lt;p&gt;In Fig.1, $N$ is the size of images associated with some text. $T_i$ is the encoding for the entire text string.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Why is it zero shot?&lt;/strong&gt;
+This model is zero shot because it refers to the number of lables we see for training. In this architecture, for a particular evaluation task, you do not train. You take the train weights(and give some bias). THis notion of zero shot is in line with GPT notion of zero shot i.e. you do a lot of training -  you don&amp;rsquo;t care what is happenng at the pre-training stage&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Dataset:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Called WiT Dataset (WebImageText)&lt;/li&gt;
+&lt;li&gt;400 million (image, text) pairs by searching over text queries&lt;/li&gt;
+&lt;li&gt;500,000 text queries:
+&lt;ul&gt;
+&lt;li&gt;All words occuring atleast 100 times in the English version of Wikipedia + WordNet synsets + some details&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cap at a maximum of 20000 (image, text) pairs per query&lt;/li&gt;
+&lt;li&gt;Total wordcount similar to WebText dataset used by GPT-2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;u&gt;Note&lt;/u&gt;: There is a difference between queries and labels.
+Example, when you give a query &amp;lsquo;dog&amp;rsquo; on google image, it will come with all sorts of images of &amp;lsquo;dog&amp;rsquo; and each such image will come associated with a (paired)text. These texts can be in the form of alt text or title of the page.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Model architecture:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;(In progress)
+&lt;br/&gt;
+&lt;u&gt;Acknowledment:&lt;/u&gt; Thanks to the discussion in TTIC reading group which introduced me to this paper.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Datasets for Fine-Grained Image Classification</title>
       <link>https://srishti.dev/post/1111-11-11-datasets-for-fine-grained-image-classification/</link>
       <pubDate>Sat, 11 Nov 1111 12:38:00 -0700</pubDate>
@@ -430,7 +476,7 @@ For humans it is easy to identify how two events are related by looking at them.
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Datsets used:&lt;/strong&gt; &lt;/b&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;K400 (KInect 400)&lt;/li&gt;
+&lt;li&gt;K400 (Kinect 400)&lt;/li&gt;
 &lt;li&gt;Multi-Monets in Time&lt;/li&gt;
 &lt;/ul&gt;
 </description>
