@@ -13,6 +13,51 @@
     </image>
     
     <item>
+      <title>[Coming Up] Hypernetworks</title>
+      <link>https://srishti.dev/post/1111-11-11-hypernetworks/</link>
+      <pubDate>Sat, 11 Nov 1111 12:38:00 -0700</pubDate>
+      <guid>https://srishti.dev/post/1111-11-11-hypernetworks/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Paper&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PDF: 
+&lt;a href=&#34;https://arxiv.org/abs/1609.09106&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;HyperNetworks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Blog : 
+&lt;a href=&#34;https://blog.otoro.net/2016/09/28/hyper-networks/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Blog on Hypernetworks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ &lt;figure&gt;
+    &lt;img src=&#34;https://srishti.dev/img/hyper-networks.png&#34; width=&#34;920&#34; height=&#34;720&#34;/&gt;
+    &lt;figcaption&gt;
+    &lt;a href=&#34;https://blog.otoro.net/2016/09/28/hyper-networks/&#34;&gt; Fig 1. Photo via David Ha&#39;s Blog&lt;/a&gt;
+    &lt;/figcaption&gt; 
+ &lt;/figure&gt;
+&lt;/br&gt;
+Coming up soon!
+</description>
+    </item>
+    
+    <item>
+      <title>[Coming Up] SimCLR: Contrastive Learning of Visual Representations</title>
+      <link>https://srishti.dev/post/1111-11-11-simclr/</link>
+      <pubDate>Sat, 11 Nov 1111 12:38:00 -0700</pubDate>
+      <guid>https://srishti.dev/post/1111-11-11-simclr/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Paper&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PDF: 
+&lt;a href=&#34;https://arxiv.org/pdf/2002.05709v3.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SimCLR: Contrastive Learning of Visual Representations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Blog: 
+&lt;a href=&#34;https://ai.googleblog.com/2020/04/advancing-self-supervised-and-semi.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Advancing Self-Supervised and Semi-Supervised Learning with SimCLR&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ &lt;figure&gt;
+    &lt;img src=&#34;https://srishti.dev/img/SimCLR.gif&#34; width=&#34;480&#34; height=&#34;360&#34;/&gt;
+    &lt;figcaption&gt;
+    &lt;a href=&#34;https://ai.googleblog.com/2020/04/advancing-self-supervised-and-semi.html/&#34;&gt; Fig 1. Photo via Google AI&#39;s Blog&lt;/a&gt;
+    &lt;/figcaption&gt; 
+ &lt;/figure&gt;
+&lt;/br&gt;
+Coming up soon!</description>
+    </item>
+    
+    <item>
       <title>CLIP: Connecting Text and Images</title>
       <link>https://srishti.dev/post/1111-11-11-clip-connecting-text-and-images/</link>
       <pubDate>Sat, 11 Nov 1111 12:38:00 -0700</pubDate>
@@ -20,21 +65,23 @@
       <description>&lt;p&gt;&lt;img src=&#34;https://srishti.dev/img/clip-openai.png&#34; width=&#34;920&#34; height=&#34;720&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Paper&lt;/strong&gt;: Learning Transferable Visual Models From Natural Language Supervision&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;PDF: 
-&lt;a href=&#34;https://cdn.openai.com/papers/Learning_Transferable_Visual_Models_From_Natural_Language_Supervision.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Learning Transferable Visual Models From Natural Language Supervision&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Blog: 
-&lt;a href=&#34;https://openai.com/blog/clip/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CLIP: Connecting Text and Images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PDF: 
+&lt;a href=&#34;https://cdn.openai.com/papers/Learning_Transferable_Visual_Models_From_Natural_Language_Supervision.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Learning Transferable Visual Models From Natural Language Supervision&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Blog: 
+&lt;a href=&#34;https://openai.com/blog/clip/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CLIP: Connecting Text and Images&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;General Terms:&lt;/strong&gt; &lt;/b&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;Contrastive Learning:&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;Contrastive Learning&lt;/u&gt;: It is based on the intuition that you can contrast/differentiate between similar and dissimilar things. In machine learning model, we formulate this as a task of finding similar and dissimilar things i.e. the model should be able to classify between similar and dissimilar images&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Embedding:&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Zero-shot Learning:&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;Zero-shot Learning &lt;/u&gt;: Zero-shot learning is a problem, where at test stage,the model/learner aims to recognize objects whose instances maynot have been seen during training. To learn about various works that have been done in this space (atleast till 2018), this paper provides good details: 
+&lt;a href=&#34;https://arxiv.org/pdf/1707.00600.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Zero-shot learning—a comprehensive evaluation of the good, the bad and the ugly&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
