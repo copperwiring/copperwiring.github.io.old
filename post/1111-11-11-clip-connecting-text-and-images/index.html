@@ -611,7 +611,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    3 min read
+    4 min read
   </span>
   
 
@@ -732,8 +732,68 @@ OR</li>
 <li>Adam with decoupled weight decay ($adam_w$). Cosine LR.</li>
 <li>Batch size 32768 (this is huge!)</li>
 </ul>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+.column img {
+    width: 100%;
+    float: left ;
+    margin: 0;
+}
+.column {
+    width: 50%;
+    float: left ;
+    padding: 10px; 
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+<div class="row">
+    <div class="column">
+        <img src="/img/clip-prompt-engineering-2.png"/>
+    </div>
+    <div class="column">
+        <img src="/img/clip-prompt-engineering.png" />
+    </div>
+</div>
+<div class="row">
+    <div class="column">
+        <figcaption>
+            <a href="https://cdn.openai.com/papers/Learning_Transferable_Visual_Models_From_Natural_Language_Supervision.pdf"> Fig 3a. Photo via Open AI Paper</a>
+        </figcaption> 
+    </div>
+    <div class="column">
+        <figcaption>
+            <a href="https://cdn.openai.com/papers/Learning_Transferable_Visual_Models_From_Natural_Language_Supervision.pdf"> Fig 3b. Photo via Open AI Paper</a>
+        </figcaption> 
+    </div>
+</div>
+</body>
+</html>
+ <figure>
+ </figure>
+<p><strong>Prompt Engineering:</strong></p>
+<p>From Fig 3.a, we can see that in addition to texts, authors have also experimented using prompts wth texts i.e. you can embed the label itself but you can also embed string with a customized prompt ahead of it.  E.g. &lsquo;a <em>photo</em> of &lsquo;, &lsquo;a <em>bag</em> of&rsquo;. Fig 3.b shows that authors show that prompts work better than raw label (+15%)</p>
+<p><strong>Performance:</strong></p>
+ <figure>
+    <img src="/img/clip-zero-shot-performance.png"/>
+    <figcaption>
+    <a href="https://cdn.openai.com/papers/Learning_Transferable_Visual_Models_From_Natural_Language_Supervision.pdf"> Fig 4. Photo via Open AI Paper from Appendix Section</a>
+    </figcaption> 
+ </figure>
+<p>For ImageNet, vanilla ResNet50 gives accuracy of 56.3% <cite>[1]</cite> and zero-shot (CLIP model) gives 59.6%.(see last column of first row in Fig.4). Model (<em>L/14-336x</em>) that gives classification accuracy close to ResNet-50 uses a lot more compute (see last column, last row in Fig.4). L/14-336x means 14 large with input resolution 336px. Hence, to surpass a supervised ResNet, you need a lot bigger model</p>
 <br/>
-<u>Acknowledment:</u> Thanks to the discussion in TTIC reading group which introduced me to this paper.
+<p>[1] : <a href="https://arxiv.org/pdf/1811.06992.pdf">https://arxiv.org/pdf/1811.06992.pdf</a></p>
+<p><u>Acknowledment:</u> Thanks to the discussion in TTIC reading group which introduced me to this paper.</p>
 
     </div>
 
@@ -882,15 +942,15 @@ OR</li>
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/post/1111-11-11-simclr/">[Coming Up] SimCLR: Contrastive Learning of Visual Representations</a></li>
+      <li><a href="/post/1111-11-11-datasets-for-fine-grained-image-classification/">Datasets for Fine-Grained Image Classification</a></li>
       
       <li><a href="/post/1111-11-11-the-unreasonable-effectiveness-of-noisy-data-for-fine-grained-recognition/">The Unreasonable Effectiveness of Noisy Data for Fine-Grained Recognition</a></li>
       
-      <li><a href="/post/1111-11-11-hypernetworks/">[Coming Up] Hypernetworks</a></li>
+      <li><a href="/post/1111-11-11-simclr/">[Coming Up] SimCLR: Contrastive Learning of Visual Representations</a></li>
       
-      <li><a href="/post/1111-11-11-presence-only-geographical-priors-for-fine-grained-image-classification/">Presence-Only Geographical Priors for Fine-Grained Image Classification</a></li>
+      <li><a href="/post/1111-11-11-the-inaturalist-species-classification-and-detection-dataset/">The iNaturalist Species Classification and Detection Dataset</a></li>
       
-      <li><a href="/post/1111-11-11-datasets-for-fine-grained-image-classification/">Datasets for Fine-Grained Image Classification</a></li>
+      <li><a href="/post/1111-11-11-we-have-so-much-in-common/">We Have So Much In Common: Modeling Semantic Relational Set Abstractions In Videos</a></li>
       
     </ul>
   </div>

@@ -147,8 +147,68 @@ OR&lt;/li&gt;
 &lt;li&gt;Adam with decoupled weight decay ($adam_w$). Cosine LR.&lt;/li&gt;
 &lt;li&gt;Batch size 32768 (this is huge!)&lt;/li&gt;
 &lt;/ul&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+* {
+  box-sizing: border-box;
+}
+.column img {
+    width: 100%;
+    float: left ;
+    margin: 0;
+}
+.column {
+    width: 50%;
+    float: left ;
+    padding: 10px; 
+}
+.row::after {
+  content: &#34;&#34;;
+  clear: both;
+  display: table;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;column&#34;&gt;
+        &lt;img src=&#34;https://srishti.dev/img/clip-prompt-engineering-2.png&#34;/&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;column&#34;&gt;
+        &lt;img src=&#34;https://srishti.dev/img/clip-prompt-engineering.png&#34; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;column&#34;&gt;
+        &lt;figcaption&gt;
+            &lt;a href=&#34;https://cdn.openai.com/papers/Learning_Transferable_Visual_Models_From_Natural_Language_Supervision.pdf&#34;&gt; Fig 3a. Photo via Open AI Paper&lt;/a&gt;
+        &lt;/figcaption&gt; 
+    &lt;/div&gt;
+    &lt;div class=&#34;column&#34;&gt;
+        &lt;figcaption&gt;
+            &lt;a href=&#34;https://cdn.openai.com/papers/Learning_Transferable_Visual_Models_From_Natural_Language_Supervision.pdf&#34;&gt; Fig 3b. Photo via Open AI Paper&lt;/a&gt;
+        &lt;/figcaption&gt; 
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+ &lt;figure&gt;
+ &lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;Prompt Engineering:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;From Fig 3.a, we can see that in addition to texts, authors have also experimented using prompts wth texts i.e. you can embed the label itself but you can also embed string with a customized prompt ahead of it.  E.g. &amp;lsquo;a &lt;em&gt;photo&lt;/em&gt; of &amp;lsquo;, &amp;lsquo;a &lt;em&gt;bag&lt;/em&gt; of&amp;rsquo;. Fig 3.b shows that authors show that prompts work better than raw label (+15%)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Performance:&lt;/strong&gt;&lt;/p&gt;
+ &lt;figure&gt;
+    &lt;img src=&#34;https://srishti.dev/img/clip-zero-shot-performance.png&#34;/&gt;
+    &lt;figcaption&gt;
+    &lt;a href=&#34;https://cdn.openai.com/papers/Learning_Transferable_Visual_Models_From_Natural_Language_Supervision.pdf&#34;&gt; Fig 4. Photo via Open AI Paper from Appendix Section&lt;/a&gt;
+    &lt;/figcaption&gt; 
+ &lt;/figure&gt;
+&lt;p&gt;For ImageNet, vanilla ResNet50 gives accuracy of 56.3% &lt;cite&gt;[1]&lt;/cite&gt; and zero-shot (CLIP model) gives 59.6%.(see last column of first row in Fig.4). Model (&lt;em&gt;L/14-336x&lt;/em&gt;) that gives classification accuracy close to ResNet-50 uses a lot more compute (see last column, last row in Fig.4). L/14-336x means 14 large with input resolution 336px. Hence, to surpass a supervised ResNet, you need a lot bigger model&lt;/p&gt;
 &lt;br/&gt;
-&lt;u&gt;Acknowledment:&lt;/u&gt; Thanks to the discussion in TTIC reading group which introduced me to this paper.
+&lt;p&gt;[1] : &lt;a href=&#34;https://arxiv.org/pdf/1811.06992.pdf&#34;&gt;https://arxiv.org/pdf/1811.06992.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;Acknowledment:&lt;/u&gt; Thanks to the discussion in TTIC reading group which introduced me to this paper.&lt;/p&gt;
 </description>
     </item>
     
@@ -401,9 +461,9 @@ $$&lt;/p&gt;
   box-sizing: border-box;
 }
 .column img {
-    width: 100px;
-    height: 150px;
-    float: left ;
+    /* width: 100px;
+    height: 150px; */
+    /* float: left ; */
     padding: 10px; 
 }
 /* Clearfix (clear floats) */
