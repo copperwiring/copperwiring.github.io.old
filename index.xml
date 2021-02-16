@@ -298,7 +298,7 @@ OR&lt;/li&gt;
     &lt;a href=&#34;https://cdn.openai.com/papers/Learning_Transferable_Visual_Models_From_Natural_Language_Supervision.pdf&#34;&gt; Fig 4. Photo via Open AI Paper from Appendix Section&lt;/a&gt;
     &lt;/figcaption&gt; 
  &lt;/figure&gt;
-&lt;p&gt;For ImageNet, vanilla ResNet50 gives accuracy of 56.3% &lt;cite&gt;[1]&lt;/cite&gt; and zero-shot (CLIP model) gives 59.6%.(see last column of first row in Fig.4). Model (&lt;em&gt;L/14-336x&lt;/em&gt;) that gives classification accuracy close to ResNet-50 uses a lot more compute (see last column, last row in Fig.4). L/14-336x means 14 large with input resolution 336px. Hence, to surpass a supervised ResNet, you need a lot bigger model&lt;/p&gt;
+&lt;p&gt;For ImageNet (1.2 million), vanilla ResNet50 gives accuracy of 56.3% &lt;cite&gt;[1]&lt;/cite&gt; and zero-shot (CLIP model) gives 59.6%.(see last column of first row in Fig.4). Model (&lt;em&gt;L/14-336x&lt;/em&gt;) that gives classification accuracy close to ResNet-50 uses a lot more compute (see last column, last row in Fig.4). L/14-336x means 14 large with input resolution 336px. Hence, to surpass a supervised ResNet, you need a lot bigger model&lt;/p&gt;
 &lt;br/&gt;
 &lt;p&gt;[1] : &lt;a href=&#34;https://arxiv.org/pdf/1811.06992.pdf&#34;&gt;https://arxiv.org/pdf/1811.06992.pdf&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;u&gt;Acknowledment:&lt;/u&gt; Thanks to the discussion in TTIC reading group which introduced me to this paper.&lt;/p&gt;
