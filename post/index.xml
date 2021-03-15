@@ -13,51 +13,6 @@
     </image>
     
     <item>
-      <title>[Coming Up] Hypernetworks</title>
-      <link>https://srishti.dev/post/1111-11-11-hypernetworks/</link>
-      <pubDate>Sat, 11 Nov 1111 12:38:00 -0700</pubDate>
-      <guid>https://srishti.dev/post/1111-11-11-hypernetworks/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Paper&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;PDF: 
-&lt;a href=&#34;https://arxiv.org/abs/1609.09106&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;HyperNetworks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Blog : 
-&lt;a href=&#34;https://blog.otoro.net/2016/09/28/hyper-networks/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Blog on Hypernetworks&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
- &lt;figure&gt;
-    &lt;img src=&#34;https://srishti.dev/img/hyper-networks.png&#34; width=&#34;920&#34; height=&#34;720&#34;/&gt;
-    &lt;figcaption&gt;
-    &lt;a href=&#34;https://blog.otoro.net/2016/09/28/hyper-networks/&#34;&gt; Fig 1. Photo via David Ha&#39;s Blog&lt;/a&gt;
-    &lt;/figcaption&gt; 
- &lt;/figure&gt;
-&lt;/br&gt;
-Coming up soon!
-</description>
-    </item>
-    
-    <item>
-      <title>[Coming Up] SimCLR: Contrastive Learning of Visual Representations</title>
-      <link>https://srishti.dev/post/1111-11-11-simclr/</link>
-      <pubDate>Sat, 11 Nov 1111 12:38:00 -0700</pubDate>
-      <guid>https://srishti.dev/post/1111-11-11-simclr/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Paper&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;PDF: 
-&lt;a href=&#34;https://arxiv.org/pdf/2002.05709v3.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SimCLR: Contrastive Learning of Visual Representations&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Blog: 
-&lt;a href=&#34;https://ai.googleblog.com/2020/04/advancing-self-supervised-and-semi.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Advancing Self-Supervised and Semi-Supervised Learning with SimCLR&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
- &lt;figure&gt;
-    &lt;img src=&#34;https://srishti.dev/img/SimCLR.gif&#34; width=&#34;480&#34; height=&#34;360&#34;/&gt;
-    &lt;figcaption&gt;
-    &lt;a href=&#34;https://ai.googleblog.com/2020/04/advancing-self-supervised-and-semi.html/&#34;&gt; Fig 1. Photo via Google AI&#39;s Blog&lt;/a&gt;
-    &lt;/figcaption&gt; 
- &lt;/figure&gt;
-&lt;/br&gt;
-Coming up soon!</description>
-    </item>
-    
-    <item>
       <title>CLIP: Connecting Text and Images</title>
       <link>https://srishti.dev/post/1111-11-11-clip-connecting-text-and-images/</link>
       <pubDate>Sat, 11 Nov 1111 12:38:00 -0700</pubDate>
