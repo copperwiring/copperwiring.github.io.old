@@ -133,6 +133,21 @@
   </url>
   
   <url>
+    <loc>https://srishti.dev/post/</loc>
+    <lastmod>1111-12-11T12:38:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://srishti.dev/tag/technical/</loc>
+    <lastmod>1111-12-11T12:38:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://srishti.dev/post/1111-11-11-plt-fig-axis/</loc>
+    <lastmod>1111-12-11T12:38:00-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://srishti.dev/post/1111-11-11-clip-connecting-text-and-images/</loc>
     <lastmod>1111-11-11T12:38:00-07:00</lastmod>
   </url>
@@ -158,17 +173,7 @@
   </url>
   
   <url>
-    <loc>https://srishti.dev/post/</loc>
-    <lastmod>1111-11-11T12:38:00-07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://srishti.dev/post/1111-11-11-presence-only-geographical-priors-for-fine-grained-image-classification/</loc>
-    <lastmod>1111-11-11T12:38:00-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://srishti.dev/tag/technical/</loc>
     <lastmod>1111-11-11T12:38:00-07:00</lastmod>
   </url>
   

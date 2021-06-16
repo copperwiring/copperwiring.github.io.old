@@ -27,10 +27,11 @@
   
     
   
-  <meta name="description" content="In deep learning, it is not easy to tune hyperparameters for optimal results. If we have 2 parameters (each with 3 prior desirable values), it is an easier problem. We will have possible combinations to try.">
+  <meta name="description" content="When working with python libraries, especially for visualization, I usually get confused my number of options available for plotting. Example:
+1. plt.plot() 2. ax = plt.subplot() ax.plot(x, y) 3. fig1, ((ax1, ax2), (ax3, ax4)) = plt.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://srishti.dev/post/1111-11-11-hyperopt/">
+  <link rel="alternate" hreflang="en-us" href="https://srishti.dev/post/1111-11-11-plt-fig-axis/">
 
   
 
@@ -220,7 +221,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://srishti.dev/post/1111-11-11-hyperopt/">
+  <link rel="canonical" href="https://srishti.dev/post/1111-11-11-plt-fig-axis/">
 
   
   
@@ -236,15 +237,16 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Srishti Yadav">
-  <meta property="og:url" content="https://srishti.dev/post/1111-11-11-hyperopt/">
-  <meta property="og:title" content="Hyperopt: A tool for parameter tuning | Srishti Yadav">
-  <meta property="og:description" content="In deep learning, it is not easy to tune hyperparameters for optimal results. If we have 2 parameters (each with 3 prior desirable values), it is an easier problem. We will have possible combinations to try."><meta property="og:image" content="https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png">
+  <meta property="og:url" content="https://srishti.dev/post/1111-11-11-plt-fig-axis/">
+  <meta property="og:title" content="Understanding Usage of plt, figure, subplot, axes, axis in matplotlib | Srishti Yadav">
+  <meta property="og:description" content="When working with python libraries, especially for visualization, I usually get confused my number of options available for plotting. Example:
+1. plt.plot() 2. ax = plt.subplot() ax.plot(x, y) 3. fig1, ((ax1, ax2), (ax3, ax4)) = plt."><meta property="og:image" content="https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="1111-11-11T12:38:00-07:00">
+      <meta property="article:published_time" content="1111-12-11T12:38:00-07:00">
     
-    <meta property="article:modified_time" content="1111-11-11T12:38:00-07:00">
+    <meta property="article:modified_time" content="1111-12-11T12:38:00-07:00">
   
 
   
@@ -268,12 +270,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://srishti.dev/post/1111-11-11-hyperopt/"
+    "@id": "https://srishti.dev/post/1111-11-11-plt-fig-axis/"
   },
-  "headline": "Hyperopt: A tool for parameter tuning",
+  "headline": "Understanding Usage of plt, figure, subplot, axes, axis in matplotlib",
   
-  "datePublished": "1111-11-11T12:38:00-07:00",
-  "dateModified": "1111-11-11T12:38:00-07:00",
+  "datePublished": "1111-12-11T12:38:00-07:00",
+  "dateModified": "1111-12-11T12:38:00-07:00",
   
   "author": {
     "@type": "Person",
@@ -288,7 +290,7 @@
       "url": "https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "In deep learning, it is not easy to tune hyperparameters for optimal results. If we have 2 parameters (each with 3 prior desirable values), it is an easier problem. We will have possible combinations to try."
+  "description": "When working with python libraries, especially for visualization, I usually get confused my number of options available for plotting. Example:\n1. plt.plot() 2. ax = plt.subplot() ax.plot(x, y) 3. fig1, ((ax1, ax2), (ax3, ax4)) = plt."
 }
 </script>
 
@@ -306,7 +308,7 @@
 
 
 
-  <title>Hyperopt: A tool for parameter tuning | Srishti Yadav</title>
+  <title>Understanding Usage of plt, figure, subplot, axes, axis in matplotlib | Srishti Yadav</title>
 
 </head>
 
@@ -560,7 +562,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Hyperopt: A tool for parameter tuning</h1>
+  <h1>Understanding Usage of plt, figure, subplot, axes, axis in matplotlib</h1>
 
   
 
@@ -579,7 +581,7 @@
     
       
     
-    Nov 11, 1111
+    Dec 11, 1111
   </span>
   
 
@@ -588,7 +590,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 min read
+    3 min read
   </span>
   
 
@@ -624,37 +626,122 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>In deep learning, it is not easy to tune hyperparameters for optimal results. If we have 2 parameters (each with 3 prior desirable values), it is an easier problem. We will have possible combinations to try. However, with more parameters, the possible combinations will increase exponentially. For example, for 5 parameters, each with 4 desired values, we will have possible combinations. Manually trying each of them is not a very practical approach.</p>
-<p>hence, the question usually is &ldquo;Which way should I update my hyper-parameter to reduce the loss (i.e. gradients) in order to find the optimal model architecture?</p>
-<p>Idealy, we should come up with an approach :</p>
+      <p>When working with python libraries, especially for visualization, I usually get confused my number of options available for plotting. Example:</p>
+<pre><code>1. plt.plot()
+
+2. ax = plt.subplot()
+   ax.plot(x, y)
+
+3. fig1, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2)
+
+4. f, axarr = plt.subplots(2,2)
+   axarr[0,0].imshow(image_datas[0])
+   ....
+
+</code></pre>
+<p>After reading through a bunch of stackoverflow explainations, I compiled them here:</p>
+<br/>
+<h3 id="question-1-what-is-the-difference-between-drawing-plots-using-plot-axes-or-figure-in-matplotlib">Question 1: What is the difference between drawing plots using plot, axes or figure in matplotlib?</h3>
+<br/>
+<p><strong>Plot just one figure with (x,y) coordinates</strong></p>
+<pre><code>plt.plot(x, y)
+
+</code></pre>
+<p>If you just want to get one graphic, you can use this way.</p>
+<p>Example:</p>
+<pre><code>import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.random.rand(10)
+y = np.random.rand(10)
+
+figure1 = plt.plot(x,y)
+</code></pre>
+<figure>
+    <img src="/img/plt-img-1.png" width="300" height="400" />
+    <figcaption>
+    <a href="https://stackoverflow.com/questions/37970424/what-is-the-difference-between-drawing-plots-using-plot-axes-or-figure-in-matpl"> Fig 1. Photo via Stackoverflow</a>
+    </figcaption> 
+ </figure>
+<p><strong>Plot one or several figure(s) in the same window</strong></p>
+<p>Plot just one figure</p>
+<pre><code>ax = plt.subplot()
+ax.plot(x, y)
+</code></pre>
+<p>or you can plot multiple figures like this:</p>
+<pre><code>fig1, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2)
+</code></pre>
+<p>This plot 4 figures which are named ax1, ax2, ax3 and ax4 each one but on the same window. This window will be just divided in 4 parts with my example.</p>
+<p>Example:</p>
+<pre><code>import numpy as np
+import matplotlib.pyplot as plt
+
+x1 = np.random.rand(10)
+x2 = np.random.rand(10)
+x3 = np.random.rand(10)
+x4 = np.random.rand(10)
+y1 = np.random.rand(10)
+y2 = np.random.rand(10)
+y3 = np.random.rand(10)
+y4 = np.random.rand(10)
+
+figure2, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2)
+ax1.plot(x1,y1)
+ax2.plot(x2,y2)
+ax3.plot(x3,y3)
+ax4.plot(x4,y4)
+
+plt.show()
+</code></pre>
+<figure>
+    <img src="/img/plt_img_2.png" width="300" height="400" />
+    <figcaption>
+    <a href="https://stackoverflow.com/questions/37970424/what-is-the-difference-between-drawing-plots-using-plot-axes-or-figure-in-matpl"> Fig 2. Photo via Stackoverflow</a>
+    </figcaption> 
+ </figure>
+<p><strong>Another method for multiple plots</strong></p>
+<pre><code>
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig = plt.figure()
+new_plot = fig.add_subplot(111)
+new_plot.plot(x, y)
+</code></pre>
+<hr>
+<br/>
+<h3 id="question-2-difference-between-axes-and-axis-in-matplotlib">Question 2: Difference between “axes” and “axis” in matplotlib?</h3>
+<p>In the context of matplotlib, axes is not the plural form of axis, it actually denotes the plotting area, including all axis.</p>
+<figure>
+    <img src="/img/axes_axis.png" width="300" height="400" />
+    <figcaption>
+    <a href="https://matplotlib.org/1.5.1/faq/usage_faq.html#parts-of-a-figure"> Fig 3. Photo via matplotlib old documentation</a>
+    </figcaption> 
+ </figure>
 <ul>
-<li>where we can search for hyperparameters (hyper-parameter search space) using a distributed compute on the cloud.</li>
-<li>intelligently optimize which of the possible combinations from the search space will give us the best results.</li>
-<li>Supports exisitng optimization techniques like Grid Search, Random Search, Bayesian Optmization etc.</li>
+<li>
+<p>Axes</p>
+<p>This is what you think of as <code>a plot</code>, it is the region of the image with the data space (marked as the inner blue box). A given figure can contain many Axes, but a given Axes object can only be in one Figure. The Axes contains two (or three in the case of 3D) Axis objects (be aware of the difference between Axes and Axis) which take care of the data limits (the data limits can also be controlled via set via the <code>set_xlim()</code> and <code>set_ylim()</code> Axes methods). Each Axes has a title (set via <code>set_title()</code>), an x-label (set via <code>set_xlabel()</code>), and a y-label set via <code>set_ylabel()</code>).</p>
+</li>
+<li>
+<p>Axis</p>
+<p>These are the number-line-like objects (circled in green). They take care of setting the graph limits and generating the ticks (the marks on the axis) and ticklabels (strings labeling the ticks). The location of the ticks is determined by a Locator object and the ticklabel strings are formatted by a Formatter. The combination of the correct Locator and Formatter gives very fine control over the tick locations and labels.</p>
+</li>
 </ul>
-<p>Some of the exisiting tools for hyperparamter tuning are:</p>
-<ol>
-<li>RayTune (<a href="https://ray.readthedocs.io/en/latest/tune.html">https://ray.readthedocs.io/en/latest/tune.html</a>)</li>
-<li>Talos (<a href="https://autonomio.github.io/talos">https://autonomio.github.io/talos</a>)</li>
-<li>NNI (<a href="https://nni.readthedocs.io/en/latest/index.html">https://nni.readthedocs.io/en/latest/index.html</a>)</li>
-<li>Orion (<a href="https://orion.readthedocs.io/en/latest/user/pytorch.html#adapting-the-code-for-orion">https://orion.readthedocs.io/en/latest/user/pytorch.html#adapting-the-code-for-orion</a>)</li>
-<li>Sherpa (<a href="https://parameter-sherpa.readthedocs.io/en/latest/parallel/parallel-guide.html">https://parameter-sherpa.readthedocs.io/en/latest/parallel/parallel-guide.html</a>)</li>
-<li>TPOT (<a href="https://github.com/EpistasisLab/tpot">https://github.com/EpistasisLab/tpot</a>)</li>
-<li>Hyperopt (<a href="https://github.com/hyperopt/hyperopt">https://github.com/hyperopt/hyperopt</a>)</li>
-<li>AWS Sagemaker Hyperparameter tuning (<a href="https://aws.amazon.com/sagemaker/?hp=tile&amp;so-exp=below">https://aws.amazon.com/sagemaker/?hp=tile&amp;so-exp=below</a>)</li>
-<li>Botorch (<a href="https://botorch.org/">https://botorch.org/</a>)</li>
-</ol>
-<p>Here, we will discuss hyperopt!</p>
-<p>Hyperopt is an open-source hyperparameter tuning library written for Python. Hyperopt provides a general API for searching over hyperparameters and model types. Hyperopt offers two tuning algorithms: Random Search and the Bayesian method Tree of Parzen Estimators (TPE). To run hyperopt you define:</p>
-<ul>
-<li>the objective function</li>
-<li>the parameter space</li>
-<li>the number of experiments</li>
-</ul>
-<p>There are both continuous and categorical methods to describe the parameters.</p>
-<!-- <img src="/img/hyperopt.png " width="600" height="800" /> -->
-<p><strong>Limitation</strong>:
-Hyper-parameter takes a lot of time to tune the parameters if number of trials and number of epocs (iteration of the neural network) are higher (which is desired). Hence, it would be good to explore how to parallelize the tuning work.</p>
+<hr>
+<br/>
+<h3 id="question-3-what-is-the-difference-between-pltsubplots-and-pltfigure">Question 3: What is the difference between plt.subplots() and plt.figure()</h3>
+<p>In matplotlib, we can plots in two ways like below:</p>
+<pre><code>plt.figure(1,figsize=(400,8))
+</code></pre>
+<p>or</p>
+<pre><code>fig,ax = plt.subplots()
+fig.set_size_inches(400,8)
+</code></pre>
+<p>and though both are correct, they have their differences.</p>
+<p><code>plt.figure</code> just creates a figure (but with no axes in it) whereas <code>plt.subplots</code> takes optional arguments (ex: plt.subplots(2, 2)) to create an array of axes in the figure. Most of the kwargs that <code>plt.figure</code> takes <code>plt.subplots</code> also takes.</p>
+<p><code>plt.figure()</code> is usually used when you want more customization to you axes, such as positions, sizes, colors and etc. You can see artist tutorial for more details. (I personally prefer this for individual plot).</p>
+<p><code>plt.subplots()</code> is recommended for generating multiple subplots in grids. You can also achieve higher flexibility using &lsquo;gridspec&rsquo; and &lsquo;subplots&rsquo;, see details here.</p>
 
     </div>
 
@@ -818,15 +905,15 @@ Hyper-parameter takes a lot of time to tune the parameters if number of trials a
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/post/1111-11-11-clip-connecting-text-and-images/">CLIP: Connecting Text and Images</a></li>
-      
       <li><a href="/post/1111-11-11-the-inaturalist-species-classification-and-detection-dataset/">The iNaturalist Species Classification and Detection Dataset</a></li>
+      
+      <li><a href="/post/1111-11-11-hyperopt/">Hyperopt: A tool for parameter tuning</a></li>
       
       <li><a href="/post/1111-11-11-low-shot-learning-basic-concepts/">Low/Few Shot Learning</a></li>
       
-      <li><a href="/post/1111-11-11-the-unreasonable-effectiveness-of-noisy-data-for-fine-grained-recognition/">The Unreasonable Effectiveness of Noisy Data for Fine-Grained Recognition</a></li>
+      <li><a href="/post/1111-11-11-clip-connecting-text-and-images/">CLIP: Connecting Text and Images</a></li>
       
-      <li><a href="/post/1111-11-11-kl-divergence/">KL-Divergence</a></li>
+      <li><a href="/post/1111-11-11-presence-only-geographical-priors-for-fine-grained-image-classification/">Presence-Only Geographical Priors for Fine-Grained Image Classification</a></li>
       
     </ul>
   </div>

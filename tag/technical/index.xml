@@ -5,12 +5,136 @@
     <link>https://srishti.dev/tag/technical/</link>
       <atom:link href="https://srishti.dev/tag/technical/index.xml" rel="self" type="application/rss+xml" />
     <description>technical</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 11 Nov 1111 12:38:00 -0700</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 11 Dec 1111 12:38:00 -0700</lastBuildDate>
     <image>
       <url>https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png</url>
       <title>technical</title>
       <link>https://srishti.dev/tag/technical/</link>
     </image>
+    
+    <item>
+      <title>Understanding Usage of plt, figure, subplot, axes, axis in matplotlib</title>
+      <link>https://srishti.dev/post/1111-11-11-plt-fig-axis/</link>
+      <pubDate>Mon, 11 Dec 1111 12:38:00 -0700</pubDate>
+      <guid>https://srishti.dev/post/1111-11-11-plt-fig-axis/</guid>
+      <description>&lt;p&gt;When working with python libraries, especially for visualization, I usually get confused my number of options available for plotting. Example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. plt.plot()
+
+2. ax = plt.subplot()
+   ax.plot(x, y)
+
+3. fig1, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2)
+
+4. f, axarr = plt.subplots(2,2)
+   axarr[0,0].imshow(image_datas[0])
+   ....
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After reading through a bunch of stackoverflow explainations, I compiled them here:&lt;/p&gt;
+&lt;br/&gt;
+&lt;h3 id=&#34;question-1-what-is-the-difference-between-drawing-plots-using-plot-axes-or-figure-in-matplotlib&#34;&gt;Question 1: What is the difference between drawing plots using plot, axes or figure in matplotlib?&lt;/h3&gt;
+&lt;br/&gt;
+&lt;p&gt;&lt;strong&gt;Plot just one figure with (x,y) coordinates&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;plt.plot(x, y)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you just want to get one graphic, you can use this way.&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.random.rand(10)
+y = np.random.rand(10)
+
+figure1 = plt.plot(x,y)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+    &lt;img src=&#34;https://srishti.dev/img/plt-img-1.png&#34; width=&#34;300&#34; height=&#34;400&#34; /&gt;
+    &lt;figcaption&gt;
+    &lt;a href=&#34;https://stackoverflow.com/questions/37970424/what-is-the-difference-between-drawing-plots-using-plot-axes-or-figure-in-matpl&#34;&gt; Fig 1. Photo via Stackoverflow&lt;/a&gt;
+    &lt;/figcaption&gt; 
+ &lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;Plot one or several figure(s) in the same window&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Plot just one figure&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ax = plt.subplot()
+ax.plot(x, y)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or you can plot multiple figures like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;fig1, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This plot 4 figures which are named ax1, ax2, ax3 and ax4 each one but on the same window. This window will be just divided in 4 parts with my example.&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import numpy as np
+import matplotlib.pyplot as plt
+
+x1 = np.random.rand(10)
+x2 = np.random.rand(10)
+x3 = np.random.rand(10)
+x4 = np.random.rand(10)
+y1 = np.random.rand(10)
+y2 = np.random.rand(10)
+y3 = np.random.rand(10)
+y4 = np.random.rand(10)
+
+figure2, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2)
+ax1.plot(x1,y1)
+ax2.plot(x2,y2)
+ax3.plot(x3,y3)
+ax4.plot(x4,y4)
+
+plt.show()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+    &lt;img src=&#34;https://srishti.dev/img/plt_img_2.png&#34; width=&#34;300&#34; height=&#34;400&#34; /&gt;
+    &lt;figcaption&gt;
+    &lt;a href=&#34;https://stackoverflow.com/questions/37970424/what-is-the-difference-between-drawing-plots-using-plot-axes-or-figure-in-matpl&#34;&gt; Fig 2. Photo via Stackoverflow&lt;/a&gt;
+    &lt;/figcaption&gt; 
+ &lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;Another method for multiple plots&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig = plt.figure()
+new_plot = fig.add_subplot(111)
+new_plot.plot(x, y)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;br/&gt;
+&lt;h3 id=&#34;question-2-difference-between-axes-and-axis-in-matplotlib&#34;&gt;Question 2: Difference between “axes” and “axis” in matplotlib?&lt;/h3&gt;
+&lt;p&gt;In the context of matplotlib, axes is not the plural form of axis, it actually denotes the plotting area, including all axis.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&#34;https://srishti.dev/img/axes_axis.png&#34; width=&#34;300&#34; height=&#34;400&#34; /&gt;
+    &lt;figcaption&gt;
+    &lt;a href=&#34;https://matplotlib.org/1.5.1/faq/usage_faq.html#parts-of-a-figure&#34;&gt; Fig 3. Photo via matplotlib old documentation&lt;/a&gt;
+    &lt;/figcaption&gt; 
+ &lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Axes&lt;/p&gt;
+&lt;p&gt;This is what you think of as &lt;code&gt;a plot&lt;/code&gt;, it is the region of the image with the data space (marked as the inner blue box). A given figure can contain many Axes, but a given Axes object can only be in one Figure. The Axes contains two (or three in the case of 3D) Axis objects (be aware of the difference between Axes and Axis) which take care of the data limits (the data limits can also be controlled via set via the &lt;code&gt;set_xlim()&lt;/code&gt; and &lt;code&gt;set_ylim()&lt;/code&gt; Axes methods). Each Axes has a title (set via &lt;code&gt;set_title()&lt;/code&gt;), an x-label (set via &lt;code&gt;set_xlabel()&lt;/code&gt;), and a y-label set via &lt;code&gt;set_ylabel()&lt;/code&gt;).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Axis&lt;/p&gt;
+&lt;p&gt;These are the number-line-like objects (circled in green). They take care of setting the graph limits and generating the ticks (the marks on the axis) and ticklabels (strings labeling the ticks). The location of the ticks is determined by a Locator object and the ticklabel strings are formatted by a Formatter. The combination of the correct Locator and Formatter gives very fine control over the tick locations and labels.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;br/&gt;
+&lt;h3 id=&#34;question-3-what-is-the-difference-between-pltsubplots-and-pltfigure&#34;&gt;Question 3: What is the difference between plt.subplots() and plt.figure()&lt;/h3&gt;
+&lt;p&gt;In matplotlib, we can plots in two ways like below:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;plt.figure(1,figsize=(400,8))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;fig,ax = plt.subplots()
+fig.set_size_inches(400,8)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and though both are correct, they have their differences.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;plt.figure&lt;/code&gt; just creates a figure (but with no axes in it) whereas &lt;code&gt;plt.subplots&lt;/code&gt; takes optional arguments (ex: plt.subplots(2, 2)) to create an array of axes in the figure. Most of the kwargs that &lt;code&gt;plt.figure&lt;/code&gt; takes &lt;code&gt;plt.subplots&lt;/code&gt; also takes.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;plt.figure()&lt;/code&gt; is usually used when you want more customization to you axes, such as positions, sizes, colors and etc. You can see artist tutorial for more details. (I personally prefer this for individual plot).&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;plt.subplots()&lt;/code&gt; is recommended for generating multiple subplots in grids. You can also achieve higher flexibility using &amp;lsquo;gridspec&amp;rsquo; and &amp;lsquo;subplots&amp;rsquo;, see details here.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>CLIP: Connecting Text and Images</title>
