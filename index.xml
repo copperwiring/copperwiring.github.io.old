@@ -832,12 +832,16 @@ ls
       <guid>https://srishti.dev/projects/</guid>
       <description>&lt;hr&gt;
 &lt;h2 id=&#34;project-1&#34;&gt;Project 1&lt;/h2&gt;
+&lt;h3 id=&#34;clip-based-predictive-domain-adaptation&#34;&gt;CLIP-based Predictive Domain Adaptation&lt;/h3&gt;
+&lt;p&gt;Work in progress: Code 
+&lt;a href=&#34;https://github.com/copperwiring/CLIP-Graph-Predictive-Domain-Adaptation/tree/sy/set-config-file-for-domainnet&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;project-2&#34;&gt;Project 2&lt;/h2&gt;
 &lt;h3 id=&#34;design-implementation-and-delivering-of-a-ml-system-for-cloudshadow-and-haze-detection-from-satellite-data&#34;&gt;Design, Implementation and Delivering of a ML System for Cloud,Shadow and Haze Detection from Satellite Data.&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Goal&lt;/strong&gt;: Given unprocessed geospatial data from standard sources, aim was to detect and predict cloud, shadow and haze cover.&lt;/p&gt;
 &lt;p&gt;This project involved formatting raw data to match a standard specification and then used as an input to a deep learning-based image segmentation model. The entire software stack was cloud based and AWS EC2 was used the main development server. Docker was used for creating virtual environments and parallel deployment of multiple training jobs. Jupyter notebooks were used as a mechanism for integrating both code and documentation into a single deliverable medium.&lt;/p&gt;
 &lt;p&gt;Effort was aimed at developing machine learning models which would suit our purpose. This involved data augmentation, data filtering, reiteration with different hyper-parameters, improving code to incorporate added functionality and implementing the solution using
 standardized software packages and frameworks like PyTorch.&lt;/p&gt;
-&lt;h2 id=&#34;project-2&#34;&gt;Project 2&lt;/h2&gt;
+&lt;h2 id=&#34;project-3&#34;&gt;Project 3&lt;/h2&gt;
 &lt;h3 id=&#34;optimization-methods-for-better-cloud-mask-from-sentinel-2-data&#34;&gt;Optimization Methods for Better Cloud Mask from Sentinel 2 Data&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Goal&lt;/strong&gt;:Scientific understanding of how radiometric properties can affect cloud detection.&lt;/p&gt;
 &lt;p&gt;A standard cloud detection approach for visible bands will model the threshold value as a linear function with respect to reflectance. We did a linear transformation between our Top-of-Atmosphere (TOA) reflectance values (band reflectance) to the NBAR albedo reflectance values
@@ -849,7 +853,7 @@ standardized software packages and frameworks like PyTorch.&lt;/p&gt;
     &lt;/figcaption&gt; 
  &lt;/figure&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; To do basic exploration with geospatial data and understand how it works and what it looks like, see the code here: &lt;a href=&#34;https://github.com/copperwiring/3-band-satellite-imagery-analysis&#34;&gt;https://github.com/copperwiring/3-band-satellite-imagery-analysis&lt;/a&gt; . It is recommended to use QGIS to view TIF files when needed.&lt;/p&gt;
-&lt;h2 id=&#34;project-3&#34;&gt;Project 3&lt;/h2&gt;
+&lt;h2 id=&#34;project-4&#34;&gt;Project 4&lt;/h2&gt;
 &lt;h3 id=&#34;microsoft-kinect-rgb-depth-based-visual-tracking&#34;&gt;Microsoft Kinect RGB-Depth Based Visual Tracking&lt;/h3&gt;
 &lt;p&gt;The project (part of my Masters thesis) addresses the challenge of re-detection of a single occluded target. This work specifically focuses on human targets that are occluded by objects (e.g. chairs) or by other humans (e.g. a tall person). The tracking methodology proposed considers a single Kinect RGB-D camera, single-target,and is model-free, applied to long-term tracking. The model-free property means that the only supervised training example is provided by the bounding box in the first frame. The long-term tracking means that the tracker learns to re-detection after the target is lost. i.e. to infer the object position in the current frame.&lt;/p&gt;
  &lt;figure&gt;
@@ -862,7 +866,7 @@ standardized software packages and frameworks like PyTorch.&lt;/p&gt;
 &lt;p&gt;
 &lt;a href=&#34;https://www.youtube.com/watch?v=WU1yeRTaXnY&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/WU1yeRTaXnY/0.jpg&#34; alt=&#34;Occlusion aware depth based tracking&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;!-- &lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://youtu.be/WU1yeRTaXnY&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt; --&gt;
-&lt;h2 id=&#34;project-4&#34;&gt;Project 4&lt;/h2&gt;
+&lt;h2 id=&#34;project-4-1&#34;&gt;Project 4&lt;/h2&gt;
 &lt;h3 id=&#34;image-classification-model-deployment-using-flask&#34;&gt;Image Classification Model Deployment Using Flask&lt;/h3&gt;
 &lt;p&gt;This project builds a image classification model which recognises &amp;lsquo;House Numbers&amp;rsquo; (in photos). It uses Flask to create an API, we can deploy this model and create a simple web page to load and classify new images.&lt;/p&gt;
 &lt;p&gt;The model can be tested on website: 

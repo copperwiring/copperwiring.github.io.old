@@ -27,7 +27,8 @@
   
     
   
-  <meta name="description" content="Project 1 Design, Implementation and Delivering of a ML System for Cloud,Shadow and Haze Detection from Satellite Data. Goal: Given unprocessed geospatial data from standard sources, aim was to detect and predict cloud, shadow and haze cover.">
+  <meta name="description" content="Project 1 CLIP-based Predictive Domain Adaptation Work in progress: Code here
+Project 2 Design, Implementation and Delivering of a ML System for Cloud,Shadow and Haze Detection from Satellite Data. Goal: Given unprocessed geospatial data from standard sources, aim was to detect and predict cloud, shadow and haze cover.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://srishti.dev/projects/">
@@ -238,7 +239,8 @@
   <meta property="og:site_name" content="Srishti Yadav">
   <meta property="og:url" content="https://srishti.dev/projects/">
   <meta property="og:title" content="Projects | Srishti Yadav">
-  <meta property="og:description" content="Project 1 Design, Implementation and Delivering of a ML System for Cloud,Shadow and Haze Detection from Satellite Data. Goal: Given unprocessed geospatial data from standard sources, aim was to detect and predict cloud, shadow and haze cover."><meta property="og:image" content="https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png">
+  <meta property="og:description" content="Project 1 CLIP-based Predictive Domain Adaptation Work in progress: Code here
+Project 2 Design, Implementation and Delivering of a ML System for Cloud,Shadow and Haze Detection from Satellite Data. Goal: Given unprocessed geospatial data from standard sources, aim was to detect and predict cloud, shadow and haze cover."><meta property="og:image" content="https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
@@ -568,12 +570,16 @@
     <div class="article-style">
       <hr>
 <h2 id="project-1">Project 1</h2>
+<h3 id="clip-based-predictive-domain-adaptation">CLIP-based Predictive Domain Adaptation</h3>
+<p>Work in progress: Code 
+<a href="https://github.com/copperwiring/CLIP-Graph-Predictive-Domain-Adaptation/tree/sy/set-config-file-for-domainnet" target="_blank" rel="noopener">here</a></p>
+<h2 id="project-2">Project 2</h2>
 <h3 id="design-implementation-and-delivering-of-a-ml-system-for-cloudshadow-and-haze-detection-from-satellite-data">Design, Implementation and Delivering of a ML System for Cloud,Shadow and Haze Detection from Satellite Data.</h3>
 <p><strong>Goal</strong>: Given unprocessed geospatial data from standard sources, aim was to detect and predict cloud, shadow and haze cover.</p>
 <p>This project involved formatting raw data to match a standard specification and then used as an input to a deep learning-based image segmentation model. The entire software stack was cloud based and AWS EC2 was used the main development server. Docker was used for creating virtual environments and parallel deployment of multiple training jobs. Jupyter notebooks were used as a mechanism for integrating both code and documentation into a single deliverable medium.</p>
 <p>Effort was aimed at developing machine learning models which would suit our purpose. This involved data augmentation, data filtering, reiteration with different hyper-parameters, improving code to incorporate added functionality and implementing the solution using
 standardized software packages and frameworks like PyTorch.</p>
-<h2 id="project-2">Project 2</h2>
+<h2 id="project-3">Project 3</h2>
 <h3 id="optimization-methods-for-better-cloud-mask-from-sentinel-2-data">Optimization Methods for Better Cloud Mask from Sentinel 2 Data</h3>
 <p><strong>Goal</strong>:Scientific understanding of how radiometric properties can affect cloud detection.</p>
 <p>A standard cloud detection approach for visible bands will model the threshold value as a linear function with respect to reflectance. We did a linear transformation between our Top-of-Atmosphere (TOA) reflectance values (band reflectance) to the NBAR albedo reflectance values
@@ -585,7 +591,7 @@ standardized software packages and frameworks like PyTorch.</p>
     </figcaption> 
  </figure>
 <p><strong>Note:</strong> To do basic exploration with geospatial data and understand how it works and what it looks like, see the code here: <a href="https://github.com/copperwiring/3-band-satellite-imagery-analysis">https://github.com/copperwiring/3-band-satellite-imagery-analysis</a> . It is recommended to use QGIS to view TIF files when needed.</p>
-<h2 id="project-3">Project 3</h2>
+<h2 id="project-4">Project 4</h2>
 <h3 id="microsoft-kinect-rgb-depth-based-visual-tracking">Microsoft Kinect RGB-Depth Based Visual Tracking</h3>
 <p>The project (part of my Masters thesis) addresses the challenge of re-detection of a single occluded target. This work specifically focuses on human targets that are occluded by objects (e.g. chairs) or by other humans (e.g. a tall person). The tracking methodology proposed considers a single Kinect RGB-D camera, single-target,and is model-free, applied to long-term tracking. The model-free property means that the only supervised training example is provided by the bounding box in the first frame. The long-term tracking means that the tracker learns to re-detection after the target is lost. i.e. to infer the object position in the current frame.</p>
  <figure>
@@ -598,7 +604,7 @@ standardized software packages and frameworks like PyTorch.</p>
 <p>
 <a href="https://www.youtube.com/watch?v=WU1yeRTaXnY" target="_blank" rel="noopener"><img src="https://img.youtube.com/vi/WU1yeRTaXnY/0.jpg" alt="Occlusion aware depth based tracking"></a></p>
 <!-- <iframe width="560" height="315" src="https://youtu.be/WU1yeRTaXnY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-<h2 id="project-4">Project 4</h2>
+<h2 id="project-4-1">Project 4</h2>
 <h3 id="image-classification-model-deployment-using-flask">Image Classification Model Deployment Using Flask</h3>
 <p>This project builds a image classification model which recognises &lsquo;House Numbers&rsquo; (in photos). It uses Flask to create an API, we can deploy this model and create a simple web page to load and classify new images.</p>
 <p>The model can be tested on website: 
