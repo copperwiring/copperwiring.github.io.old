@@ -1,0 +1,1328 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Srishti Yadav">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Update: A small section of latex in the LaTeX is not rendering correctly. Will fix it soon.
+A blog post on Viewmaker Networks: Learning Views for Unsupervised Representation Learning. ICLR, 2021">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://srishti.dev/post/1111-11-11-viewmaker-network-work-but-why/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#3f51b5">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://srishti.dev/post/1111-11-11-viewmaker-network-work-but-why/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Srishti Yadav">
+  <meta property="og:url" content="https://srishti.dev/post/1111-11-11-viewmaker-network-work-but-why/">
+  <meta property="og:title" content="On The Effects of Learning Views on Neural Representations in Self-Supervised Learning | Srishti Yadav">
+  <meta property="og:description" content="Update: A small section of latex in the LaTeX is not rendering correctly. Will fix it soon.
+A blog post on Viewmaker Networks: Learning Views for Unsupervised Representation Learning. ICLR, 2021"><meta property="og:image" content="https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="1111-11-12T22:21:06-07:00">
+    
+    <meta property="article:modified_time" content="1111-11-12T22:21:06-07:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://srishti.dev/post/1111-11-11-viewmaker-network-work-but-why/"
+  },
+  "headline": "On The Effects of Learning Views on Neural Representations in Self-Supervised Learning",
+  
+  "datePublished": "1111-11-12T22:21:06-07:00",
+  "dateModified": "1111-11-12T22:21:06-07:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Srishti Yadav"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Srishti Yadav",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "Update: A small section of latex in the LaTeX is not rendering correctly. Will fix it soon.\nA blog post on Viewmaker Networks: Learning Views for Unsupervised Representation Learning. ICLR, 2021"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>On The Effects of Learning Views on Neural Representations in Self-Supervised Learning | Srishti Yadav</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Srishti Yadav</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Srishti Yadav</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/post/"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/projects/"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/news/"><span>News</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/reading_list/"><span>Books</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/files/cv.pdf"><span>CV</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>On The Effects of Learning Views on Neural Representations in Self-Supervised Learning</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Nov 12, 1111
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    24 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>Update: A small section of latex in the LaTeX is not rendering correctly. Will fix it soon.</p>
+<p>A blog post on 
+<a href="https://iclr.cc/virtual/2021/poster/2544" target="_blank" rel="noopener"><em>Viewmaker Networks: Learning Views for Unsupervised Representation Learning</em></a>. ICLR, 2021</p>
+<p><strong>About this Blog Post</strong>:</p>
+<p>Contrastive self-supervised learning (SSL) methods require domain expertise to select a set of data transformations that work well on a specific downstream task, modality, and domain. This creates a bottleneck for the utilization of SSL strategies on new datasets, particularly those sampled from different domains. This blog post details the Viewmaker Networks, a method that attempts to overcome this issue by using constrained perturbations and an adversarial training objective to synthesize novel views. This method can be broadly extended to many domains, as it learns views directly from the training data. We cover the details of the methodology and related concepts as they apply to contrastive visual representation learning. This blog post also develops further insights into the visual representations learned using the Viewmaker&rsquo;s augmented views by conducting additional experiments. Specifically, we investigate the dimensional collapse and representational similarity between differently trained models (handcrafted views and viewmaker views). We observe that training models using Viewmaker views not only make better use of the embedding space but also learn a different function of the data when compared to training models using handcrafted views, something one should carefully consider when choosing one over the other. We feel these observations will encourage further discussions on learned views in self-supervised learning.</p>
+<center>
+<figure>
+<img align="centre" src="https://i.imgur.com/SmmBsnK.gif" alt="Trulli" style="width:100%">
+<figcaption style="text-align:center">
+    Fig.1:  The Viewmaker Network Setup
+</figcaption>
+</figure>
+</center>
+<div> 
+<blockquote>
+  <p>
+Contrastive self-supervised learning(SSL) methods require domain expertise to select a set of data transformations that work well on a specific downstream task, modality, and domain. This creates a bottleneck for the utilization of SSL strategies on new datasets, particularly those sampled from different domains. This blog post details the Viewmaker Networks, a method that attempts to overcome this issue by using constrained perturbations and an adversarial training objective to synthesize novel views. This method can be broadly extended to many domains, as it learns views directly from the training data. We cover the details of the methodology and related concepts as they apply to contrastive visual representation learning.</p>
+</blockquote>
+</div>
+<!-- ## **Motivation** -->
+<p>The amount of data available to us is exploding. Despite the availabilty of such large amounts of data, we are currently unable to exploit it because the majority of existing deep learning research relies on annotated data. We require a learning method which can use training data with fewer or no labels and yet perform well when identifying patterns in unseen data. This learning paradigm, which doesn&rsquo;t assume availabilty of labelled training data, is called Unsupervised Learning. We specifically explore a subset of unsupervised methods, which utilizes pretext tasks that develop a training objective which exploits the structure in the data itself. This subset of Unsupervised Learning is called Self-Supervised Learning(SSL).</p>
+<p>Self-Supervised learning (SSL) requires a human expert to design a pretext task. Recently, constrastive learning has emerged as an effective and popular pretext task. It works by extracting a weak supervisory signal from carefully chosen data transformations, typically specified by a domain expert. This creates a barrier for the use of such models by non-domain experts as well as issues with usabilty across various domains and modalities. Viewmaker Network attempts to remove this barrier by proposing a network which is domain agnostic and yet generates useful learned views (i.e. augmented images) which can be used for model training and show significant success on a variety of classification tasks across various datasets and modalities. This blog post also develops further insights into the visual representations learned using the Viewmaker&rsquo;s augmented views by conducting additional experiments. Specifically, we investigate the dimensional collapse and representational similarity between differently trained models (handcrafted views and viewmaker views). We observe that training models using Viewmaker views not only make better use of the embedding space but also learn a different function of the data when compared to training models using handcrafted views, something one should carefully consider when choosing one over the other. We feel these observations will encourage further discussions on learned views in self-supervised learning.</p>
+<h1 id="1-representation-learning">1. Representation Learning</h1>
+<!-- One of the basic concepts of the Viewmaker Network is  'views' (Section 2) or what we can also call image transformations. These image 'representations' in deep learning are non-linear transformations of the data that are meaningful and useful for downstream tasks when building predictive models.  -->
+<p>The task of self-supervised representation learning requires discovering ways to learn abstract representations from the data, which capture relevant high-level properties, without any explicit annotations. Recently, representation learning has seen extensive successful usage in deep learning, with the goal of finding more abstract – and ultimately more useful representations.</p>
+<p>For visual representations to be useful, they must satisfy a set of criteria. Firstly, they must encode useful semantic properties that explain the image contents. Secondly, the learned representations should be useful for performing downstream image analysis tasks (such as classification). And thirdly, they must be robust to various changes to the image, such as natural variations in lighting or viewpoint.</p>
+<p>There are multiple strategies for learning visual representations. When learning visual representations in a supervised manner, the resulting representations are often specific to the supervised task and annotations. This is undesirable, as these representation may not generalize to different tasks i.e. they are not task and label agnostic. One strategy for mitigating these issues and learning better visual representation is to shift to a self-supervised learning approach. SSL approaches do not rely on annotations and are agnostic to downstream tasks, and so these representations might be more general.</p>
+<h1 id="2-views">2. Views</h1>
+<h2 id="21-what-are-views">2.1 What Are Views?</h2>
+<!-- About Self-Supervised Visual Representation Learning, Hand-crafted views, recent works on automatizing the process, etc. -->
+<!-- Read this again --> 
+<figure>
+<img src="https://i.imgur.com/JFGTXRy.png" alt="Trulli" style="width:100%">
+<figcaption style="text-align:center"> 
+    Fig.2: Different views of a Labrador Retriever. The left most images are natural views sampled by taking different photographs of a Labrador Retriever. The rightmost images are synthetic views sampled by modifying a single natural view.
+</figcaption>
+</figure>
+<p>Many natural images contain visual representations of semantically distinct objects such as animals, plants, furniture, etc. Given an image containing an instance of some object class, this image is only one potential view of that object. For example, in Figure 2, there are two unique images of a Labrador Retriever photographed at different times and from different locations. These are examples of natural views of an object, which are essentially just the set of all possible photographs of that object as it might exist in the real world. Figure 2 also portrays two synthetic views of the Labrador Retriever. These are synthetically augmented images, which modify the image while still retaining the relevant semantic information. Similar to natural views, these are valid visual representations of the object. However, they are derived by modifying a single image from the set of natural views using various augmentation strategies such as geometric transformations of an image or color modification.</p>
+<figure>
+<img src="https://1.bp.blogspot.com/-bO6c2IGpXDY/Xo4cR6ebFUI/AAAAAAAAFpo/CPVNlMP08hUfNPHQb2tKeHju4Y_UsNzegCLcBGAsYHQ/s1600/image3.png" alt="Trulli" style="width:100%">
+<figcaption style="text-align:center"> 
+    Fig.3: SimCLR data augmentation options. The authors included geometric transformations like cropping, rotation, resizing, and flipping; and color transformations like blurring, and color jitter.
+</figcaption>
+</figure>
+<!-- https://europe.naverlabs.com/research/computer-vision/learning-visual-representations/ -->
+<h2 id="22-which-views-are-useful">2.2 Which Views Are Useful?</h2>
+<!-- The fact that views must be designed by hand is a significant limitation. -->
+<p>Many previous works have achieved significantly improved model performance by proposing a variety of image augmentation strategies. Historically, it was the development of the AlexNet architecture (<strong>ImageNet Classification with Deep Convolutional Neural Networks</strong>) which popularized the use of augmentations in deep learning. The transformations they considered involved randomly cropped 224×224 patches from the original images, flipping them horizontally, and changing the intensity of the RGB channels using PCA color augmentation. Since then, various novel augmentation strategies have demonstrated effectiveness in various domains. Random Erasing (<strong>Random Erasing Data Augmentation</strong>) is an augmentation strategy that attempts to mimic the natural object occlusion which occurs in many image modalities. This strategy, demonstrated in Fig. 4, involves randomly selecting a rectangular image region and replacing the pixel values with random values or a single pixel value. Related to this approach (<strong>Improved Regularization of Convolutional Neural Networks with Cutout</strong>) is CutOut, a procedure that involves randomly masking out square regions of the input during training. The authors find that cutout improves the robustness and overall performance of convolutional neural networks. Another augmentation strategy, known as Mixup, (<strong>mixup: Beyond Empirical Risk Minimization</strong>) involves augmenting both the input image and the image label. Mixup proceeds by sampling two images from the dataset and interpolating between them by some factor. Then, the one-hot encoded image labels are interpolated by the same factor. Yun et. al. proposed CutMix (<strong>CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features</strong>), an augmentation strategy that combines CutOut and Mixup. CutMix proceeds by applying CutOut to an input image and then replaces the cutout region with a cropped section from another image. Then, the label is augmented such that it represents the percentage of the image occupied by each object class. DAGAN (<strong>Data Augmentation Generative Adversarial Network</strong>) utilizes an adversarial setup to learn image augmentations and the authors showed that adversarial training can be used to expand the pool of available data and even apply novel augmentations to unseen classes of data (e.g. few-shot learning). This field of optimizing best augmentation strategies is constantly expanding.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Black</th>
+<th align="center">White</th>
+<th align="center">Random</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img src="https://i.imgur.com/u4IS2EJ.gif" alt="i1"></td>
+<td align="center"><img src="https://i.imgur.com/SWrTAvd.gif" alt="i2"></td>
+<td align="center"><img src="https://i.imgur.com/0elggeF.gif" alt="i3"></td>
+</tr>
+<tr>
+<td align="center"><img src="https://imgur.com/LFfityQ.gif" alt="i4"></td>
+<td align="center"><img src="https://imgur.com/JN5aVIY.gif" alt="i5"></td>
+<td align="center"><img src="https://imgur.com/8y55KTi.gif" alt="i6"></td>
+</tr>
+</tbody>
+</table>
+<figcaption style="text-align:center">
+    Fig.4: Random Erasing Augmetation Strategy
+</figcaption>
+<center>
+<figure>
+<img align="centre" src="https://i.imgur.com/2mC2AjM.jpg" alt="Trulli" style="width:100%">
+<figcaption style="text-align:center">
+    Fig.5: (left to right) Mixup, Cutout and CutMix data augmentations
+</figcaption>
+</figure>
+</center>
+<p>The intuition behind using many of the common image transformations is that these augmented views attempt to simulate samples from the true underlying data distribution. This improves the diversity of the available data and can help improve model convergence. This rationale, however, does not explain why unrealistic distortions such as cutout (<strong>Improved Regularization of Convolutional Neural Networks with Cutout</strong>) and mixup (<strong>mixup: Beyond Empirical Risk Minimization</strong>) significantly improve generalization. Furthermore, many augmentation strategies do not always transfer across datasets. Cutout, for example, improves performance on CIFAR-10 but not on ImageNet(<strong>Improving Robustness Without Sacrificing Accuracy with Patch Gaussian Augmentation</strong>). There are also no standard metrics that quantify if an augmentation strategy is good and how well can it be generalized because they are model-dependent. Viewmaker Network aims to remove this dependency on handcrafted views by learning image transformations from the data.</p>
+<h1 id="3-where-does-viewmaker-network-fit-in">3. Where Does Viewmaker Network Fit In?</h1>
+<p>Recently, contrastive self-supervised representation learning methods have explored training models which are invariant to different “views,” or augmented versions of an input. However, designing these views requires considerable trial and error by human experts, hindering its widespread adoption across domains and modalities thus leading to the question: how can we better transform image with minimum human expertise?</p>
+<p>Images can be transformed in a vast number of ways. However, only a subset of these transformations provide a useful training signal which can be exploited by contrastive methods. Within this subset of informative transformations, only a few are ever selected by experts. As seen in Fig. 6, there is a vast untapped space of image transformations which can be used for contrastive methods. The Viewmaker Network attempts to explore this transformation space, denoted as <strong>B</strong>, using an adversarial setup without any input from a human expert.</p>
+<center>
+<figure>
+<img align="centre" src="https://i.imgur.com/8HoEHkv.png" alt="The set of image transformations">
+<figcaption style="text-align:left">
+    Fig.6: Possible sets of image transformations where <b>A</b> = The set of all image transformations; <b>B</b> = the set of all transformations that provide a useful training signal for contrastive methods; <b>C</b> = the set of handcrafted transformations. 
+</figcaption>
+</figure>
+</center>
+<!--DONT REMOVE THIS COMMENT /public/images/cifar-result.png -->
+<h1 id="4-learning-to-generate-views">4. Learning to Generate Views</h1>
+<p>Using neural networks to learn image transformations for generating augmented views is not a simple task, as we have no annotated training data that explicitly indicates whether or not a network augmented image is within the set of valid views. An alternative strategy is to utilize an adversarial set up such that one model can guide the other into learning transformations that produce valid views. In an adversarial training setup, we have two neural networks: the generator $G$ and the discriminator $D$. The discriminator is typically tasked with receiving inputs from a real distribution, and a synthetic distribution, and then classifying which distribution each input originated from. The generator is typically optimized to generate an input that can fool the discriminator into believing the input originates from the real distribution. More formally, the discriminator is optimized to maximize the following objective function:</p>
+<p>$$\mathbb{E}_x[\texttt{log}D(x)] + \mathbb{E}_z[\texttt{log}(1-D(G(z)))]$$</p>
+<p>And the generator is optimized to minimize the following objective function:</p>
+<p>$$\mathbb{E}_z[\texttt{log}(1-D(G(z)))]$$</p>
+<p>where $x$ is an input sampled from the real distribution, and $z$ is a stochastic input that the generator modifies to produce samples that match the real distribution, $D$ is the discrimantor and $G$ is the generator.</p>
+<p>The adversarial setup used for training the Viewmaker Networks differs from traditional adversarial training setups in a few distinct ways. First, there is no real distribution. Second, the discriminator is optimized using an instance discrimination objective, such as infoNCE (<strong>Representation Learning with Contrastive Predictive Coding</strong>), which involves the task of re-identify a transformed version of some instance of the image $x_i$ within a set of many other different images. Third, the generator is tasked with modifying an image as follows:</p>
+<p>$$x_{view} = G(x_i) + x_i$$</p>
+<p>such that the new image $x_{view}$ maximizes the instance discrimination objective. This setup encourages $D$ to learn representations of images that allow it to re-identify modified images, and it encourages $G$ to learn transformations of $x_i$ such that it is becomes more difficult to distinguish from unrelated images. However, this method has a major failure case &ndash; if the generator is allowed to arbitrarily modify $x_i$, then it can learn a solution where it simply destroys all revevant semantic information in $x_i$. Thus, this method requires that a constraint is applied to the transformations learned by $G$ such that it cannot converge to this undesired solution.</p>
+<!-- Source: https://stackoverflow.com/questions/24319505/how-can-one-display-images-side-by-side-in-a-github-readme-md  -->
+<centre>
+<figure>
+<p align="middle">
+  <img src="https://i.imgur.com/KUNRWj7.png" alt="Trulli" width="30%"/>
+  <img src="https://i.imgur.com/XUHB4Or.png" alt="Trulli" width="30%" />
+  <img src="https://i.imgur.com/QaUJDp3.png" alt="Trulli" width="30%"/>
+<figcaption style="text-align:center">
+    Fig.6. Sample Views from Viewmaker Network at 200th epoch 
+</figcaption>
+</figure>
+</p>
+</centre>
+<h2 id="51-making-novel-views-with-adversarial-perturbations">5.1 Making Novel Views with Adversarial Perturbations</h2>
+<!-- Reword below
+ -->
+<p>The method proposed by the authors is insipired from adverserial setup, in particular with the use of $l_p$ norms used for adverserial robustness. But what is adversarial robustness and how is it related to samples of our data?</p>
+<p>Szegedy et al. and Biggio et al. showed that specifically crafted small perturbations of benign inputs can lead machine-learning models to misclassify them. These perturbed inputs are referred to as adversarial samples. Given a machine-learning model, a sample $\hat{x}$ is considered as an adversarial example if it is similar to a benign sample $x$ (drawn from the data distribution), such that $x$ is correctly classified and $\hat{x}$ is classified differently than x. (<strong>On the Suitability of Lp-norms for Creating and Preventing Adversarial Examples</strong>)</p>
+<h2 id="51-l_p-constrainted-perturbations">5.1 $l_p$ Constrainted Perturbations</h2>
+<p>To explain the $l_p$ contrained perturbations proposed by the authors, we first need to define $l_p$ norm.</p>
+<p>For a real number $p \geq 1$, we can define the $l_p$ norm as $||\textbf{w}||_p = (∑_{i}^{n}|w_i|^p)^{1/p}$. Note that we use bold to denote vector notations. Based on the value of $p$, we get the $l_1$, $l_2$, .. , $l_n$ norms (**may be reference which has good details on lp norms?**)</p>
+<!-- ~~Note that $l_p$ for $p=2$ and $n=2$ is a  $||\textbf{w}||_2 = \sqrt{w_1^2+w_2^2}$ which is a circle.~~ For a bettre mathematical intuition, one way would be to think about these norms it is to look at what happens to the unit circle as $p$ varies. When $p=∞$, the unit circle is just a square. As p decreases, the outer corners begin to move inward until $p=1$, when they become just straight lines between the cardinal unit vectors, and the unit circle becomes a diamond. For $p<1$, the diagonal lines start to bulge inward, creating a four-pointed "star".  -->
+<!-- Source https://www.physicsforums.com/threads/intuitive-explanation-of-what-a-p-norm-is-for-any-arbitrary-p-0.520225/ -->
+<p>But how does $l_p$ constraints generate perturbations which are helpful for viewmaker network? To explain this we will refer to  Fig.7 (pseudo code for viewmaker network) and Fig. 8 which is its representation in an (assumed) 3D space.</p>
+<figure>
+<img src="https://i.imgur.com/eUwGsrF.png" alt="Trulli" />
+<figcaption style="text-align:center">
+    Fig.7.Psuedo Code for Viewmaker Network 
+</figcaption>
+</figure>
+<centre>
+<figure>
+<img src="https://i.imgur.com/xyXpZJK.png" alt="Trulli" style="width:800%">
+<figcaption style="text-align:center">
+    Fig.8: Representation of adding perturbation to input data in a sample 3D space </figcaption>
+</figure>
+</centre>
+<!-- 
+~~Referring to Fig. 8, let us assume a 3D space with centre at point 4. This space defines the region where images can exist. By definition, $L_1$ norm is $||\textbf{w}||_1 = ∑_{i}^{n}|w_i|$ and hence can be represented as the greenish pyramid structure centred at point 4 and 5 respectively. $L_2$ norm is $||\textbf{w}||_2^2 = ∑_{i}^{n}w_i^2$ and can be represented by the pink and yellow spheres centred around point 4 and 5 respectively.~~
+ -->
+<p>Let us assume a 3D space with origin at point 1 (see Fig.8 above). We are working with 3D data points in this example scenario. Let 5 be an input data point in this space and 1 be a generated perturbation in this space. If we were to add points 1 and 5 to perturb the input, there is a very high chance that in such a blind addition, the features of the perturbation can completely overshaddow the features of the input data point. To avoid this, we need a constraint on the perturbation before adding it to the input.</p>
+<p>${l}_p$ normIf we constrain 1 using the</p>
+<p>By definition, $L_1$ norm is $||\textbf{w}||_1 = ∑_{i}^{n}|w_i|$ and hence can be represented as the greenish pyramid structure centred at point 4 and 5 respectively. $L_2$ norm is $||\textbf{w}||_2^2 = ∑_{i}^{n}w_i^2$ and can be represented by the pink and yellow spheres centred around point 4 and 5 respectively.</p>
+<p>To explain how a perturbation can be constrained by  Viewmaker Network creates image transformation, we will, for simplicity, assume our input data in some 3D space at point 5. Other descriptions of the points in the Fig.8 can be seen below followed by their use in the viewmaker network.</p>
+<!-- (to add as legends in fig itself)
+ -->
+<p>Point <span style="color:red">1</span>: Unconstrained perturbation
+Point <span style="color:red">2</span>: Perturbation constrained by $l_2$ norm
+Point <span style="color:red">3</span>: Perturbation constrained by $l_1$ norm
+Point <span style="color:red">4</span>: origin
+Point <span style="color:red">5</span>: input data point
+Point <span style="color:red">6</span>: input data point perturbed by an $l_1$ constrained perturbation
+Point <span style="color:red">7</span>: input data point perturbed by an $l_2$ constrained perturbation</p>
+<p>We denote random unconstrained perturbation by point 1. From our knowledge of $l_p$ norms and pseudo code shown in Fig. 8, we know that these perturbations can be constrained by $l_1$ or $l_2$ norms i.e. within $l_1$ sphere (pink sphere around origin) or $l_2$ spheres(green pyramid structure around origin) respectively as shown in Fig. 9. These sphere represent the space (intutively) where we constraint perturbations we want to add to the original input data (images). Hence, in Viewmaker Network, when perturbation is constrained by an $l_1$ norm, intuitivetly, it implies that perturbation can not lie beyond the space of pink sphere.</p>
+<p>From the psuedo code Step 3, we also see that perturbations are added to original images which is eventually used an as input to the encoder, i.e.</p>
+<p>$$
+X = X + P
+$$</p>
+<p>where $X$ is the input original data and $P$ is the pertubation weighted by $l_1$ or $l_2$ norm. In Fig. 9, this is computed using simple vector additions. Hence, $P_5$ + $P_3$ = $P_6$ and $P_5$ + $P_2$ = $P_7$ where<br>
+$P_5$ is the original input data, $P_3$ and $P_2$ are $P_1$ (perturbation) weighted by $l_1$ and $l_2$ norm respectively, $P_6$ and $P_7$ are the resultant adverserially perturbed representation of original data $P_5$ constrained by $l_p$ norm.</p>
+<p>So far we covered perturbations contstrained by $l_p$ norms but how do we know they would be useful. To ensure that perturbations are useful, there are three things to keep in mind:</p>
+<ul>
+<li><b>Challenging</b>: The perturations should be complex and strong enough so that the encoder learns useful representations.</li>
+<li><b>Faithful</b>: Perturbations shouldn’t make the encoder task impossible by destroying all features.</li>
+<li><b>Stochastic</b>: The method should generate a variety of perturbations Achieved by injecting random noise into viewmaker (so that the model learns a stochastic function that produces a different perturbation each time)</li>
+</ul>
+<h2 id="52-visual-representation-of-psuedo-code">5.2. Visual Representation of Psuedo Code</h2>
+<p>Figure 9 shows how respective steps of the psuedo code allign with the block diagram of viewmaker network as whole. First an input data is sampled and a random noise/perturbation is generated. This random perturbation is then weighted by an $l_p$ norm to constraint the perturbations. It is important to constraint these perturbations so that they do not destroy the input data when added to original image. Finally this output is clamped so that each pixel value has a value between 0 and 1 for image representation.</p>
+<figure>
+<img src="https://i.imgur.com/nnN6Qzp.png" alt="Trulli" />
+<figcaption style="text-align:center">
+    Fig.9.Psuedo Code: Generate perturbations
+</figcaption>
+</figure>
+<!-- Should we conclude it? -->
+<!-- conclude with the papers which ppularized adverserial learning -->
+<!-- Important paper: Adversarial Self-Supervised Contrastive Learning -->
+<h1 id="7-intro-to-contrastive-learning">7. Intro to Contrastive Learning</h1>
+<p>Contrastive self-supervised visual representation learning algorithms learns representations by maximizing the agreement between the different views of the same image and minimizing the agreements between views of different images via a contrastive loss in the latent space. SimCLR and InstDisc are two popular contrastive learning algorithms.<strong>(give references)</strong></p>
+<p>One of the major components of the contrastive learning frameworks is the  data augmentation module which generates the various views of images. Traditionally, this module generates views from a predefined pool of augmentation which are designed by humans. Viewmaker Networks([1]) proposes an alternate data augmentation strategy which can be used for contrastive learning algorithms.</p>
+<center>
+<figure>
+<img align="centre" src="https://i.imgur.com/iCJLj6l.gif" alt="Trulli" style="width:60%">
+<figcaption style="text-align:center">
+    Fig.14: Contrastive Learning(representational image)
+</figcaption>
+</figure>
+</center>
+<h1 id="8-viewmaker-architecture">8. Viewmaker Architecture</h1>
+<p>The Viewmaker training setup requires the use of two neural networks. The first network is the Encoder network, which is the network that learns the image representations and solves the self-supervised task. For the experiments within this work, ResNet18 is used as the default architecture for the encoder. The Viewmaker network architecture modifies input images before sending them to the Encoder. The Viewmaker architecture was based off of a style transfer network established in previous works in the style transfer literature. The network is fully convolutional, contains 5 residual blocks, and includes no pooling. Uniform random noise is concatenated to the input and activations before each residual block.</p>
+<p>During training, the Encoder and Viewmaker network are trained back-and-forth, similar to other adversarial approaches. The Viewmaker network requires the experimenter to select a self-supervised learning strategy, which can be arbitrarily selected from a variety of available self-supervised methods. The authors opt to use the SimCLR training object and the InstDisc training object. The following hyperparams were selected for each of the training objectives:</p>
+<details>
+  <summary>The following hyperparams were selected for each of the training objectives (toggle to see):</summary>
+    <ol>
+    <li>SimCLR Specific Hyperparams</li>
+        <ul>
+            <li>temperature = 0.07</li>
+        </ul>
+    <li>InstDisk</li>
+        <ul>
+            <li>negatives = 4096</li>
+            <li>update rate = 0.5</li>
+        </ul>
+    <li>Other Hyperparams:</li>
+        <ul>
+        <li>optimizer = SGD</li>
+        <li>Batch size = 256</li>
+        <li>Learning rate = 0.03</li>
+        <li>Momentum = 0.9</li>
+        <li>Weight decay = 1e-4</li>
+        <li>Epochs = 200</li>
+    </ol>
+</details>
+<h3 id="evaluation">Evaluation:</h3>
+<p>To evaluate the resultant encoder models, the authors use linear evaluation. Linear evaluation involves first removing the final layer of the encoder and freezing the remaining paramaters, and then training a logistic regression model using the frozen features. The goal of this strategy is to determine if the learned representations are linearly separable with respect to the true underlying classes, despite the fact that the encoder is not trained using those class label. The experimental setup for training the logistic regression model is selected as follows:</p>
+<details>
+  <summary>The following hyperparams were selected for each of the training objectives (toggle to see):</summary>
+    <ol>
+    <li>Optimizer = SGD</li>
+    <li>Learning rate = 0.01</li>
+    <li>Momentum = 0.9</li>
+    <li>Weight decay = 0</li>
+    <li>Batch size = 128</li>
+    <li>Epochs = 100</li>
+    <li>Learning rate decay schedule:</li>
+        <ul>
+        <li>epoch 60, decay by factor of 10</li>
+        <li>epoch 80, decay by factor of 10</li>
+    </ol>
+</details>
+<h3 id="comparitive-results">Comparitive results</h3>
+<p>They compare their results with SimCLR (reference) and IntDisc (reference) training object, which uses expertly selected image augmentations.</p>
+<center>
+<figure>
+<img align="centre" src="https://i.imgur.com/TTzDVN6.png" alt="Trulli" style="width:60%">
+<figcaption style="text-align:center">
+    Fig.10:  SimCLR expert views transfer performance as compared to viewmaker learned views on CIFAR-10
+</figcaption>
+</figure>
+</center>
+<hr>
+<h1 id="8-experiments">8. Experiments</h1>
+<h2 id="81-collapse-problem-in-self-supervised-learning-and">8.1 Collapse Problem in Self-Supervised Learning and</h2>
+<h4 id="introduction">Introduction</h4>
+<p>Since the beginning of the field of self-supervised visual representation learning, researchers have proposed various methods to overcome the problem of representational collapse (also known as complete collapse) i.e. the problem where all embedding vectors collapse to a trivial constant vector. Contrastive learning methods like SimCLR solve this problem by incorporating negative pairs of images.</p>
+<p>Although complete collapse is avoided in contrastive learning methods (via the use of positive and negative pairs), a different form of collapse occurs and is often overlooked: dimensional collapse([3]). In dimensional collapse the embedding vectors rather than occupying the entire available embedding space, occupies only a lower-dimensional manifold within the available embedding space.</p>
+<figure>
+<img src="https://i.imgur.com/jaFWhxU.png" alt="Trulli" />
+<figcaption style="text-align:center">
+    Fig.9 (a) Complete collapse and (b) Dimensional collapse
+</figcaption>
+</figure>
+<h4 id="implementation-and-experiments">Implementation and Experiments</h4>
+<p>To observe and compare the dimensional collapse occuring in the SimCLR pre-training setup while using expert views and viewmaker views, we followed the procedure proposed in [3].</p>
+<p>We trained two ResNet-18 models, one with expert views and the other with viewmaker views, on CIFAR-10, following the standard SimCLR training procedure given in [1]. After training, we passed the test set through both of the pretrained ResNet-18 models and obtained 2 sets of embedding vectors.</p>
+<p>Let us denote the two embedding matrices as:
+$\mathbf{Z}_e$ : Embedding matrix obtained from expert views pretrained ResNet-18
+$\mathbf{Z}_v$ : Embedding matrix obtained from viewmaker views pretrained ResNet-18</p>
+<p>$$\mathbf{Z}_e , \mathbf{Z}_v \in \mathbb{R} ^{10000 \times 128}$$
+[10000 is the number of images in the test set of CIFAR-10 and 128 is the output embedding dimension of ResNet-18]</p>
+<p>We then compute the covariance matrix of the embedding layers of both the networks using the following formula:</p>
+<p>$$\mathbf{C} = \frac{1}{N} \sum_{i=1}^{N} (\mathbf{z}_i - \mathbf{\bar z})^T(\mathbf{z}_i - \mathbf{\bar z})$$</p>
+<p>where,</p>
+<p>$\mathbf{C}$ : Covariance matrix
+$N$ : Number of images in the test set of CIFAR-10(10000 images)
+$\mathbf{z}_i$ : $i^{th}$ row vector of $\mathbf{Z}$ ($\mathbf{Z}$ $\in$ {$\mathbf{Z}_e$, $\mathbf{Z}<em>v$ })
+and $\mathbf{\bar z} = \frac{1}{N} \sum</em>{i=1}^{N} \mathbf{z}_i$</p>
+<p>Thus, we obtain:
+$\mathbf{C}_e$ : Covariance matrix obtained from the embedding layer of expert views pretrained ResNet-18
+and
+$\mathbf{C}_v$ : Covariance matrix obtained from the embedding layer of viewmaker views pretrained ResNet-18
+$$\mathbf{C}_e, \mathbf{C}_v \in \mathbb{R} ^{128 \times 128}$$</p>
+<p>We then perform the SVD(Singular Value Decomposition) on both $\mathbf{C}_e$ and $\mathbf{C}_v$
+$$\mathbf{C} = \mathbf{U} \mathbf{S} \mathbf{V}^T,  \mathbf{S} = diag(\sigma^k)$$</p>
+<p>We can then plot the singular values thus obtained from both $\mathbf{C}_e$ and $\mathbf{C}_v$ in sorted order(descending) and logarithmic scale to obtain the following plot:</p>
+<center>
+<figure>
+<img align="centre" src="https://i.imgur.com/Lg7kci2.png" alt="Trulli">
+<figcaption style="text-align:center">
+    Fig.17: Singular value spectrum of the embedding spaces 
+</figcaption>
+</figure>
+</center>
+<h4 id="observations">Observations</h4>
+<p>The figure shows that a large number of the singular values of both covariance matrices are collapsing to zero, which represents the collapsing dimensions in the respective embedding spaces. $\mathbf{S}_e$ collapses to 24 dimensions(out of the available 128) and $\mathbf{S}_v$ collapses to 28 dimensions(out of the available 128).</p>
+<p>[3] shows that a mechanism which causes dimensional collapse is strong augmentation. Although both methods results in dimensional collapse, Viewmaker views pretrained ResNet-18 had marginally less number of embedding dimensions that collapsed. We believe this can be attributed to the constrained perturbations resulting in comparably less strong augmentations.</p>
+<p>It is known that neural networks that can generalize better to the test set are those that transform the data into low-dimensional manifolds. There is a proven tradeoff between generalization and class separability of representations w.r.t the dimensionality of the representations. We believe that marginally lesser number of collapsed dimensions of the Viewmaker views pretrained ResNet-18&rsquo;s embedding layer helps improving the class separability of the representations but is hurting it&rsquo;s generalization capability due to the above mentioned tradeoff, which is evident from the marginally lower accuracy of Viewmaker views pretrained ResNet-18 on transfer tasks <strong>(see section on viewmaker architecture)</strong></p>
+<h2 id="82-do-expert-views-and-viewmaker-trained-networks-learn-similar-representations">8.2 Do Expert Views and Viewmaker Trained Networks Learn Similar Representations?</h2>
+<h4 id="introduction-1">Introduction</h4>
+<p>Contrastive self-supervised methods, such as those trained using &ldquo;Expert Views&rdquo;, exploit the fact that image semantics are invariant under a variety of image transformations. Given a set of transformations which are known to preserve image semantics, networks trained using this method can develop the weak underlying signal within a dataset and learn many relevant features for solving downstream image tasks. Networks trained with &ldquo;Expert Views&rdquo; typically use the following set of image transformations:</p>
+<p>A = {Crop, Cutout, Noise, Rotation, Flipping, Resizing, Color Distortion, and Sobel Filtering}</p>
+<p>In contrast to this, the Viewmaker method attempts to learn these image transformations. This creates an interesting situation, as both methods are attempting to learn features corresponding to image properties which are unchanged under various transformations. However, these methods rely on potentially disjoint sets of transformations. This situation naturally leads to the following question &ndash; do these views lead to models that learn similar representations of the data?</p>
+<p>Developing similarity metrics for determining the similarity between models is a challenging problem. Recently, Centered Kernel Alignment (CKA) [^4] has emerged as a popular strategy for measuring the similarity between network architectures in the representation space. We use this metric to explore the question of whether or not Viewmaker and Expert Views trained models learn similar representations. Below, we develop the mathematical intuition behind this metric and then highlight a set of experiments which we conducted to answer our question.</p>
+<h4 id="mathematics">Mathematics</h4>
+<p>CKA measures the similarity between two representations, $\mathbf{X} \in \mathbb{R}^{m\times p_1}$ and $\mathbf{Y} \in \mathbb{R}^{m\times p_2}$, where $m$ is number of examples, $p_1$ is the dimensionality of the representations in $\mathbf{X}$ and $p_2$ is the dimensionality of the representations in $\mathbf{Y}$. This metric is bound between 0 and 1, with 0 representing maximum dissimilarity and 1 representing maximum similarity. CKA satisfies two important propertis:</p>
+<ol>
+<li>Invariant to Orthogonal Transformations</li>
+<li>Invariance to Isotropic Scaling: i.e., $s(\mathbf{X}, \mathbf{Y}) = s(\alpha\mathbf{X}, \beta\mathbf{Y})$</li>
+</ol>
+<p>CKA itself is dependent on the Hilbert-Schmidt Independence Criterion (HSIC), which only satisfies first property. HSIC is calculated as follows:</p>
+<p>$$\texttt{HSIC}(\mathbf{K},\mathbf{L}) = \frac{1}{(n-1)^2}\texttt{tr}(\mathbf{K}\mathbf{H}\mathbf{L}\mathbf{H})$$</p>
+<p>Where $\mathbf{K}_{ij} = k(\mathbf{X}_i, \mathbf{X}<em>j) \in \mathbb{R}^{m \times m}$ and $\mathbf{L}</em>{ij} = k(\mathbf{Y}_i, \mathbf{X}_j) \in \mathbb{R}^{m \times m}$ are a Gram matrices generated by a kernel function $k$, and $\mathbf{H} = \mathbf{I}_m - \frac{1}{m}\mathbf{J}_m$ is a kernel centering matrix. HSIC can be made invariant to isotropic scaling by normalizing the metric, which leads to the following definition for CKA:</p>
+<p>$$\texttt{CKA}(\mathbf{K},\mathbf{L}) = \frac{\texttt{HSIC}(\mathbf{K},\mathbf{L})}{\sqrt{\texttt{HSIC}(\mathbf{K},\mathbf{K})\texttt{HSIC}(\mathbf{L},\mathbf{L})}}$$</p>
+<p>For our experiments, we select the Radial Basis Function for our kernel function $k$, which is defined as:
+$$k(\mathbf{X}_i, \mathbf{X}_j) = \texttt{exp}(-\frac{||\mathbf{X}_i - \mathbf{X}_j ||^2}{2\sigma^2})$$</p>
+<h3 id="experiments">Experiments</h3>
+<center>
+<figure>
+<img align="centre" src="https://i.imgur.com/QdMNsBJ.png" alt="Trulli" style="width:100%">
+<figcaption style="text-align:center">
+    Fig.17: (Adrian please give a caption here)
+</figcaption>
+</figure>
+</center>
+<p>To determine the relationship between the functions learned by Viewmaker and Expert Views, we calculate the CKA between 6 layers at increasing network depths across both models and within each model. Figure 17 highlights the three CKA heatmaps for the following comparisons:</p>
+<ol>
+<li>Viewmaker layers vs. Viewmaker layers</li>
+<li>Expert View layers vs. Expert View layers</li>
+<li>Viewmaker layers vs. Expert View layers</li>
+</ol>
+<p>For every layer considered, we calculate the CKA with respect to every other layer (including the layer being considered). In the CKA heatmaps shown above, the shallowest layers are represented in the bottom left corner of the plot, and the deepest layers are represented in the top right corner of the plot.</p>
+<h3 id="observations-1">Observations</h3>
+<p>A few interesting relationships can be observed from these plots. First, we find that Viewmaker and Expert Views learn similar features across the shallower layers but learn consideribly different features as the depth of the network increases. Second, the shallowest layers of Expert Views have a relatively high similarity with many of the deeper layers of Viewmaker. These two points suggest that Viewmaker networks learn a different function of the data when compared to Expert Views, which should be carefully considered when deciding to train with Viewmaker view over Expert views.</p>
+<h1 id="9-conclusion">9. Conclusion</h1>
+<p>In this blog post we explore Viewmaker Networks, a strategy for learning image transformations and which can be used by non-domain experts. We make observations about the learned representations, exploring whether there dimensionality collapse inn the embedding space and how they compare to other strategies for selecting views.</p>
+<hr>
+<details>
+  <summary>Image Credits (toggle to see):</summary>
+    <ol>
+    <li>[Fig.13](https://arxiv.org/abs/2110.09348)</li>
+    </ol>
+</details>
+<h2 id="references">References</h2>
+<ul>
+<li>[1] 
+<a href="">ImageNet Classification with Deep Convolutional Neural Networks</a></li>
+<li>[2] 
+<a href="">Random Erasing Data Augmentation</a></li>
+<li>[3] 
+<a href="">Improved Regularization of Convolutional Neural Networks with Cutout</a></li>
+<li>[4] 
+<a href="">mixup: Beyond Empirical Risk Minimization</a></li>
+<li>[5] 
+<a href="">CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features</a></li>
+<li>[6] 
+<a href="">Data Augmentation Generative Adversarial Network</a></li>
+<li>[7] 
+<a href="">Improved Regularization of Convolutional Neural Networks with Cutout) and mixup (mixup: Beyond Empirical Risk Minimization</a></li>
+<li>[8] 
+<a href="">mixup: Beyond Empirical Risk Minimization</a></li>
+<li>[9] 
+<a href="">Improving Robustness Without Sacrificing Accuracy with Patch Gaussian Augmentation</a></li>
+<li>[10] 
+<a href="">Representation Learning with Contrastive Predictive Coding</a></li>
+<li>[11] 
+<a href="">On the Suitability of Lp-norms for Creating and Preventing Adversarial Examples</a></li>
+<li>[12] 
+<a href="https://arxiv.org/abs/2002.05709" target="_blank" rel="noopener">A Simple Framework for Contrastive Learning of Visual Representations</a></li>
+<li>[13] 
+<a href="">Unsupervised Feature Learning via Non-Parametric Instance-level Discrimination</a></li>
+<li>[14] 
+<a href="">Viewmaker Network</a></li>
+<li>[15] 
+<a href="https://arxiv.org/abs/2110.09348" target="_blank" rel="noopener">Understanding Dimensional Collapse in Contrastive Self-supervised Learning</a></li>
+<li>[16] 
+<a href="https://arxiv.org/abs/1905.00414" target="_blank" rel="noopener">Similarity of Neural Network Representations Revisited</a></li>
+</ul>
+<hr>
+<p><em>Acknowledgment</em>: This work was done with Adrian and Vaisakh as part of our collaboration at Machine Learning Collective. Hude thanks to Akshit for allowing me to use his GPU allowing me to run these experiments.</p>
+<!-- ---
+
+# 9. Conclusion
+Putting it all together, future of conditional view generation.  -->
+<!-- 
+<details>
+  <summary>Image Credits (toggle to see):</summary>
+    <ol>
+    <li>[Fig.9](https://arxiv.org/abs/2110.09348)</li>
+    <li>[Fig.9](https://arxiv.org/abs/2110.09348)</li>
+    </ol>
+</details> -->
+<!-- ## **References**
+
+Write the main references on the top.
+
+[1] [Viewmaker Networks: Learning Views for Unsupervised Representation Learning](https://iclr.cc/virtual/2021/poster/2544)
+[2] [A Simple Framework for Contrastive Learning of Visual Representations](https://arxiv.org/abs/2002.05709)
+[3] [Understanding Dimensional Collapse in Contrastive Self-supervised Learning](https://arxiv.org/abs/2110.09348)
+[4] [Similarity of Neural Network Representations Revisited](https://arxiv.org/abs/1905.00414) -->
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/politics/">politics</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+    
+    
+    
+      
+    
+    
+    
+    <div class="media author-card content-widget-hr">
+      
+        
+        <img class="avatar mr-3 avatar-circle" src="/author/srishti-yadav/avatar_hu9d788c3a7095d2e8067c7cba9a8e0ac1_2405876_270x270_fill_q90_lanczos_center.jpg" alt="Srishti Yadav">
+      
+
+      <div class="media-body">
+        <h5 class="card-title"><a href="https://srishti.dev">Srishti Yadav</a></h5>
+        <h6 class="card-subtitle">ML Researcher</h6>
+        <p class="card-text">My research interest include applying computationally intensive machine learning algorithm to image or text based data</p>
+        <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:srishtiy@sfu.ca" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=LW9fQacAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://linkedin.com/in/srishti-yadav" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/copperwiring" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/files/cv.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.6f7ce8be710290b8c431bbc97f405d15.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

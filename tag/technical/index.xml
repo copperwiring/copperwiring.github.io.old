@@ -5,7 +5,7 @@
     <link>https://srishti.dev/tag/technical/</link>
       <atom:link href="https://srishti.dev/tag/technical/index.xml" rel="self" type="application/rss+xml" />
     <description>technical</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 11 Dec 1111 12:38:00 -0700</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 11 Nov 1111 12:38:01 -0700</lastBuildDate>
     <image>
       <url>https://srishti.dev/images/icon_hu83f24c6794b0c645cb0fb9e8b29ab31d_111941_512x512_fill_lanczos_center_2.png</url>
       <title>technical</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Understanding Usage of plt, figure, subplot, axes, axis in matplotlib</title>
       <link>https://srishti.dev/post/1111-11-11-plt-fig-axis/</link>
-      <pubDate>Mon, 11 Dec 1111 12:38:00 -0700</pubDate>
+      <pubDate>Sat, 11 Nov 1111 12:38:01 -0700</pubDate>
       <guid>https://srishti.dev/post/1111-11-11-plt-fig-axis/</guid>
       <description>&lt;p&gt;When working with python libraries, especially for visualization, I usually get confused my number of options available for plotting. Example:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;1. plt.plot()
